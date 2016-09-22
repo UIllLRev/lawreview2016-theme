@@ -28,7 +28,16 @@
         </div>
       </div>
     </section>
+    <?php if ( $category_parent_id === 10 ): ?>
+    <nav class="nav nav-secondary has-shadow">
+        <div class="container">
+          <div class="nav-center">
 
+            <a href="/online/" class="nav-item is-tab">Articles</a><a href="/online-rankings/" class="nav-item is-tab">Rankings</a>
+          </div>
+        </div>
+    </nav>
+    <?php endif; ?>
     <section class="section">
       <div class="container">
         <div class="columns">

@@ -30,7 +30,7 @@
 
                 $label = get_sub_field('menu__link-label');
                 $link = get_sub_field('menu__link-url');
-                $target = '_blank';
+                $target = '_self'; //'_blank';
 
                 } elseif ( $menu_type === 'section' ) {
 
