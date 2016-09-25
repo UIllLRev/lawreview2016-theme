@@ -1,6 +1,6 @@
 <?php 
   global $query_string;
-  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=symposium&posts_per_page=-1');
+  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=symposium&posts_per_page=-1&orderby=date&order=ASC');
   if ( have_posts() ): ?>
 
   <!-- SECTION: Symposium -->
@@ -35,7 +35,7 @@
 
 <?php
   endif;
-  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=article&posts_per_page=-1');
+  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=article&posts_per_page=-1&orderby=date&order=ASC');
   if ( have_posts() ): ?>
 
   <!-- SECTION: Articles -->
@@ -70,7 +70,7 @@
 
 <?php
   endif;
-  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=essay&posts_per_page=-1');
+  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=essay&posts_per_page=-1&orderby=date&order=ASC');
   if ( have_posts() ): ?>
 
   <!-- SECTION: Essays -->
@@ -105,7 +105,7 @@
 
 <?php
   endif;
-  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=lecture&posts_per_page=-1');
+  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=lecture&posts_per_page=-1&orderby=date&order=ASC');
   if ( have_posts() ): ?>
 
   <!-- SECTION: David C. Baum Memorial Lecture -->
@@ -140,7 +140,7 @@
 
 <?php
   endif;
-  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=note&posts_per_page=-1');
+  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=note&posts_per_page=-1&orderby=date&order=ASC');
   if ( have_posts() ): ?>
 
   <!-- SECTION: Notes -->
