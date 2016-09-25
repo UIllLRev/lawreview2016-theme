@@ -437,6 +437,15 @@ function lawreview_blank_view_article($more)
     return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'lawreview') . '</a>';
 }
 
+function lawreview_no_featured_permalink($cat, $cats, $post)
+{
+    if ($cat->category_nicename == 'featured' && count($cats) > 1) {
+        return $cats[1];
+    }
+
+    return $cat;
+}
+
 // Remove Admin bar
 function remove_admin_bar()
 {
@@ -566,6 +575,7 @@ add_filter('excerpt_more', 'lawreview_blank_view_article'); // Add 'View Article
 add_filter('style_loader_tag', 'lawreview_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
+add_filter('post_link_category', 'lawreview_no_featured_permalink', 10, 3); // Don't use featured category in permalinks
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt
