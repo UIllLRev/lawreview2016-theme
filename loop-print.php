@@ -70,11 +70,11 @@
 
 <?php
   endif;
-  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=essay&posts_per_page=-1&orderby=date&order=ASC');
+  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=lecture&posts_per_page=-1&orderby=date&order=ASC');
   if ( have_posts() ): ?>
 
-  <!-- SECTION: Essays -->
-  <span class="label is-primary">Essay<?php if (lawreview_post_count() > 1) echo 's'; ?></span>
+  <!-- SECTION: David C. Baum Memorial Lecture -->
+  <span class="label is-primary">David C. Baum Memorial Lecture<?php if (lawreview_post_count() > 1) echo 's'; ?></span>
   <ul class="group">
 
     <?php while ( have_posts() ) : the_post();
@@ -105,11 +105,11 @@
 
 <?php
   endif;
-  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=lecture&posts_per_page=-1&orderby=date&order=ASC');
+  query_posts($query_string . '&meta_key=ilr_post_type&meta_value=essay&posts_per_page=-1&orderby=date&order=ASC');
   if ( have_posts() ): ?>
 
-  <!-- SECTION: David C. Baum Memorial Lecture -->
-  <span class="label is-primary">David C. Baum Memorial Lecture<?php if (lawreview_post_count() > 1) echo 's'; ?></span>
+  <!-- SECTION: Book Review Essays -->
+  <span class="label is-primary">Book Review Essay<?php if (lawreview_post_count() > 1) echo 's'; ?></span>
   <ul class="group">
 
     <?php while ( have_posts() ) : the_post();
