@@ -39,7 +39,7 @@
   if ( have_posts() ): ?>
 
   <!-- SECTION: Articles -->
-  <span class="label is-primary">Articles</span>
+  <span class="label is-primary">Article<?php if (lawreview_post_count() > 1) echo 's'; ?></span>
   <ul class="group">
 
     <?php while ( have_posts() ) : the_post();
@@ -74,7 +74,7 @@
   if ( have_posts() ): ?>
 
   <!-- SECTION: Essays -->
-  <span class="label is-primary">Essays</span>
+  <span class="label is-primary">Essay<?php if (lawreview_post_count() > 1) echo 's'; ?></span>
   <ul class="group">
 
     <?php while ( have_posts() ) : the_post();
@@ -109,7 +109,7 @@
   if ( have_posts() ): ?>
 
   <!-- SECTION: David C. Baum Memorial Lecture -->
-  <span class="label is-primary">David C. Baum Memorial Lecture</span>
+  <span class="label is-primary">David C. Baum Memorial Lecture<?php if (lawreview_post_count() > 1) echo 's'; ?></span>
   <ul class="group">
 
     <?php while ( have_posts() ) : the_post();
@@ -144,7 +144,7 @@
   if ( have_posts() ): ?>
 
   <!-- SECTION: Notes -->
-  <span class="label is-primary">Notes</span>
+  <span class="label is-primary">Note<?php if (lawreview_post_count() > 1) echo 's'; ?></span>
   <ul class="group">
 
     <?php while ( have_posts() ) : the_post();

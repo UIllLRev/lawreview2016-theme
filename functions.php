@@ -446,6 +446,11 @@ function lawreview_no_featured_permalink($cat, $cats, $post)
     return $cat;
 }
 
+function lawreview_post_count() {
+    global $wp_query;
+    return $wp_query->post_count;
+}
+
 // Remove Admin bar
 function remove_admin_bar()
 {
