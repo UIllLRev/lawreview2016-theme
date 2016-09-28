@@ -19,7 +19,7 @@
 
                 <li class="item<?php if ( !empty($author) ): ?> has-author<?php endif; ?>">
 
-                  <h2 class="title"><a href="<?php the_permalink(); ?>"><?=$title?>&nbsp;</a></h2>
+                <h2 class="title"><a href="<?php the_permalink(); ?>"><?=$title?><?php if (!empty($subtitle)) echo ': '. $subtitle; ?>&nbsp;</a></h2>
                   <!-- leave the non-breaking space; it's a hack -->
 
                   <?php if ( !empty($author) ) : ?>
