@@ -6,11 +6,12 @@
       <div class="columns">
         <div class="column is-10 is-offset-1">
 
+          <?php $post_types = lawreview_get_post_types(); ?>
           <?php if ( have_posts() ): ?> 
 
             <?php while ( have_posts() ) : the_post(); 
 
-              $label = ucfirst( get_field('ilr_post_type') );
+              $label = $post_types[get_field('ilr_post_type')];
               $subtitle = get_field('ilr_subtitle');
               $author = get_field('ilr_author');
               $citation = get_field('ilr_citation');

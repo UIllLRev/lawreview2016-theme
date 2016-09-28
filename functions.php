@@ -446,6 +446,26 @@ function lawreview_no_featured_permalink($cat, $cats, $post)
     return $cat;
 }
 
+function lawreview_get_post_types() {
+    $field_name = 'ilr_post_type';
+    foreach (get_posts(array('post_type' => 'acf', 'posts_per_page' => -1)) as $acf) {
+        $meta = get_post_meta($acf->ID);
+        foreach($meta as $key => $field) {
+            if(substr($key, 0, 6) == 'field_') {
+                $field = unserialize($field[0]);
+                if($field['name'] == $field_name && isset($field['choices'])) {
+                    return $field['choices'];
+                }
+            }
+        }
+    }
+}
+
+function lawreview_query_posts($type) {
+    global $query_string;
+    query_posts($query_string.'&meta_key=ilr_post_type&meta_value='.$type.'&posts_per_page=-1&orderby=date&order=ASC');
+}
+
 function lawreview_post_count() {
     global $wp_query;
     return $wp_query->post_count;
