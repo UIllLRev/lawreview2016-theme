@@ -1,5 +1,7 @@
 <?php
 
+$post_types = lawreview_get_post_types();
+
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 query_posts( array(
@@ -21,7 +23,7 @@ if ( have_posts() ) : ?>
 
   <?php while ( have_posts() ) : the_post(); 
 
-    $label = get_field('ilr_post_type');
+    $label = $post_types[get_field('ilr_post_type')];
     $subtitle = get_field('ilr_subtitle');
     $author = get_field('ilr_author');
     $citation = get_field('ilr_citation');

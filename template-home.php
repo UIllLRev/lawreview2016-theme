@@ -3,6 +3,8 @@
 <main class="main" role="main">
 
 <?php
+  $post_types = lawreview_get_post_types();
+
   // set up arguments
   $posts = get_posts(array(
     'posts_per_page' => 1,
@@ -24,7 +26,7 @@
 
         <?php foreach( $posts as $post ) : setup_postdata( $post );
 
-          $label = get_field('ilr_post_type');
+          $label = $post_types[get_field('ilr_post_type')];
           $subtitle = get_field('ilr_subtitle');
           $author = get_field('ilr_author');
           $citation = get_field('ilr_citation');
@@ -99,10 +101,10 @@
 
             foreach( $posts as $post ) : setup_postdata( $post );
 
-              $label = get_post_field('ilr_post_type', $post);
-              $subtitle = get_post_field('ilr_subtitle', $post);
-              $author = get_post_field('ilr_author', $post);
-              $citation = get_post_field('ilr_citation', $post);
+              $label = $post_types[get_field('ilr_post_type')];
+              $subtitle = get_field('ilr_subtitle');
+              $author = get_field('ilr_author');
+              $citation = get_field('ilr_citation');
 
             ?>
 
@@ -172,10 +174,10 @@
           <?php if( $posts ): 
 
             foreach( $posts as $post ) : setup_postdata( $post );
-              $label = get_post_field('ilr_post_type', $post);
-              $subtitle = get_post_field('ilr_subtitle', $post);
-              $author = get_post_field('ilr_author', $post);
-              $citation = get_post_field('ilr_citation', $post);
+              $label = $post_types[get_field('ilr_post_type')];
+              $subtitle = get_field('ilr_subtitle');
+              $author = get_field('ilr_author');
+              $citation = get_field('ilr_citation');
 
             ?>
 
