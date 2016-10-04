@@ -471,6 +471,13 @@ function lawreview_post_count() {
     return $wp_query->post_count;
 }
 
+function lawreview_plural_suffix($stem) {
+    // Not even trying to be comprehensive here
+    if (substr($stem, -2) == 'ch' || substr($stem, -2) == 'sh')
+        return 'es';
+    return 's';
+}
+
 // Remove Admin bar
 function remove_admin_bar()
 {

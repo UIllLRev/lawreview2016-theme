@@ -3,7 +3,7 @@
   foreach (lawreview_get_post_types() as $post_type => $label):
     lawreview_query_posts($post_type);
     if ( have_posts() ):
-        if ($label != 'Symposium' && lawreview_post_count() > 1) $label .= 's';
+        if ($label != 'Symposium' && lawreview_post_count() > 1) $label .= lawreview_plural_suffix($label);
         ?>
 
       <span class="label is-primary"><?php echo $label; ?></span>
