@@ -1,6 +1,6 @@
 <?php 
   $post_types = lawreview_get_post_types();
-  foreach (lawreview_get_post_types() as $post_type => $label):
+  foreach ($post_types as $post_type => $label):
     lawreview_query_posts($post_type);
     if ( have_posts() ):
         if ($label != 'Symposium' && lawreview_post_count() > 1) $label .= lawreview_plural_suffix($label);
