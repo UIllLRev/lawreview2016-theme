@@ -35,6 +35,7 @@
           </ul>
 
         <?php
-          endif;
-      endforeach;
+    endif;
+  endforeach;
+  echo category_description();
 ?>
