@@ -463,7 +463,7 @@ function lawreview_get_post_types() {
 
 function lawreview_query_posts($type) {
     global $query_string;
-    query_posts($query_string.'&meta_key=ilr_post_type&meta_value='.$type.'&posts_per_page=-1&orderby=date&order=ASC');
+    query_posts($query_string.'&meta_key=ilr_post_type&meta_value='.$type.'&posts_per_page=-1');
 }
 
 function lawreview_post_count() {
@@ -476,6 +476,21 @@ function lawreview_plural_suffix($stem) {
     if (substr($stem, -2) == 'ch' || substr($stem, -2) == 'sh')
         return 'es';
     return 's';
+}
+
+// The following two filters sort ILR post types by page number.
+function lawreview_custom_posts_join_paged($join, $query) {
+    if ($query->get('meta_key') == 'ilr_post_type') {
+        $join .= " INNER JOIN (SELECT post_id, meta_value AS ilr_citation FROM wp_postmeta WHERE meta_key = 'ilr_citation') AS citations ON (citations.post_id = wp_posts.ID)";
+    }
+    return $join;
+}
+
+function lawreview_custom_posts_orderby($orderby_statement, $query) {
+    if ($query->get('meta_key') == 'ilr_post_type') {
+        $orderby_statement = "CAST(SUBSTRING_INDEX(TRIM(ilr_citation), ' ', -1) AS UNSIGNED)";
+    }
+    return $orderby_statement;
 }
 
 // Remove Admin bar
@@ -608,6 +623,8 @@ add_filter('style_loader_tag', 'lawreview_style_remove'); // Remove 'text/css' f
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
 add_filter('post_link_category', 'lawreview_no_featured_permalink', 10, 3); // Don't use featured category in permalinks
+add_filter('posts_join_paged', 'lawreview_custom_posts_join_paged', 10, 2); // Sort by page number
+add_filter('posts_orderby', 'lawreview_custom_posts_orderby', 10, 2); // Sort by page number
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt
