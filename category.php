@@ -7,12 +7,13 @@
 
           <?php 
 
-            $category = get_the_category();
-            $category_parent_id = $category[0]->category_parent;
+            $category_id = get_query_var('cat');
+            $category = get_category($category_id);
+            $category_parent_id = $category->category_parent;
             $title = single_cat_title("", false); 
 
             if ( $category_parent_id === 36 ) {
-              // 36 is the category id of `University of Illinois Law Review`
+              // 36 is the category id of `Print Archives`
               echo '<h1 class="title is-page-title is-normal-case">' . $title . '</h1>';
 
             } elseif ( $category_parent_id === 10 ) {
@@ -43,8 +44,14 @@
         <div class="columns">
 
           <?php
-            
-            if ( $category_parent_id === 36 ) {
+
+            if ( $category_id === 36 ) {
+
+              echo '<div class="column is-10 is-offset-1 table-of-contents">';
+                      get_template_part('loop', 'index');
+              echo '</div>';
+
+            } elseif ( $category_parent_id === 36 ) {
 
               echo '<div class="column is-10 is-offset-1 table-of-contents">';
                       get_template_part('loop', 'print');
