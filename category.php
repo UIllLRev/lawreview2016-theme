@@ -29,7 +29,7 @@
         </div>
       </div>
     </section>
-    <?php if ( $category_parent_id === 10 ): ?>
+    <?php if ( $category_id === 10 ): ?>
     <nav class="nav nav-secondary has-shadow">
         <div class="container">
           <div class="nav-center">
@@ -51,17 +51,17 @@
                       get_template_part('loop', 'index');
               echo '</div>';
 
-            } elseif ( $category_parent_id === 36 ) {
-
-              echo '<div class="column is-10 is-offset-1 table-of-contents">';
-                      get_template_part('loop', 'print');
-              echo '</div>';
-
-            } elseif ( $category_parent_id === 10 ) {
+            } elseif ( $category_id === 10 ) {
 
               echo '<div class="column is-10 is-offset-1 main-content">';
                       get_template_part('loop', 'online');
                       get_template_part('pagination');
+              echo '</div>';
+
+            } elseif ( $category_parent_id === 36 ) {
+
+              echo '<div class="column is-10 is-offset-1 table-of-contents">';
+                      get_template_part('loop', 'print');
               echo '</div>';
 
             } else {
