@@ -19,7 +19,7 @@
             } elseif ( $category_parent_id === 10 ) {
               // 10 is the category id of `Law Review Online`
               echo '<h1 class="title is-page-title">Law Review Online</h1>';
-            
+
             } else {
               echo '<h1 class="title is-page-title">' . $title . '</h1>';
             }
@@ -29,12 +29,12 @@
         </div>
       </div>
     </section>
-    <?php if ( $category_id === 10 ): ?>
+    <?php if ( $category_id === 10 || $category_id === 153): ?>
     <nav class="nav nav-secondary has-shadow">
         <div class="container">
           <div class="nav-center">
 
-            <a href="/online/" class="nav-item is-tab">Articles</a><a href="/online-rankings/" class="nav-item is-tab">Rankings</a>
+            <a href="/online/" class="nav-item is-tab">Articles</a><a href="/online-rankings/" class="nav-item is-tab">Rankings</a><a href="/blog/" class="nav-item is-tab">Blog</a>
           </div>
         </div>
     </nav>
@@ -55,6 +55,13 @@
 
               echo '<div class="column is-10 is-offset-1 main-content">';
                       get_template_part('loop', 'online');
+                      get_template_part('pagination');
+              echo '</div>';
+
+            } elseif ( $category_id === 153 ) {
+
+              echo '<div class="column is-10 is-offset-1 main-content">';
+                      get_template_part('loop', 'blog');
                       get_template_part('pagination');
               echo '</div>';
 
