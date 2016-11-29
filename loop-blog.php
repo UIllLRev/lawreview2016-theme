@@ -45,6 +45,10 @@ if ( have_posts() ) : ?>
           <span class="date"><?php the_date(); ?></span>
         </div>
 
+        <div class="post-excerpt">
+            <?php the_excerpt(); ?>
+        </div>
+
     </article>
 
   <?php endwhile; ?>
