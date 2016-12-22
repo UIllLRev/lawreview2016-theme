@@ -1,5 +1,4 @@
 <?php 
-$children = get_term_children(36, 'category');
 $cats = get_terms(
     array(
         'taxonomy' => 'category',
