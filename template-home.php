@@ -176,7 +176,9 @@
             foreach( $posts as $post ) : setup_postdata( $post );
               $label = $post_types[get_field('ilr_post_type')];
               $subtitle = get_field('ilr_subtitle');
-              $author = get_field('ilr_author');
+              // like strip_tags() only removes content too
+              // we do this to remove star footnote
+              $author = preg_replace('@<(\w+)\b.*?>.*?</\1>@si', '', get_field('ilr_author'));
               $citation = get_field('ilr_citation');
 
             ?>
