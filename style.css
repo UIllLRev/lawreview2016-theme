@@ -6921,6 +6921,17 @@ a.nav-item .theme-logo .cls-1 {
   }
 }
 
+
+
+/**
+ * Post-launch styles
+ * ==================
+ *
+ * The following are styles added to the file after the theme was deployed.
+ * We need to fold these into the Sass partials and/or rewrite them.
+ *
+ */
+
 .pt-SubHead1 {
   font-variant: small-caps;
   text-align: center
@@ -7017,4 +7028,52 @@ input[type=checkbox]:checked.collapse + label::before {
 .post-excerpt {
   margin: 1em 1em 0 1em;
   text-align: justify;
+}
+
+
+/* Mobile nav styles */
+
+@media screen and (max-width: 767px) {
+  .nav-menu.is-active {
+    background-color: #fafcff;
+    display: block;
+    font-size: 21px;
+    text-transform: capitalize;
+  }
+
+  .nav-menu.is-active .nav-item {
+    color: #34383d;
+    padding: 0;
+    transition: all 86ms ease-out;
+  }
+
+  .nav-menu.is-active .nav-item > .nav-item {
+    border: 0;
+    padding: 15px;
+  }
+
+  .nav-menu.is-active .nav-item:hover {
+    background-color: #f5f7fa;
+    color: #e84a27;
+  }
+
+  .main::before {
+    background-color: rgba(0,0,0,.2);
+    content: '';
+    display: block;
+    opacity: 0;
+    position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    transition: all 86ms ease-out;
+    visibility: hidden;
+    z-index: 9;
+  }
+
+  .main.nav-menu-is-active::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }

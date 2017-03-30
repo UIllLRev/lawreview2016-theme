@@ -1,7 +1,7 @@
 (function ($, root, undefined) {
-	
+
 	$(function () {
-		
+
 		'use strict';
 
 		// Hide Header on on scroll down
@@ -24,12 +24,12 @@
 
         function hasScrolled() {
             var st = $(window).scrollTop();
-            
+
             // Make sure they scroll more than delta
             if(Math.abs(lastScrollTop - st) <= delta){
                 return;
             }
-            
+
             // If scrolled down, hide and inverse the header
             if ( st > lastScrollTop ){
                 header.addClass('is-hidden');
@@ -41,7 +41,7 @@
             if ( st < 150) {
                 header.removeClass('is-inverse');
             }
-            
+
             lastScrollTop = st;
         }
 
@@ -58,7 +58,22 @@
                 }
             }
         });
-		
+
+        $('.nav-toggle').click(function() {
+            var navMenu = $('.nav-menu');
+            var mainSection = $('.main');
+
+            if( $(this).hasClass('is-active') ) {
+                $(this).removeClass('is-active');
+                navMenu.removeClass('is-active');
+                mainSection.removeClass('nav-menu-is-active');
+            } else {
+                $(this).addClass('is-active');
+                navMenu.addClass('is-active');
+                mainSection.addClass('nav-menu-is-active');
+            }
+        });
+
 	});
-	
+
 })(jQuery, this);
