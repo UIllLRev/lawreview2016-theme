@@ -23,26 +23,28 @@
         }, 150);
 
         function hasScrolled() {
-            var st = $(window).scrollTop();
+            if ( $(window).width() >= 768 ) {
+                var st = $(window).scrollTop();
 
-            // Make sure they scroll more than delta
-            if(Math.abs(lastScrollTop - st) <= delta){
-                return;
+                // Make sure they scroll more than delta
+                if(Math.abs(lastScrollTop - st) <= delta){
+                    return;
+                }
+
+                // If scrolled down, hide and inverse the header
+                if ( st > lastScrollTop ){
+                    header.addClass('is-hidden');
+                } else if ( st + $(window).height() < $(document).height() ) {
+                        header.removeClass('is-hidden').addClass('is-inverse');
+                }
+
+                // If scrolled up past 150px, remove inverse class from header
+                if ( st < 150) {
+                    header.removeClass('is-inverse');
+                }
+
+                lastScrollTop = st;
             }
-
-            // If scrolled down, hide and inverse the header
-            if ( st > lastScrollTop ){
-                header.addClass('is-hidden');
-            } else if ( st + $(window).height() < $(document).height() ) {
-                    header.removeClass('is-hidden').addClass('is-inverse');
-            }
-
-            // If scrolled up past 150px, remove inverse class from header
-            if ( st < 150) {
-                header.removeClass('is-inverse');
-            }
-
-            lastScrollTop = st;
         }
 
         $('a[href*=#]:not([href=#])').click(function() {
