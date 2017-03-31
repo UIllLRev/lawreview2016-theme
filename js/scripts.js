@@ -7,7 +7,7 @@
         // Hide Header on on scroll down
         var didScroll = null;
         var lastScrollTop = 0;
-        var delta = 10;
+        var delta = 5;
         var header = $('.header');
         // var headerHeight = header.outerHeight();
 
@@ -31,7 +31,7 @@
                     return;
                 }
 
-                // If scrolled down, hide and inverse the header
+                // If scrolled down enough, hide and inverse the header
                 if ( st > lastScrollTop && st > delta ){
                     header.addClass('is-hidden');
                 } else if ( st + $(window).height() < $(document).height() ) {
