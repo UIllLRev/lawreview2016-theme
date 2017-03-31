@@ -9,37 +9,37 @@
         var lastScrollTop = 0;
         var delta = 5;
         var header = $('.header');
-        var headerHeight = header.outerHeight();
+        /* var headerHeight = header.outerHeight(); */
 
         $(window).scroll(function(event){
             didScroll = true;
         });
 
         setInterval(function() {
-            if ( didScroll ) {
+            if (didScroll) {
                 hasScrolled();
                 didScroll = false;
             }
-        }, 250);
+        }, 150);
 
         function hasScrolled() {
             if ( $(window).width() >= 768 ) {
                 var st = $(window).scrollTop();
 
                 // Make sure they scroll more than delta
-                if( Math.abs(lastScrollTop - st) <= delta ){
+                if(Math.abs(lastScrollTop - st) <= delta){
                     return;
                 }
 
                 // If scrolled down, hide and inverse the header
-                if ( st > lastScrollTop && st > headerHeight ){
+                if ( st > lastScrollTop ){
                     header.addClass('is-hidden');
                 } else if ( st + $(window).height() < $(document).height() ) {
                         header.removeClass('is-hidden').addClass('is-inverse');
                 }
 
                 // If scrolled up past 150px, remove inverse class from header
-                if ( st < 150 ) {
+                if ( st < 150) {
                     header.removeClass('is-inverse');
                 }
 
