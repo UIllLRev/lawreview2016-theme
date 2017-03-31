@@ -52,6 +52,11 @@
                             </span>
                         </a>
                     </div>
+                    <span class="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
                 </nav>
             </div>
 		</header>

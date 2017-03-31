@@ -1,7 +1,7 @@
 (function ($, root, undefined) {
-	
+
 	$(function () {
-		
+
 		'use strict';
 
 		// Hide Header on on scroll down
@@ -23,26 +23,28 @@
         }, 150);
 
         function hasScrolled() {
-            var st = $(window).scrollTop();
-            
-            // Make sure they scroll more than delta
-            if(Math.abs(lastScrollTop - st) <= delta){
-                return;
-            }
-            
-            // If scrolled down, hide and inverse the header
-            if ( st > lastScrollTop ){
-                header.addClass('is-hidden');
-            } else if ( st + $(window).height() < $(document).height() ) {
-                    header.removeClass('is-hidden').addClass('is-inverse');
-            }
+            if ( $(window).width() >= 768 ) {
+                var st = $(window).scrollTop();
 
-            // If scrolled up past 150px, remove inverse class from header
-            if ( st < 150) {
-                header.removeClass('is-inverse');
+                // Make sure they scroll more than delta
+                if(Math.abs(lastScrollTop - st) <= delta){
+                    return;
+                }
+
+                // If scrolled down, hide and inverse the header
+                if ( st > lastScrollTop ){
+                    header.addClass('is-hidden');
+                } else if ( st + $(window).height() < $(document).height() ) {
+                        header.removeClass('is-hidden').addClass('is-inverse');
+                }
+
+                // If scrolled up past 150px, remove inverse class from header
+                if ( st < 150) {
+                    header.removeClass('is-inverse');
+                }
+
+                lastScrollTop = st;
             }
-            
-            lastScrollTop = st;
         }
 
         $('a[href*=#]:not([href=#])').click(function() {
@@ -58,7 +60,22 @@
                 }
             }
         });
-		
+
+        $('.nav-toggle').click(function() {
+            var navMenu = $('.nav-menu');
+            var mainSection = $('.main');
+
+            if( $(this).hasClass('is-active') ) {
+                $(this).removeClass('is-active');
+                navMenu.removeClass('is-active');
+                mainSection.removeClass('nav-menu-is-active');
+            } else {
+                $(this).addClass('is-active');
+                navMenu.addClass('is-active');
+                mainSection.addClass('nav-menu-is-active');
+            }
+        });
+
 	});
-	
+
 })(jQuery, this);
