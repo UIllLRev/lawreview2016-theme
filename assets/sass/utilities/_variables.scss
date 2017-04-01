@@ -1,0 +1,312 @@
+// ============================================================================
+//
+//   Variables
+//
+//   Updated: 4/1/2017 by Chris Lusk
+//
+//   For convenience, you can search for a section by preceeding the title
+//   with a pound sign and a space. Example: `# Colors`
+//
+//   --
+//
+//   [Table of Contents]
+//
+//   1. Initial variables
+//      - Colors
+//      - Typography
+//      - Borders
+//      - Miscellaneous
+//
+//   2. Applied variables
+//      -
+//
+// ============================================================================
+
+
+
+
+// ----------------------------------------------------------------------------
+//
+//  1. Initial variables
+//
+//  These are base variables defined with a direct value. In general, variable
+//  format should follow the `$component-modifier-state-property` order.
+//
+//  Note: These variables generally should not be used in stylesheets.
+//
+// ----------------------------------------------------------------------------
+
+
+
+
+//
+// # Colors
+// ========
+//
+// Grayscale, site colors, and third-party brand colors.
+// ----------------------------------------------------------------------------
+
+$white:        #fff;
+$black:        #000;
+
+//## Build a grayscale palette based on theme colors using Sass functions.
+//## Resource: http://codepen.io/chrismlusk/pen/QpEbQd
+$gray-1:       #111;
+$gray-2:       #222;
+$gray-3:       #333;
+$gray-4:       #444;
+$gray-5:       #555;
+$gray-6:       #666;
+$gray-7:       #777;
+$gray-8:       #888;
+$gray-9:       #999;
+$gray-a:       #aaa;
+$gray-b:       #bbb;
+$gray-c:       #ccc;
+$gray-d:       #ddd;
+$gray-e:       #eee;
+$gray-f3:      #f3f3f3;
+$gray-f6:      #f6f6f6;
+$gray-f9:      #f9f9f9;
+
+$orange:       #ff470f;
+$yellow:       #ffdd57;
+$green:        #23d160;
+$turquoise:    #00d1b2;
+$blue:         #3273dc;
+$purple:       #b86bff;
+$red:          #ff3860;
+
+//## Third-party brand colors
+//## Resource: http://brandcolors.net
+$facebook-primary:    #3b5998;
+$google-plus-primary: #dd4b39;
+$instagram-primary:   #405de6;
+$linkedin-primary:    #0077b5;
+$mailchimp-primary:   #2c9ab7;
+$pinterest-primary:   #bd081c;
+$snapchat-primary:    #fffc00;
+$twitter-primary:     #1da1f2;
+$youtube-primary:     #cd201f;
+
+
+
+
+//
+// # Typography
+// ============
+//
+// Font, sizes, weights, line heights for body text, headings, and more.
+// ----------------------------------------------------------------------------
+
+$family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-serif:      Georgia, "Times New Roman", Times, serif;
+$family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$render-mode: optimizeLegibility;
+
+//## The px values shown below are based on a 16px root
+$size-1: 3rem;      // 48px
+$size-2: 2.5rem;    // 40px
+$size-3: 2rem;      // 32px
+$size-4: 1.5rem;    // 24px
+$size-5: 1.25rem;   // 20px
+$size-6: 1rem;      // 16px -- Warning! It's best not to change this one.
+$size-7: 0.875rem;  // 14px
+$size-8: 0.75rem;   // 12px
+
+$size-xl-1: 6rem;   // 96px
+$size-xl-2: 5.5rem; // 88px
+$size-xl-3: 4.5rem; // 72px
+$size-xl-4: 3.5rem; // 56px
+
+$weight-light:    300;
+$weight-normal:   400;
+$weight-semibold: 500;
+$weight-bold:     700;
+$weight-black:    900;
+
+$weight-title-normal: 500;
+$weight-title-bold:   700;
+
+$line-height-tightest:  1.1;
+$line-height-tight:     (4 / 3);
+$line-height-normal:    1.5;
+
+
+
+
+//
+// # Body
+// ======
+
+$body-background: $white;
+$body-size:       $size-6; // sets base to `1rem`
+
+
+
+
+//
+// # Responsiveness
+// ================
+//
+// 960, 1152, and 1344 have been chosen because they're divisible by 12 and 16.
+// ----------------------------------------------------------------------------
+
+$tablet:      769px;
+$desktop:     1000px; // 960px container + 40px
+$widescreen:  1192px; // 1152px container + 40
+$fullhd:      1384px; // 1344px container + 40
+
+
+
+
+//
+// # Borders
+// =========
+//
+// Custom variables for more variation over various elements.
+// ----------------------------------------------------------------------------
+
+$border-width-normal: 1px;
+$border-width-thick:  3px;
+
+$border-radius-small:   0.2rem;
+$border-radius-normal:  0.25rem;
+$border-radius-large:   0.3rem;
+
+
+
+
+//
+// # Miscellaneous
+// ===============
+//
+// Things that don't fit in any current category.
+// ----------------------------------------------------------------------------
+
+$easing: ease-out;
+$speed: 86ms;
+$box-shadow: 0 2px 4px -1px rgba($black,0.06), 0 4px 5px 0 rgba($black,0.06), 0 1px 10px 0 rgba($black,0.08);
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//
+//  2. Applied variables
+//
+//  Assigned with the values set in the first section.
+//
+//  This is also where we override Bulma variables. Commented-out variables
+//  don't depend on the variables defined in the first section and contain the
+//  default values from the vendor. To override these, uncomment and modify.
+//
+//  Note: These variables are also used in your custom stylesheets.
+//
+// ----------------------------------------------------------------------------
+
+
+
+
+//
+// # Primary colors
+// ================
+//
+// Reference: bulma/sass/utitilies/_variables.sass:70
+// ----------------------------------------------------------------------------
+
+$primary: $turquoise;
+
+$info: $blue;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+
+$light: $gray-f6;
+$dark: $gray-3;
+
+
+
+
+//
+// # General colors
+// ================
+//
+// Reference: bulma/sass/utitilies/_variables.sass:103
+// ----------------------------------------------------------------------------
+
+$background: $gray-f6;
+
+$border: $gray-e;
+$border-hover: $gray-c;
+
+
+
+
+//
+// # Text colors
+// =============
+//
+// Reference: bulma/sass/utitilies/_variables.sass:109
+// ----------------------------------------------------------------------------
+
+$text: $gray-4;
+$text-invert: findColorInvert($text);
+$text-light: $gray-7;
+$text-strong: $gray-3;
+
+
+
+
+//
+// # Link colors
+// =============
+//
+// Reference: bulma/sass/utitilies/_variables.sass:122
+// ----------------------------------------------------------------------------
+
+$link: $primary;
+$link-invert: $primary-invert;
+$link-visited: $purple;
+
+$link-hover: $gray-3;
+$link-hover-border: $gray-c;
+
+$link-focus: $gray-3;
+$link-focus-border: $primary;
+
+$link-active: $gray-3;
+$link-active-border: $gray-4;
+
+
+
+
+//
+// # Typography
+// ============
+//
+// Reference: bulma/sass/utitilies/_variables.sass:136
+// ----------------------------------------------------------------------------
+
+$family-primary: $family-sans-serif;
+$family-code: $family-monospace;
+
+$size-small: $size-7;
+$size-normal: $size-6;
+$size-medium: $size-5;
+$size-large: $size-4;
+
+
+
+
+//
+// # Lists and maps
+// ================
+//
+// Reference: bulma/sass/utitilies/_variables.sass:147
+// ----------------------------------------------------------------------------
+
+$sizes: $size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8;
+

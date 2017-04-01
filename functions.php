@@ -119,28 +119,28 @@ function lawreview_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+    	wp_register_script('conditionizr', get_template_directory_uri() . 'assets/js/vendors/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
         wp_enqueue_script('conditionizr'); // Enqueue it!
 
-        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+        wp_register_script('modernizr', get_template_directory_uri() . 'assets/js/vendors/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('lawreviewscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
+        wp_register_script('lawreviewscripts', get_template_directory_uri() . 'assets/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('lawreviewscripts'); // Enqueue it!
 
-        wp_register_script('fontawesome', 'https://use.fontawesome.com/1acee197ed.js', array(), '4.6.3');
+        wp_register_script('fontawesome', '//use.fontawesome.com/1acee197ed.js', array(), '4.6.3');
         wp_enqueue_script('fontawesome');
     }
 }
 
-// Load Law Review conditional scripts
-function lawreview_conditional_scripts()
-{
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
-    }
-}
+// // Load Law Review conditional scripts
+// function lawreview_conditional_scripts()
+// {
+//     if (is_page('pagenamehere')) {
+//         wp_register_script('scriptname', get_template_directory_uri() . 'assets/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
+//         wp_enqueue_script('scriptname'); // Enqueue it!
+//     }
+// }
 
 // Load Law Review styles
 function lawreview_styles()
@@ -180,7 +180,7 @@ function my_wp_nav_menu_args($args = '')
 }
 
 // Check if content is empty
-function empty_content($var) 
+function empty_content($var)
 {
     return trim(str_replace('&nbsp;','',strip_tags($var))) === '';
 }
@@ -252,11 +252,11 @@ function my_remove_recent_comments_style()
 }
 
 /**
- * Custom function to replace WordPress default `paginate_links` 
+ * Custom function to replace WordPress default `paginate_links`
  * because this is the only way to completely control/replace the
  * styles given to the pagination links injected on the page.
  *
- * If this needs to be removed for any reason, be sure to change 
+ * If this needs to be removed for any reason, be sure to change
  * the `lawreviewwp_pagination` function that is below this. Right
  * now, that function calls `pagination_links()` so replace that with
  * the default `paginate_links()` to restore original functionality.
