@@ -5372,17 +5372,18 @@ h6 {
     -webkit-transition: box-shadow 172ms ease-out, background-color 172ms ease-out, -webkit-transform 258ms ease-out;
     transition: box-shadow 172ms ease-out, background-color 172ms ease-out, -webkit-transform 258ms ease-out;
     transition: transform 258ms ease-out, box-shadow 172ms ease-out, background-color 172ms ease-out;
-    transition: transform 258ms ease-out, box-shadow 172ms ease-out, background-color 172ms ease-out, -webkit-transform 258ms ease-out; }
-  }
-  .header.is-inverse {
-    background-color: #fff;
-    border-bottom: 1px solid #eef2f7;
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
-  .header.is-hidden {
-    display: block !important;
-    box-shadow: 0 2px 4px -1px transparent, 0 4px 5px 0 transparent, 0 1px 10px 0 transparent;
-    -webkit-transform: translate(0, -105%);
-    transform: translate(0, -105%); } }
+    transition: transform 258ms ease-out, box-shadow 172ms ease-out, background-color 172ms ease-out, -webkit-transform 258ms ease-out; } }
+
+.header.is-inverse {
+  background-color: #fff;
+  border-bottom: 1px solid #eef2f7;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
+
+.header.is-hidden {
+  display: block !important;
+  box-shadow: 0 2px 4px -1px transparent, 0 4px 5px 0 transparent, 0 1px 10px 0 transparent;
+  -webkit-transform: translate(0, -105%);
+  transform: translate(0, -105%); }
 
 .single-post .header {
   background-color: #fff;
