@@ -294,7 +294,7 @@
 		"oA": 0,
 		"oAP": "\/style.css",
 		"oF": 3,
-		"oS": 0
+		"oS": 1
 		},
 	"\/stylesheets\/main.scss": {
 		"aP": 0,
@@ -2068,7 +2068,7 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
-		"outputStyle": 3,
+		"outputStyle": 1,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0
 		},
