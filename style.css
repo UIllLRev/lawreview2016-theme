@@ -1179,7 +1179,7 @@ a.box:active {
 }
 
 .content a:not(.button):visited {
-  color: #847bb9;
+  /* color: #847bb9; */
 }
 
 .content li + li {
@@ -6448,7 +6448,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .title.is-page-title, .subtitle.is-page-title {
   color: #fff;
-  font-size: 3em;
+  font-size: 2.75em;
   font-weight: 400;
   letter-spacing: 0.75px;
   padding: 40px 0 0;
@@ -6458,12 +6458,26 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 768px) {
   .title.is-page-title, .subtitle.is-page-title {
-    font-size: 3.75em;
+    font-size: 3.25em;
     padding: 100px 0 0;
   }
 }
 
 @media screen and (min-width: 980px) {
+  .title.is-page-title, .subtitle.is-page-title {
+    font-size: 4em;
+    padding: 140px 0 0;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .title.is-page-title, .subtitle.is-page-title {
+    font-size: 4.125em;
+    padding: 140px 0 0;
+  }
+}
+
+@media screen and (min-width: 1384px) {
   .title.is-page-title, .subtitle.is-page-title {
     font-size: 4.5em;
     padding: 140px 0 0;
@@ -6757,6 +6771,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 21px;
 }
 
+.post.single .title a {
+  color: inherit;
+  cursor: default;
+}
+
 @media screen and (min-width: 980px) {
   .post.single .title {
     font-size: 3.999em;
@@ -7009,8 +7028,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 div[id^="fn-"] {
-  margin-bottom: 1em;
+  margin-bottom: 16px;
   font-size: 85%;
+}
+
+.online-rankings .post.single .post-content {
+  max-width: initial;
 }
 
 .masthead-section {
