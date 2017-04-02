@@ -5373,6 +5373,7 @@ h6 {
     transition: box-shadow 172ms ease-out, background-color 172ms ease-out, -webkit-transform 258ms ease-out;
     transition: transform 258ms ease-out, box-shadow 172ms ease-out, background-color 172ms ease-out;
     transition: transform 258ms ease-out, box-shadow 172ms ease-out, background-color 172ms ease-out, -webkit-transform 258ms ease-out; }
+  }
   .header.is-inverse {
     background-color: #fff;
     border-bottom: 1px solid #eef2f7;
