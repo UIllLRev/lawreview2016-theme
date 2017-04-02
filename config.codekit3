@@ -35,7 +35,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/css\/main.min.css",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"\/assets\/css\/main.css.map": {
 		"ft": 8192,
@@ -147,7 +147,7 @@
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/scripts.min.js",
+		"oAP": "\/assets\/js\/min\/scripts-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -156,7 +156,7 @@
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/vendors\/conditionizr-4.3.0.min.min.js",
+		"oAP": "\/assets\/js\/vendors\/min\/conditionizr-4.3.0.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -165,7 +165,7 @@
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/vendors\/modernizr-2.7.1.min.min.js",
+		"oAP": "\/assets\/js\/vendors\/min\/modernizr-2.7.1.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -1129,7 +1129,7 @@
 		"oA": 0,
 		"oAP": "\/style.min.css",
 		"oF": 0,
-		"oS": 0
+		"oS": 1
 		},
 	"\/tag.php": {
 		"ft": 8192,
@@ -2889,7 +2889,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"outputStyle": 1,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0
@@ -2928,11 +2928,11 @@
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.min.js",
+		"autoOutputPathFilenamePattern": "*-min.js",
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0,
+		"autoOutputPathStyle": 2,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
@@ -2960,8 +2960,8 @@
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "",
-		"autoOutputPathReplace2": "",
+		"autoOutputPathReplace1": "kit",
+		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsLESS": {
@@ -2972,7 +2972,7 @@
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
-		"createSourceMap": 0,
+		"createSourceMap": 1,
 		"disableJavascript": 0,
 		"ieCompatibility": 1,
 		"outputStyle": 0,
@@ -2984,7 +2984,7 @@
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
-		"autoOutputAction": 1,
+		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -3038,7 +3038,7 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"outputStyle": 0,
@@ -3075,7 +3075,7 @@
 		"shouldRunBless": 0
 		},
 	"languageDefaultsSVG": {
-		"autoOutputAction": 1,
+		"autoOutputAction": 2,
 		"autoOutputPathFilenamePattern": "*.svg",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -3230,7 +3230,7 @@
 			"flagValue": -1
 			},
 		"screw-ie8": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"semicolons": {
