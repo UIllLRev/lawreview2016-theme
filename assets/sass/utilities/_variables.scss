@@ -47,7 +47,7 @@
 // ----------------------------------------------------------------------------
 
 $white:        #fff;
-$black:        #000;
+$black:        #0a0a0a;
 
 //## Build a grayscale palette based on theme colors using Sass functions.
 //## Resource: http://codepen.io/chrismlusk/pen/QpEbQd
@@ -211,6 +211,31 @@ $box-shadow: 0 2px 4px -1px rgba($black,0.06), 0 4px 5px 0 rgba($black,0.06), 0 
 
 
 //
+// # Grays, Whites, and Blacks
+// ===========================
+//
+// Bulma uses unconventional names for its gray, white, and black variables.
+// Since many Bulma partials have local variables that rely on these colors,
+// we'll reassign them rather than fight Bulma's variables in each location.
+// ----------------------------------------------------------------------------
+
+$black:         $black;
+$black-bis:     $gray-1;
+$black-ter:     $gray-2;
+
+$grey-darker:   $gray-3;
+$grey-dark:     $gray-4;
+$grey:          $gray-7;
+$grey-light:    $gray-b;
+$grey-lighter:  $gray-d;
+
+$white-ter:     $gray-f6;
+$white-bis:     $gray-f9;
+$white:         $white;
+
+
+
+//
 // # Primary colors
 // ================
 //
@@ -224,8 +249,8 @@ $success: $green;
 $warning: $yellow;
 $danger: $red;
 
-$light: $gray-f6;
-$dark: $gray-3;
+$light: $white-ter;
+$dark: $grey-darker;
 
 
 
@@ -237,10 +262,10 @@ $dark: $gray-3;
 // Reference: bulma/sass/utitilies/_variables.sass:103
 // ----------------------------------------------------------------------------
 
-$background: $gray-f6;
+$background: $white-ter;
 
-$border: $gray-e;
-$border-hover: $gray-c;
+$border: $grey-lighter;
+$border-hover: $grey-light;
 
 
 
@@ -252,10 +277,10 @@ $border-hover: $gray-c;
 // Reference: bulma/sass/utitilies/_variables.sass:109
 // ----------------------------------------------------------------------------
 
-$text: $gray-4;
+$text: $grey-dark;
 $text-invert: findColorInvert($text);
-$text-light: $gray-7;
-$text-strong: $gray-3;
+$text-light: $grey;
+$text-strong: $grey-darker;
 
 
 
@@ -271,14 +296,14 @@ $link: $primary;
 $link-invert: $primary-invert;
 $link-visited: $purple;
 
-$link-hover: $gray-3;
-$link-hover-border: $gray-c;
+$link-hover: $grey-darker;
+$link-hover-border: $grey-light;
 
-$link-focus: $gray-3;
+$link-focus: $grey-darker;
 $link-focus-border: $primary;
 
-$link-active: $gray-3;
-$link-active-border: $gray-4;
+$link-active: $grey-darker;
+$link-active-border: $grey-dark;
 
 
 
@@ -307,6 +332,8 @@ $size-large: $size-4;
 //
 // Reference: bulma/sass/utitilies/_variables.sass:147
 // ----------------------------------------------------------------------------
+
+// $colors: (white: ($white, $black), black: ($black, $white), light: ($light, $light-invert), dark: ($dark, $dark-invert), primary: ($primary, $primary-invert), info: ($info, $info-invert), success: ($success, $success-invert), warning: ($warning, $warning-invert), danger: ($danger, $danger-invert));
 
 $sizes: $size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8;
 
