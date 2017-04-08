@@ -93,14 +93,6 @@
                   // 10 is the Online id
                   //'terms' => array( 36, 10 ),
                 ),
-                'meta_query' => array(
-                  'relation' => 'AND',
-                  array(
-                    'key' => 'ilr_post_type',
-                    'value' => 'Note',
-                    'compare' => '!=',
-                  ),
-                ),
               ),
             ));
           ?>
@@ -113,6 +105,8 @@
               $subtitle = get_field('ilr_subtitle');
               $author = get_field('ilr_author');
               $citation = get_field('ilr_citation');
+
+              if ( $label != 'Note' ):
 
             ?>
 
@@ -146,7 +140,7 @@
                 </div>
               </article>
 
-            <?php endforeach; ?>
+            <?php endif; endforeach; ?>
 
           <?php else: ?>
 
