@@ -7086,6 +7086,8 @@ label.collapse {
   position: relative;
   color: white;
   display: inline-block;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 li.collapse {
@@ -7094,7 +7096,8 @@ li.collapse {
   border-radius: 5px;
 }
 
-.collapse:not(:last-child) {
+ul.collapse:not(:last-child),
+li.collapse:not(:last-child) {
   margin-bottom: .5rem;
 }
 
@@ -7130,6 +7133,10 @@ input[type=checkbox].collapse + label::before {
   transform: translateY(50%);
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+}
+
+input[type=checkbox]:checked.collapse + label.collapse {
+  margin: 0 0 .5em;
 }
 
 input[type=checkbox]:checked.collapse + label::before {
