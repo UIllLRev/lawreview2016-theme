@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/.htaccess": {
 		"ft": 8192,
 		"oA": 2,
@@ -332,6 +338,12 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-demo.php",
+		"oF": 0
+		},
+	"\/template-first-100-days.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-first-100-days.php",
 		"oF": 0
 		},
 	"\/template-home.php": {

@@ -1,0 +1,117 @@
+/**
+ * 1. Initial variables: Defined by direct value
+ */
+
+/// Colors
+$black: #141618 !default;
+$gray-2: #282b2f !default;
+$gray-3: #34383d !default;
+$gray-4: #494e55 !default;
+$gray-5: #5d636c !default;
+$gray-6: #69707a !default;
+$gray-7: #787e87 !default;
+$gray-8: #858a93 !default;
+$gray-9: #93979d !default;
+$gray-a: #aeb1b5 !default;
+$gray-b: #bbbec3 !default;
+$gray-c: #c5c9d0 !default;
+$gray-d: #d3d6db !default;
+$gray-e: #eef2f7 !default;
+$gray-f3: #f3f3f3 !default;
+$gray-f6: #f5f7fa !default;
+$gray-f9: #f9f9f9 !default;
+$white: #fff !default;
+
+$orange: #e84a27 !default;
+$blue-dark: #13294b !default;
+$blue-light: #3a7de4 !default;
+$red: #ff261e !default;
+
+/// Typography
+$family-sans-serif: 'Alegreya Sans', sans-serif !default;
+$family-serif-display: 'Alegreya', serif !default;
+$family-serif-regular: 'Georgia', 'Times New Roman', serif !default;
+$family-monospace: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace !default;
+
+/// Font weights
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-bold: 700 !default;
+$weight-black: 800 !default;
+$weight-xbold: $weight-black !default; /* just in case I mess up the name */
+
+/// Line heights
+$line-height-1: 1 !default;
+$line-height-tight: 1.1 !default;
+$line-height-normal: 1.428571428571429 !default;
+$line-height-loose: 1.666 !default;
+
+/// Font sizes
+$size-1: 3em !default;      // 48px
+$size-2: 2.625em !default;  // 42px
+$size-3: 2em !default;      // 32px
+$size-4: 1.5em !default;    // 24px
+$size-5: 1.125em !default;  // 18px
+$size-6: 1em !default;      // 16px
+$size-7: 0.875em !default;  // 14px
+$size-8: 0.712em !default;  // 12px
+
+/// Breakpoints
+/// Defining by device is not best practice, but sticking
+/// to these names to stay consistent with Bulma framework
+/// @link - http://bulma.io/documentation/overview/responsiveness
+$mobile: 320px !default;
+$tablet: 768px !default;
+$desktop: 980px !default;
+$widescreen: 1180px !default;
+
+/// Miscellaneous
+$easing: ease-out !default;
+$speed: 86ms !default;
+$base-url: '/wp-content/themes/lawreview2016' !default;
+
+
+/**
+ * 2. Generated variables: Calculated or defined by initial variables
+ */
+
+/// Theme colors
+$primary-color: $orange !default;
+$secondary-color: $blue-light !default;
+$text-color: $gray-2 !default;
+$light-gray: $gray-e !default;
+$mid-gray: $gray-9 !default;
+$dark-gray: $gray-4 !default;
+
+/// Text sizes
+$font-size-xsmall: $size-8 !default;
+$font-size-small: $size-7 !default;
+$font-size-normal: $size-6 !default;
+$font-size-large: $size-5 !default;
+
+/// Miscellaneous
+$speed-2x: ($speed * 2) !default;
+$speed-3x: ($speed * 3) !default;
+$speed-4x: ($speed * 4) !default;
+
+
+
+/**
+ * 3. Lists and maps: Collections from values previously defined
+ */
+
+/// Font sizes list
+$sizes: $size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7 !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'mobile': ( max-width: $mobile ),
+  'tablet': ( min-width: $tablet ),
+  'desktop': ( min-width: $desktop ),
+  'widescreen': ( min-width: $widescreen ),
+) !default;
+
+

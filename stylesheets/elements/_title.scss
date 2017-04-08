@@ -1,0 +1,95 @@
+.title,
+.subtitle {
+
+  // Sizes
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+
+    &.is-#{$i} {
+      font-size: $size;
+    }
+  }
+
+  &.is-1 {
+
+    @include breakpoint('widescreen') {
+      font-size: ($size-1 * 1.25);
+    }
+
+    .post.featured & {
+      font-size: $size-3;
+
+      @include breakpoint('tablet') {
+        font-size: $size-1;
+      }
+
+      @include breakpoint('widescreen') {
+        font-size: ($size-1 * 1.25);
+      }
+    }
+  }
+
+  &.is-3 {
+
+    .post.featured & {
+      font-size: $size-4;
+
+      @include breakpoint('tablet') {
+        font-size: $size-3;
+      }
+    }
+  }
+
+  &.is-page-title {
+    color: $white;
+    font-size: $size-1;
+    font-weight: $weight-light;
+    letter-spacing: 0.75px;
+    padding: 40px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint('tablet') {
+      font-size: ($size-1 * 1.25);
+      padding: 100px 0 0;
+    }
+
+    @include breakpoint('desktop') {
+      font-size: ($size-1 * 1.5);
+      padding: 140px 0 0;
+    }
+
+    &.is-normal-case {
+      text-transform: none;
+    }
+  }
+
+  a {
+    color: inherit;
+
+    @include on-event {
+      border: 0;
+      color: $primary-color;
+    }
+  }
+}
+
+
+
+.title {
+  color: $black;
+  font-weight: $weight-bold;
+
+  .tag + & {
+    margin-top: 8px;
+  }
+}
+
+
+
+.subtitle {
+  color: $gray-4;
+  font-family: $family-sans-serif;
+  font-weight: $weight-light;
+  letter-spacing: -0.5px;
+ }

@@ -1,0 +1,37 @@
+body {
+  color: $text-color;
+  font-family: $family-sans-serif;
+  font-size: 16px;
+  font-weight: $weight-normal;
+  line-height: $line-height-normal;
+}
+
+
+/**
+ * margin for `.main` content to allow for fixed header space 
+ */
+.main {
+  .single-post & {
+    margin-top: 51px;
+    @include breakpoint('tablet') {
+      margin-top: 63px;
+    }
+    @include breakpoint('desktop') {
+      margin-top: 67px;
+    }
+  }
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition-property: color;
+
+  @include on-event {
+    color: $gray-3;
+    text-decoration: none;
+  }
+}

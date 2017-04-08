@@ -1,0 +1,25 @@
+.content {
+  position: relative;
+
+  .body {
+    color: $text-color;
+    font-family: $family-serif-regular;
+    font-size: $font-size-normal;
+    line-height: $line-height-loose;
+    text-align: left;
+
+    @include breakpoint('tablet') {
+      line-height: 1.8;
+      text-align: justify;
+    }
+  }
+
+  p, ul {
+    font-size: $font-size-normal;
+
+    @include breakpoint('tablet') {
+      font-size: $font-size-large;
+    }
+  }
+
+}

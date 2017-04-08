@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all site-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @param {Bool} $self [false] - Whether or not to include current selector
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+/// Sizing
+/// If height is omitted, it falls back to `auto`
+@mixin size($width, $height: 'auto') {
+  width: $width;
+  height: $height
+}
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint
+/// @requires $breakpoints
+@mixin breakpoint($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media screen and #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.'
+  }
+}
+
+/// Opacity
+@mixin opacity($value) {
+  $opacity-ie: ($value * 100);
+
+  opacity: $value;
+  filter: alpha(opacity=$opacity-ie); /* IE8 */
+}
+
+
