@@ -6836,8 +6836,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     position: absolute;
     top: 9px;
-    left: -120px;
-    width: 90px;
+    left: -130px;
+    width: 110px;
     height: auto;
   }
 }
@@ -6859,6 +6859,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .post.single .post-content .post-meta .citation {
   color: #93979d;
+  font-size: 95%;
 }
 
 .post.single .post-content .post-meta .pdf-link {
@@ -7021,6 +7022,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/**
+ * Post-launch styles
+ * ==================
+ *
+ * The following are styles added to the file after the theme was deployed.
+ * We need to fold these into the Sass partials and/or rewrite them.
+ *
+ */
 .pt-SubHead1 {
   font-variant: small-caps;
   margin-top: 2em;
@@ -7034,6 +7043,7 @@ div[id^="fn-"] {
 
 .online-rankings .post.single .post-content {
   max-width: initial;
+  /* let contents fill entire column width */
 }
 
 .masthead-section {

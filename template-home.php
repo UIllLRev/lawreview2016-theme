@@ -79,7 +79,7 @@
         <!-- COLUMN: Print posts -->
         <div class="column is-9-tablet is-8-desktop main-content">
 
-          <?php 
+          <?php
             $posts = get_posts( array(
               'posts_per_page' => 6,
               'orderby' => 'date',
@@ -97,7 +97,7 @@
             ));
           ?>
 
-          <?php if( $posts ): 
+          <?php if( $posts ):
 
             foreach( $posts as $post ) : setup_postdata( $post );
 
@@ -105,6 +105,8 @@
               $subtitle = get_field('ilr_subtitle');
               $author = get_field('ilr_author');
               $citation = get_field('ilr_citation');
+
+              if ( $label != 'Note' ):
 
             ?>
 
@@ -138,7 +140,7 @@
                 </div>
               </article>
 
-            <?php endforeach; ?>
+            <?php endif; endforeach; ?>
 
           <?php else: ?>
 
@@ -156,7 +158,7 @@
 
           <span class="label">Online</span>
 
-          <?php 
+          <?php
             $posts = get_posts( array(
               'posts_per_page' => 10,
               'orderby' => 'date',
@@ -171,7 +173,7 @@
             ));
           ?>
 
-          <?php if( $posts ): 
+          <?php if( $posts ):
 
             foreach( $posts as $post ) : setup_postdata( $post );
               $label = $post_types[get_field('ilr_post_type')];
@@ -221,7 +223,7 @@
           <!-- News -->
           <span class="label">News</span>
 
-          <?php 
+          <?php
             $posts = get_posts( array(
               'posts_per_page' => 5,
               'orderby' => 'date',
@@ -236,7 +238,7 @@
             ));
           ?>
 
-          <?php if( $posts ): 
+          <?php if( $posts ):
 
             foreach( $posts as $post ) : setup_postdata( $post );
 
@@ -268,7 +270,7 @@
           <!-- Popular Posts -->
           <span class="label">Popular</span>
 
-          <?php 
+          <?php
             $popular = new WP_Query( array(
               'posts_per_page' => 5,
               'meta_key' => 'popular_posts',
