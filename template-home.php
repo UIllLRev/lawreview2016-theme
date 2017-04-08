@@ -94,10 +94,11 @@
                   //'terms' => array( 36, 10 ),
                 ),
                 'meta_query' => array(
+                  'relation' => 'AND',
                   array(
                     'key' => 'ilr_post_type',
-                    'value' => 'note',
-                    'compare' => 'NOT LIKE',
+                    'value' => 'Note',
+                    'compare' => '!=',
                   ),
                 ),
               ),
