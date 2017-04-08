@@ -1,4 +1,4 @@
-<?php /* Template Name: Homepage Template */ get_header(); ?>
+<?php /* Template Name: Homepage */ get_header(); ?>
 
 <main class="main" role="main">
 
@@ -81,6 +81,7 @@
 
           <?php
             $posts = get_posts( array(
+              'post_type' => 'post',
               'posts_per_page' => 6,
               'orderby' => 'date',
               'order' => 'DESC',
@@ -91,7 +92,13 @@
                   'terms' => 36
                   // 36 is the Print id
                   // 10 is the Online id
-                  //'terms' => array( 36, 10 ),
+                ),
+              ),
+              'meta_query' => array(
+                array(
+                  'key' => 'ilr_post_type',
+                  'value' => 'note',
+                  'compare' => '!='
                 ),
               ),
             ));
@@ -105,8 +112,6 @@
               $subtitle = get_field('ilr_subtitle');
               $author = get_field('ilr_author');
               $citation = get_field('ilr_citation');
-
-              if ( $label != 'Note' ):
 
             ?>
 
@@ -140,7 +145,7 @@
                 </div>
               </article>
 
-            <?php endif; endforeach; ?>
+            <?php endforeach; ?>
 
           <?php else: ?>
 

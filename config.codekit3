@@ -333,12 +333,6 @@
 		"oA": 0,
 		"oAP": "\/template-demo.php",
 		"oF": 0
-		},
-	"\/template-home.php": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/template-home.php",
-		"oF": 0
 		}
 	},
 "hooks": [
