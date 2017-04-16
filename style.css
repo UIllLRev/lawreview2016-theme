@@ -6616,7 +6616,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-item a .theme-logo, a.nav-item .theme-logo {
   width: 100%;
-  max-width: 215px;
+  max-width: 214px;
 }
 
 .nav-item a .theme-logo .cls-1, a.nav-item .theme-logo .cls-1 {
@@ -6635,7 +6635,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 980px) {
   .nav-item a .theme-logo, a.nav-item .theme-logo {
-    max-width: 230px;
+    max-width: 228px;
   }
 }
 
@@ -6836,8 +6836,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     position: absolute;
     top: 9px;
-    left: -120px;
-    width: 90px;
+    left: -130px;
+    width: 110px;
     height: auto;
   }
 }
@@ -6859,6 +6859,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .post.single .post-content .post-meta .citation {
   color: #93979d;
+  font-size: 95%;
 }
 
 .post.single .post-content .post-meta .pdf-link {
@@ -7021,6 +7022,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/**
+ * Post-launch styles
+ * ==================
+ *
+ * The following are styles added to the file after the theme was deployed.
+ * We need to fold these into the Sass partials and/or rewrite them.
+ *
+ */
 .pt-SubHead1 {
   font-variant: small-caps;
   margin-top: 2em;
@@ -7034,6 +7043,7 @@ div[id^="fn-"] {
 
 .online-rankings .post.single .post-content {
   max-width: initial;
+  /* let contents fill entire column width */
 }
 
 .masthead-section {
@@ -7072,16 +7082,23 @@ ul.collapse {
 label.collapse {
   background-color: #e84a27;
   border-radius: 5px;
-  padding: 3px;
-  padding-left: 25px;
+  padding: 3px 6px 3px 20px;
+  position: relative;
   color: white;
+  display: inline-block;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 li.collapse {
-  margin: 10px;
-  padding: 5px;
+  padding: .5rem;
   border: 1px solid #ABC;
   border-radius: 5px;
+}
+
+ul.collapse:not(:last-child),
+li.collapse:not(:last-child) {
+  margin-bottom: .5rem;
 }
 
 input[type=checkbox].collapse {
@@ -7105,31 +7122,31 @@ input[type=checkbox]:checked.collapse ~ ul {
 }
 
 input[type=checkbox].collapse + label::before {
-  -webkit-transform-origin: 25% 50%;
-  transform-origin: 25% 50%;
-  border: 8px solid transparent;
-  border-width: 8px 12px;
-  border-left-color: white;
-  margin-left: -20px;
-  width: 0;
-  height: 0;
-  display: inline-block;
-  text-align: center;
+  border: 6px solid transparent;
+  border-width: 6px 8px;
+  border-left-color: #fff;
   content: '';
-  color: #e84a27;
+  position: absolute;
+  top: 0;
+  left: 6px;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
-  position: absolute;
-  margin-top: 1px;
+}
+
+input[type=checkbox]:checked.collapse + label.collapse {
+  margin: 0 0 .5em;
 }
 
 input[type=checkbox]:checked.collapse + label::before {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg) translateX(70%) translateY(25%);
+  transform: rotate(90deg) translateX(70%) translateY(25%);
 }
 
 .post-excerpt {
-  margin: 1em 1em 0 1em;
+  font-size: 16px;
+  margin-top: 1em;
   text-align: justify;
 }
 

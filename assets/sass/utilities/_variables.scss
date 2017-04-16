@@ -2,7 +2,7 @@
 //
 //   Variables
 //
-//   Updated: 4/1/2017 by Chris Lusk
+//   Updated: 4/16/2017 by Chris Lusk
 //
 //   For convenience, you can search for a section by preceeding the title
 //   with a pound sign and a space. Example: `# Colors`
@@ -18,7 +18,13 @@
 //      - Miscellaneous
 //
 //   2. Applied variables
-//      -
+//      - Grays, whites, blacks
+//      - Primary colors
+//      - General colors
+//      - Text colors
+//      - Link colors
+//      - Typography
+//      - Lists and maps
 //
 // ============================================================================
 
@@ -46,36 +52,37 @@
 // Grayscale, site colors, and third-party brand colors.
 // ----------------------------------------------------------------------------
 
-$white:        #fff;
-$black:        #0a0a0a;
+$white:         #fff;
+$black:         #141618;
 
 //## Build a grayscale palette based on theme colors using Sass functions.
 //## Resource: http://codepen.io/chrismlusk/pen/QpEbQd
-$gray-1:       #111;
-$gray-2:       #222;
-$gray-3:       #333;
-$gray-4:       #444;
-$gray-5:       #555;
-$gray-6:       #666;
-$gray-7:       #777;
-$gray-8:       #888;
-$gray-9:       #999;
-$gray-a:       #aaa;
-$gray-b:       #bbb;
-$gray-c:       #ccc;
-$gray-d:       #ddd;
-$gray-e:       #eee;
-$gray-f3:      #f3f3f3;
-$gray-f6:      #f6f6f6;
-$gray-f9:      #f9f9f9;
+$gray-1:        #111;
+$gray-2:        #282b2f;
+$gray-3:        #34383d;
+$gray-4:        #494e55;
+$gray-5:        #5d636c;
+$gray-6:        #69707a;
+$gray-7:        #787e87;
+$gray-8:        #858a93;
+$gray-9:        #93979d;
+$gray-a:        #aeb1b5;
+$gray-b:        #bbbec3;
+$gray-c:        #c5c9d0;
+$gray-d:        #d3d6db;
+$gray-e:        #eef2f7;
+$gray-f3:       #f3f3f3;
+$gray-f6:       #f5f7fa;
+$gray-f9:       #f9f9f9;
 
-$orange:       #ff470f;
-$yellow:       #ffdd57;
-$green:        #23d160;
-$turquoise:    #00d1b2;
-$blue:         #3273dc;
-$purple:       #b86bff;
-$red:          #ff3860;
+$orange:        #e84a27;
+$yellow:        #ffdd57;
+$green:         #23d160;
+$turquoise:     #00d1b2;
+$blue:          #3a7de4;
+$blue-dark:     #13294b;
+$purple:        #b86bff;
+$red:           #ff261e;
 
 //## Third-party brand colors
 //## Resource: http://brandcolors.net
@@ -99,38 +106,40 @@ $youtube-primary:     #cd201f;
 // Font, sizes, weights, line heights for body text, headings, and more.
 // ----------------------------------------------------------------------------
 
-$family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$family-serif:      Georgia, "Times New Roman", Times, serif;
-$family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$family-sans-serif:     'Alegreya Sans', sans-serif;
+$family-serif-display:  'Alegreya', serif;
+$family-serif-regular:  'Georgia', 'Times New Roman', Times, serif;
+$family-monospace:      'Source Code Pro', 'Monaco', 'Inconsolata', monospace;
 $render-mode: optimizeLegibility;
 
 //## The px values shown below are based on a 16px root
-$size-1: 3rem;      // 48px
-$size-2: 2.5rem;    // 40px
-$size-3: 2rem;      // 32px
-$size-4: 1.5rem;    // 24px
-$size-5: 1.25rem;   // 20px
-$size-6: 1rem;      // 16px -- Warning! It's best not to change this one.
-$size-7: 0.875rem;  // 14px
-$size-8: 0.75rem;   // 12px
+$size-1: 3rem;        // 48px
+$size-2: 2.625rem;    // 42px
+$size-3: 2rem;        // 32px
+$size-4: 1.5rem;      // 24px
+$size-5: 1.125rem;    // 18px
+$size-6: 1rem;        // 16px -- Warning! It's best not to change this one.
+$size-7: 0.875rem;    // 14px
+$size-8: 0.75rem;     // 12px
 
 $size-xl-1: 6rem;   // 96px
 $size-xl-2: 5.5rem; // 88px
 $size-xl-3: 4.5rem; // 72px
 $size-xl-4: 3.5rem; // 56px
 
-$weight-light:    300;
-$weight-normal:   400;
-$weight-semibold: 500;
-$weight-bold:     700;
-$weight-black:    900;
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+$weight-black: 900;
+$weight-xbold: $weight-black; // just in case I mess up the name
 
 $weight-title-normal: 500;
 $weight-title-bold:   700;
 
-$line-height-tightest:  1.1;
-$line-height-tight:     (4 / 3);
-$line-height-normal:    1.5;
+$line-height-tight:  1.1;
+$line-height-normal:     (4 / 3);
+$line-height-loose:    1.5;
 
 
 
@@ -149,13 +158,18 @@ $body-size:       $size-6; // sets base to `1rem`
 // # Responsiveness
 // ================
 //
-// 960, 1152, and 1344 have been chosen because they're divisible by 12 and 16.
+// Defining breakpoints by device is not a good practice, but we're sticking to
+// these names to stay consistent with the Bulma framework. Also,  960, 1152,
+// and 1344 have been chosen because they're divisible by 12 and 16.
+//
+// Resource: http://bulma.io/documentation/overview/responsiveness
 // ----------------------------------------------------------------------------
 
+$mobile:      320px;
 $tablet:      769px;
 $desktop:     1000px; // 960px container + 40px
-$widescreen:  1192px; // 1152px container + 40
-$fullhd:      1384px; // 1344px container + 40
+$widescreen:  1192px; // 1152px container + 40px
+$fullhd:      1384px; // 1344px container + 40px
 
 
 
@@ -184,9 +198,16 @@ $border-radius-large:   0.3rem;
 // Things that don't fit in any current category.
 // ----------------------------------------------------------------------------
 
+$base-url: '/wp-content/themes/lawreview2016';
 $easing: ease-out;
 $speed: 86ms;
-$box-shadow: 0 2px 4px -1px rgba($black,0.06), 0 4px 5px 0 rgba($black,0.06), 0 1px 10px 0 rgba($black,0.08);
+$box-shadow: 0 2px 4px -1px rgba($black,0.06),
+             0 4px 5px 0 rgba($black,0.06),
+             0 1px 10px 0 rgba($black,0.08);
+
+
+
+
 
 
 
@@ -242,7 +263,7 @@ $white:         $white;
 // Reference: bulma/sass/utitilies/_variables.sass:70
 // ----------------------------------------------------------------------------
 
-$primary: $turquoise;
+$primary: $orange;
 
 $info: $blue;
 $success: $green;

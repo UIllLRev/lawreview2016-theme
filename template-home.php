@@ -1,4 +1,4 @@
-<?php /* Template Name: Homepage Template */ get_header(); ?>
+<?php /* Template Name: Homepage */ get_header(); ?>
 
 <main class="main" role="main">
 
@@ -79,8 +79,9 @@
         <!-- COLUMN: Print posts -->
         <div class="column is-9-tablet is-8-desktop main-content">
 
-          <?php 
+          <?php
             $posts = get_posts( array(
+              'post_type' => 'post',
               'posts_per_page' => 6,
               'orderby' => 'date',
               'order' => 'DESC',
@@ -91,13 +92,19 @@
                   'terms' => 36
                   // 36 is the Print id
                   // 10 is the Online id
-                  //'terms' => array( 36, 10 ),
+                ),
+              ),
+              'meta_query' => array(
+                array(
+                  'key' => 'ilr_post_type',
+                  'value' => 'note',
+                  'compare' => '!='
                 ),
               ),
             ));
           ?>
 
-          <?php if( $posts ): 
+          <?php if( $posts ):
 
             foreach( $posts as $post ) : setup_postdata( $post );
 
@@ -156,7 +163,7 @@
 
           <span class="label">Online</span>
 
-          <?php 
+          <?php
             $posts = get_posts( array(
               'posts_per_page' => 10,
               'orderby' => 'date',
@@ -171,7 +178,7 @@
             ));
           ?>
 
-          <?php if( $posts ): 
+          <?php if( $posts ):
 
             foreach( $posts as $post ) : setup_postdata( $post );
               $label = $post_types[get_field('ilr_post_type')];
@@ -221,7 +228,7 @@
           <!-- News -->
           <span class="label">News</span>
 
-          <?php 
+          <?php
             $posts = get_posts( array(
               'posts_per_page' => 5,
               'orderby' => 'date',
@@ -236,7 +243,7 @@
             ));
           ?>
 
-          <?php if( $posts ): 
+          <?php if( $posts ):
 
             foreach( $posts as $post ) : setup_postdata( $post );
 
@@ -268,7 +275,7 @@
           <!-- Popular Posts -->
           <span class="label">Popular</span>
 
-          <?php 
+          <?php
             $popular = new WP_Query( array(
               'posts_per_page' => 5,
               'meta_key' => 'popular_posts',
