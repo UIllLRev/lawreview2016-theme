@@ -515,7 +515,7 @@ function remove_thumbnail_dimensions( $html )
 // Custom Gravatar in Settings > Discussion
 function lawreviewgravatar ($avatar_defaults)
 {
-    $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
+    $myavatar = get_template_directory_uri() . '/assets/images/gravatar.jpg';
     $avatar_defaults[$myavatar] = "Custom Gravatar";
     return $avatar_defaults;
 }
