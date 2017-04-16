@@ -1,0 +1,130 @@
+// ============================================================================
+//
+//   Used for the table of contents displayed with on the Current Issue page.
+//
+//   [Table of Contents]
+//
+//   1. Label
+//   2. Group
+//   3. Item
+//   4. Title
+//   5. Post meta
+//
+// ============================================================================
+
+.table-of-contents {
+
+  //
+  // Label
+  // =====
+
+  .label {
+    margin-bottom: 1.125rem;
+  }
+
+
+
+
+  //
+  // Group
+  // =====
+
+  .group {
+    margin-left: 0.75rem;
+
+    &:not(:last-of-type) {
+      margin-bottom: 3rem;
+
+      @include desktop {
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+
+
+
+
+  //
+  // Item
+  // ====
+
+  .item {
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    @include tablet {
+      margin-bottom: 1.75rem;
+
+      &.has-author {
+
+        &::after {
+          border-bottom: 1px dotted $gray-c;
+          content: '';
+          position: absolute;
+            right: 0;
+            bottom: 3px;
+            left: 0;
+          z-index: 0;
+        }
+      }
+    }
+
+    @include desktop {
+      margin-bottom: 2rem;
+    }
+  }
+
+
+
+
+  //
+  // Title
+  // ======
+
+  .title {
+    font-size: $size-5;
+    margin: 0 0 0.25rem;
+
+    @include tablet {
+      margin: 0;
+      max-width: 50%;
+    }
+
+    @include desktop {
+      font-size: ($size-5 * 1.25);
+    }
+
+    a {
+      /* the inset shadow covers up the dotted line on the `.item` */
+      box-shadow: 0 -12px 0 $white inset;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+
+
+
+  //
+  // Post meta
+  // =========
+
+  .post-meta {
+    background-color: $white;
+    font-style: italic;
+    z-index: 1;
+
+    @include tablet {
+      margin: 0 0 -5px;
+      padding: 0 0 5px 5px;
+      position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+
+}

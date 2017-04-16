@@ -1,0 +1,111 @@
+.title,
+.subtitle {
+
+  // Sizes
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+
+    &.is-#{$i} {
+      font-size: $size;
+    }
+  }
+
+  &.is-1 {
+
+    @include widescreen {
+      font-size: 3.75rem;
+    }
+
+    @include fullhd {
+      font-size: 4.25rem;
+    }
+
+    .post.featured & {
+      font-size: $size-3;
+
+      @include tablet {
+        font-size: $size-1;
+      }
+
+      @include widescreen {
+        font-size: 3.75rem;
+      }
+
+      @include fullhd {
+        font-size: 4.25rem;
+      }
+    }
+  }
+
+  &.is-3 {
+
+    .post.featured & {
+      font-size: $size-4;
+
+      @include tablet {
+        font-size: $size-3;
+      }
+    }
+  }
+
+  &.is-page-title {
+    color: $white;
+    font-size: 2.75rem;
+    font-weight: $weight-light;
+    letter-spacing: 0.75px;
+    padding: 40px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 3.25rem;
+      padding: 100px 0 0;
+    }
+
+    @include desktop {
+      font-size: 4rem;
+      padding: 140px 0 0;
+    }
+
+    @include widescreen {
+      font-size: 4.125rem;
+    }
+
+    @include fullhd {
+      font-size: 4.5rem;
+    }
+
+    &.is-normal-case {
+      text-transform: none;
+    }
+  }
+
+  a {
+    color: inherit;
+
+    @include hover-focus {
+      border: 0;
+      color: $link;
+    }
+  }
+}
+
+
+
+.title {
+  color: $black;
+  font-weight: $weight-bold;
+
+  .tag + & {
+    margin-top: 8px;
+  }
+}
+
+
+
+.subtitle {
+  color: $gray-4;
+  font-family: $family-sans-serif;
+  font-weight: $weight-light;
+  letter-spacing: -0.5px;
+ }

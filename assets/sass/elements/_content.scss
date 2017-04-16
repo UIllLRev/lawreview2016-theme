@@ -1,0 +1,25 @@
+.content {
+  position: relative;
+
+  .body {
+    color: $text;
+    font-family: $family-serif-regular;
+    font-size: $size-normal;
+    line-height: $line-height-loose;
+    text-align: left;
+
+    @include tablet {
+      line-height: 1.8;
+      text-align: justify;
+    }
+  }
+
+  p, ul {
+    font-size: $size-normal;
+
+    @include tablet {
+      font-size: $size-large;
+    }
+  }
+
+}

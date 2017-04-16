@@ -26,8 +26,9 @@
 // ----------------------------------------------------------------------------
 
 @import
-  'vendors/bulma/sass/utilities/functions', // 1
-  'vendors/bulma/sass/utilities/variables'; // 1
+  //'vendors/bulma/sass/utilities/functions', // 1
+  'vendors/bulma/sass/utilities/initial-variables'; // 1
+  //'vendors/bulma/sass/utilities/derived-variables'; // 1
 
 @import
   'utilities/variables', // 2
@@ -37,26 +38,25 @@
   'vendors/bulma/bulma'; // 3
 
 @import
-  'base/generic';
+  'base/generic',
+  'base/typography';
 
 @import
   'elements/button',
   'elements/content',
+  'elements/label',
   'elements/tag',
   'elements/title',
   'elements/other';
 
 @import
-  'components/level',
-  'components/menu',
   'components/nav',
   'components/pagination',
-  'components/panel',
-  'components/tabs';
+  'components/post',
+  'components/table-of-contents';
 
-// @import
-//   'grid/columns',
-//   'grid/tiles';
+@import
+  'grid/grid';
 
 @import
   'layout/main',
@@ -64,7 +64,11 @@
   'layout/hero',
   'layout/section',
   'layout/footer',
-  'layout/aside';
+  'layout/sidebar';
 
 @import
   'pages/home';
+
+@import
+  'shame/shame'; // HACKS AND ADDITIONS THAT NEED TO BE ADDRESSED
+

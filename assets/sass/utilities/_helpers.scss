@@ -2,11 +2,46 @@
 //
 //  [Table of Contents]
 //
-//  1.
+//  1. Mixins
+//      - Hover
 //
 // ============================================================================
 
 
 
 
+//
+// Hover
+// =====
+//
+// Mixins for a variety of event states: hover, focus, active.
+// ----------------------------------------------------------------------------
 
+@mixin hover {
+  &:hover {
+    @content
+  }
+}
+
+@mixin hover-focus {
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin plain-hover-focus {
+  &,
+  &:focus,
+  &:hover {
+    @content
+  }
+}
+
+@mixin hover-focus-active {
+  &:focus,
+  &:active,
+  &:hover {
+    @content
+  }
+}

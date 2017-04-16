@@ -1,0 +1,161 @@
+// ============================================================================
+//
+//   [Table of Contents]
+//
+//   1. Components
+//   2. Menu
+//   3. Variations
+//      - Nav primary
+//
+// ============================================================================
+
+
+
+
+//
+// Nav components
+// ==============
+
+.nav-item {
+  padding: 0;
+}
+
+.nav-item a,
+a.nav-item {
+  $spacing: 15px;
+  $spacing-icon: 4px;
+  $inverse-white: rgba($white,.94);
+
+  color: $inverse-white;
+  font-weight: $weight-bold;
+  padding: $spacing;
+
+  @include hover-focus {
+    color: $link;
+  }
+
+  .header.is-inverse & {
+    color: $link-hover;
+
+    @include hover-focus {
+      color: $link;
+    }
+  }
+
+  .single-post .header & {
+    color: $link-hover;
+
+    @include hover-focus {
+      color: $link;
+    }
+  }
+
+  &.logo {
+    margin-left: $spacing;
+
+    @include desktop {
+      margin-left: 0;
+    }
+  }
+
+  &.is-icon {
+    color: rgba($white,.28);
+    padding: $spacing-icon;
+
+    @include hover-focus {
+      color: $link;
+    }
+
+    &:last-child {
+      margin-right: ($spacing - $spacing-icon);
+
+      @include desktop {
+        margin-right: 0;
+      }
+    }
+
+    .header.is-inverse &,
+    .single-post .header & {
+      color: $link;
+
+      @include hover-focus {
+        color: $gray-6;
+      }
+    }
+  }
+
+  &.is-tab {
+    color: $gray-4;
+    font-size: .825rem;
+    font-weight: $weight-bold;
+    padding-left: $spacing;
+    padding-right: $spacing;
+    text-transform: uppercase;
+    transition: border $speed $easing;
+
+    @include hover-focus {
+      color: $link;
+    }
+  }
+
+  // This class is applied to the SVG logo.
+  .theme-logo {
+    width: 100%;
+    max-width: 214px;
+
+    @include desktop {
+      max-width: 228px;
+    }
+
+    .cls-1 {
+      fill: $black;
+
+      // The header background is is white on small screens, so keep the logo
+      // black in all instances until the screen reaches tablet size.
+      .header:not(.is-inverse) & {
+        @include tablet {
+          fill: $inverse-white;
+        }
+      }
+
+      // Adjust fill when on page with `.single-post` class in `<body>`
+      .single-post .header & {
+        fill: $black;
+      }
+    }
+  }
+}
+
+
+
+
+//
+// Nav menu
+// ========
+
+.nav-menu {
+  font-size: 13px;
+  text-transform: uppercase;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+
+
+
+//
+// Nav variations
+// ==============
+
+.nav-primary {
+  background-color: transparent;
+  border-bottom: 1px solid rgba($white,.2);
+
+  @include tablet {
+    padding: 10px 0;
+  }
+}
+
+.nav-secondary {}

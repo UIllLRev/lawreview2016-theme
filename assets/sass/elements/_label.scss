@@ -1,0 +1,22 @@
+.label {
+  font-size: $size-small;
+  font-weight: $weight-black;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &.is-primary {
+    color: $primary;
+  }
+
+  /**
+   * Modify styles for `.sidebar` labels
+   */
+  .sidebar & {
+    color: $gray-7;
+    margin: 0 0 6px;
+
+    &:not(:first-of-type) {
+      margin-top: 30px;
+    }
+  }
+}

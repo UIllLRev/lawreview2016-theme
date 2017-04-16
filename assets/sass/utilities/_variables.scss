@@ -122,10 +122,10 @@ $size-6: 1rem;        // 16px -- Warning! It's best not to change this one.
 $size-7: 0.875rem;    // 14px
 $size-8: 0.75rem;     // 12px
 
-$size-xl-1: 6rem;   // 96px
-$size-xl-2: 5.5rem; // 88px
-$size-xl-3: 4.5rem; // 72px
-$size-xl-4: 3.5rem; // 56px
+$size-xl-1: 5.5rem;   // 88px
+$size-xl-2: 4.75rem;  // 76px
+$size-xl-3: 4.25rem;  // 68px
+$size-xl-4: 3.75rem;  // 60px
 
 $weight-light: 300;
 $weight-normal: 400;
@@ -137,9 +137,9 @@ $weight-xbold: $weight-black; // just in case I mess up the name
 $weight-title-normal: 500;
 $weight-title-bold:   700;
 
-$line-height-tight:  1.1;
-$line-height-normal:     (4 / 3);
-$line-height-loose:    1.5;
+$line-height-tight:   1.1;
+$line-height-normal:  (4 / 3);
+$line-height-loose:   1.5;
 
 
 
@@ -216,7 +216,7 @@ $box-shadow: 0 2px 4px -1px rgba($black,0.06),
 
 // ----------------------------------------------------------------------------
 //
-//  2. Applied variables
+//  2. Derived variables
 //
 //  Assigned with the values set in the first section.
 //
@@ -299,7 +299,7 @@ $border-hover: $grey-light;
 // ----------------------------------------------------------------------------
 
 $text: $grey-dark;
-$text-invert: findColorInvert($text);
+// $text-invert: findColorInvert($text); // let Bulma do the invert function
 $text-light: $grey;
 $text-strong: $grey-darker;
 
@@ -314,7 +314,7 @@ $text-strong: $grey-darker;
 // ----------------------------------------------------------------------------
 
 $link: $primary;
-$link-invert: $primary-invert;
+// $link-invert: $primary-invert; // let Bulma do the invert function
 $link-visited: $purple;
 
 $link-hover: $grey-darker;
