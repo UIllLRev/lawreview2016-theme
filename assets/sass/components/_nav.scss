@@ -55,6 +55,7 @@ a.nav-item {
 
     @include desktop {
       margin-left: 0;
+      padding-left: 0;
     }
   }
 
@@ -134,12 +135,22 @@ a.nav-item {
 // ========
 
 .nav-menu {
-  font-size: 13px;
-  text-transform: uppercase;
 
   @include tablet {
     display: flex;
   }
+}
+
+
+
+
+//
+// Wrapper and base class
+// ======================
+
+.nav {
+  height: auto;
+  min-height: 50px;
 }
 
 
@@ -155,6 +166,11 @@ a.nav-item {
 
   @include tablet {
     padding: 10px 0;
+  }
+
+  .nav-item {
+    font-size: 13px;
+    text-transform: uppercase;
   }
 }
 

@@ -119,11 +119,11 @@ function lawreview_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . 'assets/js/vendors/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        wp_enqueue_script('conditionizr'); // Enqueue it!
+    	// wp_register_script('conditionizr', get_template_directory_uri() . 'assets/js/vendors/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+     //    wp_enqueue_script('conditionizr'); // Enqueue it!
 
-        wp_register_script('modernizr', get_template_directory_uri() . 'assets/js/vendors/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!
+        // wp_register_script('modernizr', get_template_directory_uri() . 'assets/js/vendors/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+        // wp_enqueue_script('modernizr'); // Enqueue it!
 
         wp_register_script('lawreviewscripts', get_template_directory_uri() . 'assets/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('lawreviewscripts'); // Enqueue it!
@@ -594,7 +594,7 @@ add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline 
 add_action('init', 'lawreviewwp_pagination'); // Add custom Pagination
 add_action('wp_head', 'lawreview_track_posts'); // Add Popular Post tracking
 
-// Add feeds
+// Add Feeds
 add_feed('rss2', 'lawreview_feed_rss2');
 
 // Remove Actions
