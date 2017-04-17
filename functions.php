@@ -585,7 +585,7 @@ function lawreview_feed_rss2( $for_comments ) {
 
 // Add Actions
 add_action('init', 'lawreview_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_print_scripts', 'lawreview_conditional_scripts'); // Add Conditional Page Scripts
+// add_action('wp_print_scripts', 'lawreview_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'lawreview_styles'); // Add Theme Stylesheet
 add_action('init', 'register_lawreview_menu'); // Add Law Review Menu
