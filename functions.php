@@ -574,6 +574,11 @@ function lawreviewcomments($comment, $args, $depth)
 	<?php endif; ?>
 <?php }
 
+function lawreview_feed_rss2( $for_comments ) {
+	$rss_template = get_template_directory() . '/feed-rss2.php';
+	load_template($rss_template);
+}
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
@@ -588,6 +593,9 @@ add_action('init', 'register_lawreview_menu'); // Add Law Review Menu
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'lawreviewwp_pagination'); // Add custom Pagination
 add_action('wp_head', 'lawreview_track_posts'); // Add Popular Post tracking
+
+// Add feeds
+add_feed('rss2', 'lawreview_feed_rss2');
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
