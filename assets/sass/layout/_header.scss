@@ -1,0 +1,52 @@
+.header {
+  background-color: $white;
+  border-bottom: 1px solid $gray-e;
+  box-shadow: 0 2px 4px -1px transparent,
+              0 4px 5px 0 transparent,
+              0 1px 10px 0 transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  @include tablet {
+    background-color: transparent;
+    border-bottom: 0;
+    transform: translate(0, 0);
+    transition: transform ($speed * 4) $easing,
+                box-shadow ($speed * 2) $easing,
+                background-color ($speed * 2) $easing;
+
+    &.is-inverse {
+      background-color: $white;
+      border-bottom: 1px solid $gray-e;
+      box-shadow: 0 2px 4px -1px rgba($black, .06),
+                  0 4px 5px 0 rgba($black, .06),
+                  0 1px 10px 0 rgba($black, .08);
+    }
+
+    &.is-hidden {
+      display: block !important;
+      box-shadow: 0 2px 4px -1px transparent,
+                  0 4px 5px 0 transparent,
+                  0 1px 10px 0 transparent;
+      transform: translate(0, -105%);
+    }
+  }
+
+  /* adjust style when on page with class `.single-post` in the `body` */
+  .single-post & {
+    background-color: $white;
+    border-bottom: 1px solid $gray-e;
+  }
+
+  /* adjust positioning when WordPress admin bar is active */
+  .admin-bar & {
+    top: 46px;
+
+    /* weird `min-width` size because of WordPress */
+    @media screen and ( min-width: 783px ) {
+      top: 32px;
+    }
+  }
+}

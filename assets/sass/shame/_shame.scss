@@ -1,0 +1,164 @@
+/**
+ * Post-launch styles
+ * ==================
+ *
+ * The following are styles added to the file after the theme was deployed.
+ * We need to fold these into the Sass partials and/or rewrite them.
+ *
+ */
+.pt-SubHead1 {
+  font-variant: small-caps;
+  margin-top: 2em;
+  text-align: center;
+}
+
+div[id^="fn-"] {
+  margin-bottom: 16px;
+  font-size: 85%;
+}
+
+.masthead-section {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.masthead-section::before {
+  content: attr(title);
+  text-transform: uppercase;
+  display: block;
+  -webkit-column-span: all;
+  -moz-column-span: all;
+  column-span: all;
+  margin-bottom: 1em;
+}
+
+.masthead-2-col {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+
+.masthead-3-col {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+ul.collapse {
+  list-style-type: none;
+}
+
+label.collapse {
+  background-color: #e84a27;
+  border-radius: 5px;
+  padding: 3px 6px 3px 20px;
+  position: relative;
+  color: white;
+  display: inline-block;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+li.collapse {
+  padding: .5rem;
+  border: 1px solid #ABC;
+  border-radius: 5px;
+}
+
+ul.collapse:not(:last-child),
+li.collapse:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+input[type=checkbox].collapse {
+  display: none;
+}
+
+input[type=checkbox].collapse ~ ul {
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+input[type=checkbox]:checked.collapse ~ ul {
+  max-height: 100%;
+  max-width: 100%;
+  opacity: 1;
+}
+
+input[type=checkbox].collapse + label::before {
+  border: 6px solid transparent;
+  border-width: 6px 8px;
+  border-left-color: #fff;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 6px;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+input[type=checkbox]:checked.collapse + label.collapse {
+  margin: 0 0 .5em;
+}
+
+input[type=checkbox]:checked.collapse + label::before {
+  -webkit-transform: rotate(90deg) translateX(70%) translateY(25%);
+  transform: rotate(90deg) translateX(70%) translateY(25%);
+}
+
+.post-excerpt {
+  font-size: 16px;
+  margin-top: 1em;
+  text-align: justify;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-menu.is-active {
+    background-color: #fafcff;
+    display: block;
+    font-size: 21px;
+    text-transform: capitalize;
+  }
+  .nav-menu.is-active .nav-item {
+    color: #34383d;
+    padding: 0;
+    -webkit-transition: all 86ms ease-out;
+    transition: all 86ms ease-out;
+  }
+  .nav-menu.is-active .nav-item > .nav-item {
+    border: 0;
+    padding: 15px;
+  }
+  .nav-menu.is-active .nav-item:hover {
+    background-color: #f5f7fa;
+    color: #e84a27;
+  }
+  .main::before {
+    background-color: rgba(0, 0, 0, 0.2);
+    content: '';
+    display: block;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 86ms ease-out;
+    transition: all 86ms ease-out;
+    visibility: hidden;
+    z-index: 9;
+  }
+  .main.nav-menu-is-active::before {
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,291 @@
+// ============================================================================
+//
+//   [Table of Contents]
+//
+//   1. Wrapper and base class
+//   2. Post meta
+//   3. Post variations
+//      - Single
+//      - Sidebar
+//      - Featured
+//
+// ============================================================================
+
+
+
+
+//
+// Wrapper and base class
+// ======================
+
+.post {
+  padding: 30px 0;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  & + & {
+    border-top: 1px solid $gray-e;
+  }
+}
+
+
+
+
+//
+// Post meta
+// =========
+
+.post-meta {
+  color: $gray-6;
+  font-size: $size-small;
+  font-weight: $weight-medium;
+  line-height: $line-height-tight;
+
+  span {
+    display: inline-block;
+
+    &:not(:first-of-type)::before {
+      content: '\2022';
+      font-weight: $weight-black;
+      margin: 0 6px 0 4px;
+      opacity: .5;
+    }
+  }
+}
+
+
+
+
+//
+// Single post
+// ===========
+
+.post.single {
+
+  .post-meta {
+
+    span {
+      display: block;
+    }
+  }
+
+  .post-header {
+    max-width: 640px;
+    margin: 20px auto 60px;
+    text-align: center;
+
+    @include tablet {
+      max-width: 700px;
+      margin-top: 40px;
+    }
+
+    @include desktop {
+      max-width: 760px;
+      margin-top: 60px;
+    }
+
+    @include fullhd {
+      max-width: 840px;
+    }
+
+    .author {
+      color: $gray-6;
+      font-size: 1.143rem;
+      font-style: italic;
+      margin: 50px 0 0;
+
+      &::before {
+        background-color: $gray-d;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 0 auto;
+        position: relative;
+        top: -25px;
+        width: 40px;
+      }
+    }
+  }
+
+  .tag + .title {
+    margin-top: 21px;
+  }
+
+  .title {
+
+    @include desktop {
+      font-size: $size-xl-4;
+    }
+
+    @include fullhd {
+      font-size: $size-xl-3;
+    }
+  }
+
+  .subtitle {
+    font-size: $size-4;
+
+    @include tablet {
+      font-size: 1.75rem;
+    }
+
+    @include desktop {
+      font-size: 1.875rem;
+    }
+
+    @include fullhd {
+      font-size: 2rem;
+    }
+  }
+
+  .post-content {
+    max-width: 540px;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 600px;
+    }
+
+    .post-meta {
+      margin: 0 0 1.5rem;
+
+      @include desktop {
+        line-height: 1;
+        position: absolute;
+          top: 9px;
+          left: -130px;
+        width: 110px;
+        height: auto;
+      }
+
+      span + span::before {
+        display: none;
+      }
+
+      .date {
+        color: $gray-3;
+        font-size: 1rem;
+        letter-spacing: .25px;
+        margin: 0 0 5px;
+
+        time {
+          font-weight: $weight-black;
+        }
+      }
+
+      .citation {
+        color: $gray-9;
+      }
+
+      .pdf-link {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include desktop {
+          margin-top: 1.25rem;
+          position: relative;
+          top: auto;
+          right: auto;
+        }
+
+        .fa {
+          margin-right: 4px;
+        }
+
+        a {
+          border: 0;
+          color: inherit;
+
+          @include hover-focus {
+            color: $link;
+          }
+        }
+      }
+    }
+
+    /* drop cap when on page with class `.single-post` in the `body` */
+    .single-post & {
+      .body p:first-of-type::first-letter {
+        color: $primary;
+        float: left;
+        font-family: $family-sans-serif;
+        font-size: 3.714rem;
+        font-weight: $weight-bold;
+        line-height: 0.875;
+        padding: 1px 4px 0 0;
+
+        @include tablet {
+          font-size: 4rem;
+          padding-right: 6px;
+        }
+      }
+    }
+
+    .online-rankings & {
+      max-width: initial; // let content fill entire column width
+    }
+  }
+}
+
+
+
+
+//
+// Sidebar post
+// ============
+
+.sidebar .post {
+  padding: 10px 0;
+
+  & + .post {
+    border: 0;
+  }
+
+  .date {
+    font-size: 12px;
+    margin: 0 0 1px;
+  }
+
+  .author {
+    font-size: $size-small;
+    margin-top: 4px;
+  }
+}
+
+
+
+
+//
+// Featured post
+// =============
+
+.post.featured {
+  padding: 40px 0 0;
+
+  @include tablet {
+    padding-top: 160px;
+  }
+
+  @include desktop {
+    padding-top: 180px;
+  }
+
+  a {
+    color: $white;
+
+    @include hover-focus {
+      color: $link;
+    }
+  }
+
+  .subtitle {
+    color: rgba($white,.82);
+  }
+
+  .post-meta {
+    color: rgba($white,.64);
+  }
+}

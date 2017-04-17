@@ -22,8 +22,6 @@ $nav-height: 3.25rem !default
     flex-shrink: 0
   img
     max-height: 1.75rem
-  .button + .button
-    margin-left: 0.75rem
   .tag
     &:first-child:not(:last-child)
       margin-right: 0.5rem
@@ -64,16 +62,18 @@ a.nav-item
 
 .nav-left,
 .nav-right
+  +overflow-touch
   align-items: stretch
   display: flex
-  flex-basis: 0
   flex-grow: 1
   flex-shrink: 0
+  max-width: 100%
+  overflow: auto
+  +widescreen
+    flex-basis: 0
 
 .nav-left
   justify-content: flex-start
-  overflow: hidden
-  overflow-x: auto
   white-space: nowrap
 
 .nav-right
@@ -104,8 +104,6 @@ a.nav-item
         padding: 0.75rem
       &.is-active
         display: block
-  +tablet-only
-    padding-right: 1.5rem
 
 // Main container
 
@@ -113,18 +111,15 @@ a.nav-item
   align-items: stretch
   background-color: $white
   display: flex
-  min-height: $nav-height
+  height: $nav-height
   position: relative
   text-align: center
-  z-index: 2
+  z-index: 10
   & > .container
     align-items: stretch
     display: flex
     min-height: $nav-height
+    width: 100%
   // Modifiers
   &.has-shadow
     box-shadow: 0 2px 3px rgba($black, 0.1)
-  // Responsiveness
-  +mobile
-    & > .container
-      width: 100%

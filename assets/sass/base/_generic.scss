@@ -1,0 +1,17 @@
+//
+// Inline
+// ======
+
+a {
+  transition-property: color;
+
+  @include hover-focus {}
+}
+
+
+
+
+//
+// Block
+// =====
+

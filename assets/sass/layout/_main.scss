@@ -1,0 +1,21 @@
+//
+// Wrapper and base class
+// ======================
+//
+// 1. Increase top margin to account for fixed header spacing.
+// ----------------------------------------------------------------------------
+
+.main {
+
+  .single-post & { // 1
+    margin-top: 51px;
+
+    @include tablet {
+      margin-top: 63px;
+    }
+
+    @include desktop {
+      margin-top: 67px;
+    }
+  }
+}
