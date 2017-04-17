@@ -4,7 +4,7 @@
 	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
-		"uuidString": "BF28419E-7168-40CC-AF03-6EAA37B8CF4B"
+		"uuidString": "3027E423-1E7B-4D72-8F7E-117CA40CA7BD"
 		}
 	],
 "creatorBuild": "25813",
@@ -23,13 +23,13 @@
 		},
 	"\/404.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/404.php",
 		"oF": 0
 		},
 	"\/archive.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/archive.php",
 		"oF": 0
 		},
@@ -39,7 +39,7 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/main.min.css",
+		"oAP": "\/assets\/css\/main-min.css",
 		"oF": 0,
 		"oS": 0
 		},
@@ -106,7 +106,7 @@
 	"\/assets\/images\/logo-white.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/assets\/images\/logo-white.svg",
 		"oF": 0,
 		"opt": 0,
@@ -138,7 +138,7 @@
 	"\/assets\/images\/logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/assets\/images\/logo.svg",
 		"oF": 0,
 		"opt": 0,
@@ -161,25 +161,25 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/scripts.min.js",
-		"oF": 0,
+		"oF": 2,
 		"sC": 1,
 		"tS": 0
 		},
 	"\/assets\/js\/vendors\/conditionizr-4.3.0.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/vendors\/conditionizr-4.3.0.min.min.js",
-		"oF": 0,
+		"oA": 1,
+		"oAP": "\/assets\/js\/vendors\/conditionizr-4.3.0.min-min.js",
+		"oF": 1,
 		"sC": 1,
 		"tS": 0
 		},
 	"\/assets\/js\/vendors\/modernizr-2.7.1.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/vendors\/modernizr-2.7.1.min.min.js",
-		"oF": 0,
+		"oA": 1,
+		"oAP": "\/assets\/js\/vendors\/modernizr-2.7.1.min-min.js",
+		"oF": 1,
 		"sC": 1,
 		"tS": 0
 		},
@@ -189,9 +189,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_generic.css",
+		"oAP": "\/assets\/sass\/base\/_generic.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -202,9 +202,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_typography.css",
+		"oAP": "\/assets\/sass\/base\/_typography.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -217,7 +217,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/assets\/sass\/base\/README.html",
 		"oF": 0,
 		"oFM": 0,
@@ -233,9 +233,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_nav.css",
+		"oAP": "\/assets\/sass\/components\/_nav.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -246,9 +246,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_pagination.css",
+		"oAP": "\/assets\/sass\/components\/_pagination.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -259,9 +259,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_post.css",
+		"oAP": "\/assets\/sass\/components\/_post.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -272,9 +272,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_table-of-contents.css",
+		"oAP": "\/assets\/sass\/components\/_table-of-contents.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -285,9 +285,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_tabs.css",
+		"oAP": "\/assets\/sass\/components\/_tabs.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -298,9 +298,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_button.css",
+		"oAP": "\/assets\/sass\/elements\/_button.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -311,9 +311,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_content.css",
+		"oAP": "\/assets\/sass\/elements\/_content.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -324,9 +324,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_label.css",
+		"oAP": "\/assets\/sass\/elements\/_label.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -337,9 +337,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_other.css",
+		"oAP": "\/assets\/sass\/elements\/_other.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -350,9 +350,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_tag.css",
+		"oAP": "\/assets\/sass\/elements\/_tag.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -363,9 +363,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_title.css",
+		"oAP": "\/assets\/sass\/elements\/_title.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -376,9 +376,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_grid.css",
+		"oAP": "\/assets\/sass\/grid\/_grid.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -389,9 +389,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_footer.css",
+		"oAP": "\/assets\/sass\/layout\/_footer.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -402,9 +402,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_header.css",
+		"oAP": "\/assets\/sass\/layout\/_header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -415,9 +415,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_hero.css",
+		"oAP": "\/assets\/sass\/layout\/_hero.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -428,9 +428,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_main.css",
+		"oAP": "\/assets\/sass\/layout\/_main.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -441,9 +441,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_section.css",
+		"oAP": "\/assets\/sass\/layout\/_section.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -454,9 +454,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_sidebar.css",
+		"oAP": "\/assets\/sass\/layout\/_sidebar.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -467,9 +467,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/main.css",
+		"oAP": "\/assets\/sass\/main.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -480,9 +480,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_home.css",
+		"oAP": "\/assets\/sass\/pages\/_home.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -493,9 +493,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_shame.css",
+		"oAP": "\/assets\/sass\/shame\/_shame.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -506,9 +506,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_helpers.css",
+		"oAP": "\/assets\/sass\/utilities\/_helpers.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -519,9 +519,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/css\/_variables.css",
+		"oAP": "\/assets\/sass\/utilities\/_variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -534,7 +534,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/assets\/sass\/utilities\/README.html",
 		"oF": 0,
 		"oFM": 0,
@@ -550,9 +550,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/css\/bulma.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/bulma.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -563,9 +563,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/_all.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/base\/_all.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -576,9 +576,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/generic.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/base\/generic.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -589,9 +589,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/helpers.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/base\/helpers.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -602,9 +602,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/minireset.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/base\/minireset.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -615,9 +615,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/_all.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/_all.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -628,9 +628,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/card.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/card.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -641,9 +641,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/level.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/level.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -654,9 +654,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/media.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/media.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -667,9 +667,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/menu.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/menu.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -680,9 +680,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/message.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/message.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -693,9 +693,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/modal.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/modal.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -706,9 +706,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/nav.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/nav.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -719,9 +719,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/pagination.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/pagination.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -732,9 +732,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/panel.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/panel.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -745,9 +745,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/tabs.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/components\/tabs.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -758,9 +758,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/_all.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/_all.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -771,9 +771,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/box.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/box.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -784,9 +784,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/button.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/button.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -797,9 +797,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/content.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/content.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -810,9 +810,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/form.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/form.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -823,9 +823,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/icon.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/icon.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -836,9 +836,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/image.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/image.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -849,9 +849,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/notification.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/notification.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -862,9 +862,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/other.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/other.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -875,9 +875,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/progress.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/progress.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -888,9 +888,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/table.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/table.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -901,9 +901,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/tag.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/tag.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -914,9 +914,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/title.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/elements\/title.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -927,9 +927,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/_all.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/grid\/_all.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -940,9 +940,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/columns.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/grid\/columns.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -953,9 +953,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/tiles.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/grid\/tiles.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -966,9 +966,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/_all.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/layout\/_all.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -979,9 +979,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/footer.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/layout\/footer.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -992,9 +992,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/hero.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/layout\/hero.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1005,9 +1005,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/section.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/layout\/section.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1018,9 +1018,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/_all.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/utilities\/_all.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1031,9 +1031,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/animations.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/utilities\/animations.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1044,9 +1044,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/controls.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/utilities\/controls.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1057,9 +1057,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/derived-variables.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/utilities\/derived-variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1070,9 +1070,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/functions.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/utilities\/functions.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1083,9 +1083,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/initial-variables.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/utilities\/initial-variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1096,9 +1096,9 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/mixins.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/utilities\/mixins.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1109,34 +1109,34 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 2,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/css\/variables.css",
+		"oAP": "\/assets\/sass\/vendors\/bulma\/sass\/utilities\/variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
 	"\/author.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/author.php",
 		"oF": 0
 		},
 	"\/category.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/category.php",
 		"oF": 0
 		},
 	"\/comments.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
 	"\/footer.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/footer.php",
 		"oF": 0
 		},
@@ -1160,7 +1160,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/includes\/ README.html",
 		"oF": 0,
 		"oFM": 0,
@@ -1172,13 +1172,13 @@
 		},
 	"\/includes\/logo.svg.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/includes\/logo.svg.php",
 		"oF": 0
 		},
 	"\/index.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/index.php",
 		"oF": 0
 		},
@@ -1196,55 +1196,55 @@
 		},
 	"\/loop-online.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/loop-online.php",
 		"oF": 0
 		},
 	"\/loop-print.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/loop-print.php",
 		"oF": 0
 		},
 	"\/loop.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/loop.php",
 		"oF": 0
 		},
 	"\/page.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/page.php",
 		"oF": 0
 		},
 	"\/pagination.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/pagination.php",
 		"oF": 0
 		},
 	"\/search.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/search.php",
 		"oF": 0
 		},
 	"\/searchform.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/searchform.php",
 		"oF": 0
 		},
 	"\/sidebar.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/sidebar.php",
 		"oF": 0
 		},
 	"\/single.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/single.php",
 		"oF": 0
 		},
@@ -1255,18 +1255,18 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/style.css",
-		"oF": 3,
+		"oF": 2,
 		"oS": 1
 		},
 	"\/tag.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/tag.php",
 		"oF": 0
 		},
 	"\/template-demo.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/template-demo.php",
 		"oF": 0
 		},
@@ -1288,10 +1288,10 @@
 "manualImportLinks": {
 	},
 "projectAttributes": {
-	"creationDate": 512768505,
-	"displayValue": "Illinois Law Review",
-	"displayValueWasSetByUser": 1,
-	"iconImageName": "brackets_orange"
+	"creationDate": 514033442,
+	"displayValue": "lawreview2016-theme",
+	"displayValueWasSetByUser": 0,
+	"iconImageName": "brackets_purple"
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2072,7 +2072,7 @@
 			"optionString": ""
 			},
 		"no-extra-parens": {
-			"active": 1,
+			"active": 0,
 			"optionString": "'all', {'conditionalAssign': false, 'returnAssign': false, 'nestedBinaryExpressions': false, 'ignoreJSX': 'none'}"
 			},
 		"no-extra-semi": {
@@ -2092,7 +2092,7 @@
 			"optionString": ""
 			},
 		"no-global-assign": {
-			"active": 0,
+			"active": 1,
 			"optionString": "{'exceptions': []}"
 			},
 		"no-implicit-coercion": {
@@ -2300,7 +2300,7 @@
 			"optionString": "{'props': false}"
 			},
 		"no-self-compare": {
-			"active": 1,
+			"active": 0,
 			"optionString": ""
 			},
 		"no-sequences": {
@@ -2328,7 +2328,7 @@
 			"optionString": ""
 			},
 		"no-template-curly-in-string": {
-			"active": 1,
+			"active": 0,
 			"optionString": ""
 			},
 		"no-ternary": {
@@ -2384,12 +2384,12 @@
 			"optionString": ""
 			},
 		"no-unsafe-negation": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-unused-expressions": {
 			"active": 0,
-			"optionString": "{'allowShortCircuit': false, 'allowTernary': false}"
+			"optionString": "{'allowShortCircuit': false, 'allowTernary': false, 'allowTaggedTemplates': false}"
 			},
 		"no-unused-labels": {
 			"active": 1,
@@ -2408,7 +2408,7 @@
 			"optionString": ""
 			},
 		"no-useless-computed-key": {
-			"active": 1,
+			"active": 0,
 			"optionString": ""
 			},
 		"no-useless-concat": {
@@ -2544,7 +2544,7 @@
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false, 'ArrowFunctionExpression': false}}"
 			},
 		"require-yield": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"rest-spread-spacing": {
@@ -3015,13 +3015,13 @@
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.min.css",
+		"autoOutputPathFilenamePattern": "*-min.css",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"createSourceMap": 1,
-		"outputStyle": 1,
+		"createSourceMap": 0,
+		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0
 		},
@@ -3059,7 +3059,7 @@
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.min.js",
+		"autoOutputPathFilenamePattern": "*-min.js",
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
@@ -3083,8 +3083,8 @@
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "",
-		"autoOutputPathReplace2": "",
+		"autoOutputPathReplace1": "kit",
+		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsLESS": {
@@ -3094,8 +3094,8 @@
 		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 2,
-		"createSourceMap": 0,
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 1,
 		"disableJavascript": 0,
 		"ieCompatibility": 1,
 		"outputStyle": 0,
@@ -3107,7 +3107,7 @@
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
-		"autoOutputAction": 1,
+		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -3160,8 +3160,8 @@
 		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 2,
-		"createSourceMap": 1,
+		"autoOutputPathStyle": 0,
+		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"outputStyle": 0,
@@ -3188,7 +3188,7 @@
 		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 2,
+		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"importCSS": 0,
@@ -3198,7 +3198,7 @@
 		"shouldRunBless": 0
 		},
 	"languageDefaultsSVG": {
-		"autoOutputAction": 1,
+		"autoOutputAction": 2,
 		"autoOutputPathFilenamePattern": "*.svg",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -3212,7 +3212,7 @@
 		"autoOutputPathRelativePath": "\/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 2,
+		"autoOutputPathStyle": 0,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
 		"jsxMode": 0,
@@ -3228,7 +3228,7 @@
 	"languageDefaultsUserDefined": [
 		],
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/stylesheets",
 	"sourceFolderName": "source",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
@@ -3353,7 +3353,7 @@
 			"flagValue": -1
 			},
 		"screw-ie8": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"semicolons": {
