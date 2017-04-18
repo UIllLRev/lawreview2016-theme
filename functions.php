@@ -328,7 +328,7 @@ function pagination_links( $args = '' ) {
       $link = add_query_arg( $add_args, $link );
     $link .= $args['add_fragment'];
 
-    $page_links[] = '<a class="pagination-link" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['prev_text'] . '</a>';
+    $page_links[] = '<a class="pagination-previous" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['prev_text'] . '</a>';
   endif;
   for ( $n = 1; $n <= $total; $n++ ) :
     if ( $n == $current ) :
@@ -355,7 +355,7 @@ function pagination_links( $args = '' ) {
     if ( $add_args )
       $link = add_query_arg( $add_args, $link );
     $link .= $args['add_fragment'];
-    $page_links[] = '<a class="pagination-link" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['next_text'] . '</a>';
+    $page_links[] = '<a class="pagination-next" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['next_text'] . '</a>';
   endif;
   switch ( $args['type'] ) {
     case 'array' :
