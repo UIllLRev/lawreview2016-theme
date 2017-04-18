@@ -7,9 +7,9 @@
         <div class="column is-10 is-offset-1">
 
           <?php $post_types = lawreview_get_post_types(); ?>
-          <?php if ( have_posts() ): ?> 
+          <?php if ( have_posts() ): ?>
 
-            <?php while ( have_posts() ) : the_post(); 
+            <?php while ( have_posts() ) : the_post();
 
               $label = $post_types[get_field('ilr_post_type')];
               $subtitle = get_field('ilr_subtitle');
@@ -30,7 +30,7 @@
                   <?php endif; ?>
 
                   <!-- title -->
-                  <h1 class="title is-1"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+                  <h1 class="title is-1"><?php the_title(); ?></h1>
 
                   <!-- subtitle -->
                   <?php if ( !empty($subtitle) ) : ?>
@@ -68,16 +68,16 @@
                   <!-- body -->
                   <div class="body">
 
-                    <?php 
+                    <?php
 
                       if ( empty_content( $post->post_content ) && !empty_content( $post->post_excerpt ) ) {
-                        
+
                         echo '<p>' . get_the_excerpt() . '</p>';
-                      
+
                       } elseif ( !empty_content( $post->post_content ) ) {
 
                         the_content();
-                      
+
                       }
 
                     ?>

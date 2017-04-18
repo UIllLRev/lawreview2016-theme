@@ -27,7 +27,7 @@
                         </a>
                         <?php lawreview_nav(); ?>
                     </div>
-                    <div class="nav-right is-flex-none is-hidden-mobile">
+                    <div class="is-flex is-hidden-mobile">
                         <a href="https://twitter.com/UIllLRev" target="_blank" class="nav-item is-icon">
                             <span class="icon">
                                 <i class="fa fa-twitter"></i>
