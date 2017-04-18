@@ -382,7 +382,7 @@ function lawreviewwp_pagination()
         'format' => '?paged=%#%',
         'current' => max( 1, get_query_var('paged') ),
         'total' => $wp_query->max_num_pages,
-        'prev_next' => true,
+        'prev_next' => false,
         'type' => 'array',
     ));
 
@@ -394,9 +394,14 @@ function lawreviewwp_pagination()
     }
 }
 
-// Add class to pagination links
-function posts_link_attributes() {
-    return 'class="pagination-link"';
+// Add class to prev pagination link
+function posts_link_attributes_1() {
+    return 'class="pagination-previous"';
+}
+
+// Add class to next pagination link
+function posts_link_attributes_2() {
+    return 'class="pagination-next"';
 }
 
 // Custom Excerpts
@@ -610,8 +615,8 @@ remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
 // Add Filters
-add_filter('next_posts_link_attributes', 'posts_link_attributes');
-add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes_1');
+add_filter('next_posts_link_attributes', 'posts_link_attributes_2');
 add_filter('avatar_defaults', 'lawreviewgravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
