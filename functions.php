@@ -328,11 +328,11 @@ function pagination_links( $args = '' ) {
       $link = add_query_arg( $add_args, $link );
     $link .= $args['add_fragment'];
 
-    $page_links[] = '<a class="button" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['prev_text'] . '</a>';
+    $page_links[] = '<a class="pagination-link" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['prev_text'] . '</a>';
   endif;
   for ( $n = 1; $n <= $total; $n++ ) :
     if ( $n == $current ) :
-      $page_links[] = "<a class='button is-primary'>" . $args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number'] . "</a>";
+      $page_links[] = "<a class='pagination-link  is-current'>" . $args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number'] . "</a>";
       $dots = true;
     else :
       if ( $args['show_all'] || ( $n <= $end_size || ( $current && $n >= $current - $mid_size && $n <= $current + $mid_size ) || $n > $total - $end_size ) ) :
@@ -341,10 +341,10 @@ function pagination_links( $args = '' ) {
         if ( $add_args )
           $link = add_query_arg( $add_args, $link );
         $link .= $args['add_fragment'];
-        $page_links[] = "<a class='button' href='" . esc_url( apply_filters( 'paginate_links', $link ) ) . "'>" . $args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number'] . "</a>";
+        $page_links[] = "<a class='pagination-link' href='" . esc_url( apply_filters( 'paginate_links', $link ) ) . "'>" . $args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number'] . "</a>";
         $dots = true;
       elseif ( $dots && ! $args['show_all'] ) :
-        $page_links[] = '<a class="button is-disabled">' . __( '&hellip;' ) . '</a>';
+        $page_links[] = '<a class="pagination-link" disabled>' . __( '&hellip;' ) . '</a>';
         $dots = false;
       endif;
     endif;
@@ -355,7 +355,7 @@ function pagination_links( $args = '' ) {
     if ( $add_args )
       $link = add_query_arg( $add_args, $link );
     $link .= $args['add_fragment'];
-    $page_links[] = '<a class="button" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['next_text'] . '</a>';
+    $page_links[] = '<a class="pagination-link" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['next_text'] . '</a>';
   endif;
   switch ( $args['type'] ) {
     case 'array' :
@@ -388,17 +388,15 @@ function lawreviewwp_pagination()
 
     if ( is_array($pages) ) {
         $paged = ( get_query_var('paged') === 0 ) ? 1 : get_query_var('paged');
-        //echo '<ul>';
         foreach ( $pages as $page ) {
             echo '<li>' . $page . '</li>';
         }
-        //echo '</ul>';
     }
 }
 
 // Add class to pagination links
 function posts_link_attributes() {
-    return 'class="button"';
+    return 'class="pagination-link"';
 }
 
 // Custom Excerpts
