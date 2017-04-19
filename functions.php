@@ -697,6 +697,7 @@ function lawreview_custom_post_symposium()
         'supports'              => array(
                                         'title',
                                         'editor',
+                                        'page-attributes',
                                         'thumbnail',
                                         'revisions',
                                     ),
