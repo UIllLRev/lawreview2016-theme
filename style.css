@@ -5421,13 +5421,13 @@ a.nav-item {
     color: #f2590d;
     float: left;
     font-family: "Alegreya Sans", sans-serif;
-    font-size: 3.714rem;
+    font-size: 3.375rem;
     font-weight: 700;
     line-height: 0.875;
     padding: 1px 4px 0 0; }
     @media screen and (min-width: 769px), print {
       .single-post .post.single .post-content .body p:first-of-type::first-letter {
-        font-size: 4rem;
+        font-size: 4.5rem;
         padding-right: 6px; } }
   .online-rankings .post.single .post-content {
     max-width: initial; }

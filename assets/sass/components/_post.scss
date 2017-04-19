@@ -217,13 +217,13 @@
         color: $primary;
         float: left;
         font-family: $family-sans-serif;
-        font-size: 3.714rem;
+        font-size: 3.375rem;
         font-weight: $weight-bold;
         line-height: 0.875;
         padding: 1px 4px 0 0;
 
         @include tablet {
-          font-size: 4rem;
+          font-size: 4.5rem;
           padding-right: 6px;
         }
       }
