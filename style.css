@@ -4999,6 +4999,19 @@ h6 {
       .content .body {
         line-height: 1.8;
         text-align: justify; } }
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    font-weight: 700; }
+  .content h2 {
+    font-size: 2.625rem; }
+  .content h3 {
+    font-size: 2.125rem; }
+  .content h4 {
+    font-size: 1.5rem; }
   .content p, .content ul {
     font-size: 1rem; }
     @media screen and (min-width: 769px), print {
@@ -5628,12 +5641,13 @@ a.nav-item {
  */
 .pt-SubHead1 {
   font-variant: small-caps;
-  margin-top: 2em;
+  margin-top: 2rem;
   text-align: center; }
 
-div[id^="fn-"] {
-  margin-bottom: 16px;
-  font-size: 85%; }
+div[id^="fn-"],
+p.pt-FootNote {
+  margin-bottom: 1rem;
+  font-size: .875rem; }
 
 .masthead-section {
   margin-bottom: 1em;
@@ -5644,19 +5658,19 @@ div[id^="fn-"] {
   text-transform: uppercase;
   display: block;
   -webkit-column-span: all;
-  -moz-column-span: all;
-  column-span: all;
+     -moz-column-span: all;
+          column-span: all;
   margin-bottom: 1em; }
 
 .masthead-2-col {
   -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2; }
+     -moz-column-count: 2;
+          column-count: 2; }
 
 .masthead-3-col {
   -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
   text-align: center;
   margin-bottom: 1em; }
 
@@ -5664,7 +5678,7 @@ ul.collapse {
   list-style-type: none; }
 
 label.collapse {
-  background-color: #e84a27;
+  background-color: #f2590d;
   border-radius: 5px;
   padding: 3px 6px 3px 20px;
   position: relative;
@@ -5708,7 +5722,7 @@ input[type=checkbox].collapse + label::before {
   top: 0;
   left: 6px;
   -webkit-transform: translateY(50%);
-  transform: translateY(50%);
+          transform: translateY(50%);
   -webkit-transition: all .5s ease;
   transition: all .5s ease; }
 
@@ -5717,14 +5731,25 @@ input[type=checkbox]:checked.collapse + label.collapse {
 
 input[type=checkbox]:checked.collapse + label::before {
   -webkit-transform: rotate(90deg) translateX(70%) translateY(25%);
-  transform: rotate(90deg) translateX(70%) translateY(25%); }
+          transform: rotate(90deg) translateX(70%) translateY(25%); }
 
 .post-excerpt {
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 1em;
   text-align: justify; }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    background-color: #fff;
+    box-shadow: 0 4px 7px rgba(17, 17, 17, 0.1);
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0; }
+  .nav-menu .nav-item {
+    border-top: 1px solid rgba(211, 214, 219, 0.5);
+    padding: 10px; }
   .nav-menu.is-active {
     background-color: #fafcff;
     display: block;
@@ -5740,7 +5765,7 @@ input[type=checkbox]:checked.collapse + label::before {
     padding: 15px; }
   .nav-menu.is-active .nav-item:hover {
     background-color: #f5f7fa;
-    color: #e84a27; }
+    color: #f2590d; }
   .main::before {
     background-color: rgba(0, 0, 0, 0.2);
     content: '';
