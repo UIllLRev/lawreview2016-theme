@@ -592,7 +592,6 @@ add_action('init', 'lawreview_header_scripts'); // Add Custom Scripts to wp_head
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'lawreview_styles'); // Add Theme Stylesheet
 add_action('init', 'register_lawreview_menu'); // Add Law Review Menu
-//add_action('init', 'create_post_type_lawreview'); // Add our Law Review Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'lawreviewwp_pagination'); // Add custom Pagination
 add_action('wp_head', 'lawreview_track_posts'); // Add Popular Post tracking
@@ -622,9 +621,6 @@ add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars
 add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
-// add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected classes (Commented out by default)
-// add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected ID (Commented out by default)
-// add_filter('page_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> Page ID's (Commented out by default)
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
@@ -639,7 +635,6 @@ add_filter('posts_orderby', 'lawreview_custom_posts_orderby', 10, 2); // Sort by
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt
-
 
 
 
@@ -705,7 +700,7 @@ function lawreview_custom_post_symposium()
                                         'thumbnail',
                                         'revisions',
                                     ),
-        'taxonomies'            => array( 'category' ),
+        'taxonomies'            => 'category',
         'has_archive'           => true,
         'rewrite'               => array( 'slug' => 'symposium' ),
         'query_var'             => true,
