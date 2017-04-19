@@ -93,6 +93,12 @@
                   // 36 is the Print id
                   // 10 is the Online id
                 ),
+                array(
+                  'taxonomy' => 'category',
+                  'field' => 'term_id',
+                  'terms' => 138, // 138 is the Featured id
+                  'operator' => 'NOT IN'
+                ),
               ),
               'meta_query' => array(
                 array(

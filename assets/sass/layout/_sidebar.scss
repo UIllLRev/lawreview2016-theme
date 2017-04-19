@@ -9,10 +9,6 @@
     padding: 0 30px;
   }
 
-  .title {
-    margin: 0;
-  }
-
   /**
    * Modifier for `.sidebar.news`
    */
@@ -39,6 +35,7 @@
     .title {
       a {
         color: $gray-6;
+        font-size: 1rem;
 
         @include hover-focus {
           color: $link;

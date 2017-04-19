@@ -119,13 +119,13 @@ function lawreview_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . 'assets/js/vendors/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        wp_enqueue_script('conditionizr'); // Enqueue it!
+    	// wp_register_script('conditionizr', get_template_directory_uri() . '/assets/js/vendors/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+     //    wp_enqueue_script('conditionizr'); // Enqueue it!
 
-        wp_register_script('modernizr', get_template_directory_uri() . 'assets/js/vendors/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!
+        // wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendors/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+        // wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('lawreviewscripts', get_template_directory_uri() . 'assets/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
+        wp_register_script('lawreviewscripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('lawreviewscripts'); // Enqueue it!
 
         wp_register_script('fontawesome', '//use.fontawesome.com/1acee197ed.js', array(), '4.6.3');
@@ -328,11 +328,11 @@ function pagination_links( $args = '' ) {
       $link = add_query_arg( $add_args, $link );
     $link .= $args['add_fragment'];
 
-    $page_links[] = '<a class="button" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['prev_text'] . '</a>';
+    $page_links[] = '<a class="pagination-previous" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['prev_text'] . '</a>';
   endif;
   for ( $n = 1; $n <= $total; $n++ ) :
     if ( $n == $current ) :
-      $page_links[] = "<a class='button is-primary'>" . $args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number'] . "</a>";
+      $page_links[] = "<a class='pagination-link  is-current'>" . $args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number'] . "</a>";
       $dots = true;
     else :
       if ( $args['show_all'] || ( $n <= $end_size || ( $current && $n >= $current - $mid_size && $n <= $current + $mid_size ) || $n > $total - $end_size ) ) :
@@ -341,10 +341,10 @@ function pagination_links( $args = '' ) {
         if ( $add_args )
           $link = add_query_arg( $add_args, $link );
         $link .= $args['add_fragment'];
-        $page_links[] = "<a class='button' href='" . esc_url( apply_filters( 'paginate_links', $link ) ) . "'>" . $args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number'] . "</a>";
+        $page_links[] = "<a class='pagination-link' href='" . esc_url( apply_filters( 'paginate_links', $link ) ) . "'>" . $args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number'] . "</a>";
         $dots = true;
       elseif ( $dots && ! $args['show_all'] ) :
-        $page_links[] = '<a class="button is-disabled">' . __( '&hellip;' ) . '</a>';
+        $page_links[] = '<a class="pagination-link" disabled>' . __( '&hellip;' ) . '</a>';
         $dots = false;
       endif;
     endif;
@@ -355,7 +355,7 @@ function pagination_links( $args = '' ) {
     if ( $add_args )
       $link = add_query_arg( $add_args, $link );
     $link .= $args['add_fragment'];
-    $page_links[] = '<a class="button" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['next_text'] . '</a>';
+    $page_links[] = '<a class="pagination-next" href="' . esc_url( apply_filters( 'paginate_links', $link ) ) . '">' . $args['next_text'] . '</a>';
   endif;
   switch ( $args['type'] ) {
     case 'array' :
@@ -388,17 +388,20 @@ function lawreviewwp_pagination()
 
     if ( is_array($pages) ) {
         $paged = ( get_query_var('paged') === 0 ) ? 1 : get_query_var('paged');
-        //echo '<ul>';
         foreach ( $pages as $page ) {
             echo '<li>' . $page . '</li>';
         }
-        //echo '</ul>';
     }
 }
 
-// Add class to pagination links
-function posts_link_attributes() {
-    return 'class="button"';
+// Add class to prev pagination link
+function posts_link_attributes_1() {
+    return 'class="pagination-previous"';
+}
+
+// Add class to next pagination link
+function posts_link_attributes_2() {
+    return 'class="pagination-next"';
 }
 
 // Custom Excerpts
@@ -589,12 +592,11 @@ add_action('init', 'lawreview_header_scripts'); // Add Custom Scripts to wp_head
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'lawreview_styles'); // Add Theme Stylesheet
 add_action('init', 'register_lawreview_menu'); // Add Law Review Menu
-//add_action('init', 'create_post_type_lawreview'); // Add our Law Review Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'lawreviewwp_pagination'); // Add custom Pagination
 add_action('wp_head', 'lawreview_track_posts'); // Add Popular Post tracking
 
-// Add feeds
+// Add Feeds
 add_feed('rss2', 'lawreview_feed_rss2');
 
 // Remove Actions
@@ -612,16 +614,13 @@ remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
 // Add Filters
-add_filter('next_posts_link_attributes', 'posts_link_attributes');
-add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes_1');
+add_filter('next_posts_link_attributes', 'posts_link_attributes_2');
 add_filter('avatar_defaults', 'lawreviewgravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars
 add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
-// add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected classes (Commented out by default)
-// add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected ID (Commented out by default)
-// add_filter('page_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> Page ID's (Commented out by default)
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
@@ -637,69 +636,80 @@ add_filter('posts_orderby', 'lawreview_custom_posts_orderby', 10, 2); // Sort by
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt
 
-// Shortcodes
-add_shortcode('lawreview_shortcode_demo', 'lawreview_shortcode_demo'); // You can place [lawreview_shortcode_demo] in Pages, Posts now.
-add_shortcode('lawreview_shortcode_demo_2', 'lawreview_shortcode_demo_2'); // Place [lawreview_shortcode_demo_2] in Pages, Posts now.
 
-// Shortcodes above would be nested like this -
-// [lawreview_shortcode_demo] [lawreview_shortcode_demo_2] Here's the page title! [/lawreview_shortcode_demo_2] [/lawreview_shortcode_demo]
 
-/*------------------------------------*\
-	Custom Post Types
-\*------------------------------------*/
 
-// Create 1 Custom Post type for a Demo
-function create_post_type_lawreview()
+
+
+
+
+/**
+ * Custom Post Type: Symposium
+ * ===========================
+ *
+ * Create a custom post type for law review symposiums.
+ * ------------------------------------------------------------------------- */
+
+function lawreview_custom_post_symposium()
 {
-    register_taxonomy_for_object_type('category', 'lawreview'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'lawreview');
-    register_post_type('lawreview', // Register Custom Post Type
-        array(
-        'labels' => array(
-            'name' => __('Law Review Custom Post', 'lawreview'), // Rename these to suit
-            'singular_name' => __('Law Review Custom Post', 'lawreview'),
-            'add_new' => __('Add New', 'lawreview'),
-            'add_new_item' => __('Add New Law Review Custom Post', 'lawreview'),
-            'edit' => __('Edit', 'lawreview'),
-            'edit_item' => __('Edit Law Review Custom Post', 'lawreview'),
-            'new_item' => __('New Law Review Custom Post', 'lawreview'),
-            'view' => __('View Law Review Custom Post', 'lawreview'),
-            'view_item' => __('View Law Review Custom Post', 'lawreview'),
-            'search_items' => __('Search Law Review Custom Post', 'lawreview'),
-            'not_found' => __('No Law Review Custom Posts found', 'lawreview'),
-            'not_found_in_trash' => __('No Law Review Custom Posts found in Trash', 'lawreview')
-        ),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom Law Review post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
-    ));
-}
 
-/*------------------------------------*\
-	ShortCode Functions
-\*------------------------------------*/
+    // See `get_post_type_labels()` for label keys.
+    $labels = array(
+        'name'                  => _x( 'Symposiums', 'lawreview' ),
+        'singular_name'         => _x( 'Symposium', 'lawreview' ),
+        'menu_name'             => _x( 'Symposiums', 'lawreview' ),
+        'name_admin_bar'        => _x( 'Symposium', 'lawreview' ),
+        'add_new'               => __( 'Add New', 'lawreview' ),
+        'add_new_item'          => __( 'Add New Symposium', 'lawreview' ),
+        'new_item'              => __( 'New Symposium', 'lawreview' ),
+        'edit_item'             => __( 'Edit Symposium', 'lawreview' ),
+        'view_item'             => __( 'View Symposium', 'lawreview' ),
+        'all_items'             => __( 'All Symposiums', 'lawreview' ),
+        'search_items'          => __( 'Search Symposiums', 'lawreview' ),
+        'parent_item_colon'     => __( 'Parent Symposium:', 'lawreview' ),
+        'not_found'             => __( 'No symposiums found', 'lawreview' ),
+        'not_found_in_trash'    => __( 'No symposiums found in Trash', 'lawreview' ),
+        'featured_image'        => _x( 'Symposium Image', 'lawreview' ),
+        'set_featured_image'    => _x( 'Set Symposium image', 'lawreview' ),
+        'remove_featured_image' => _x( 'Remove symposium image', 'lawreview' ),
+        'use_featured_image'    => _x( 'Use as symposium image', 'lawreview' ),
+        'archives'              => _x( 'Symposiums archives', 'lawreview' ),
+        'insert_into_item'      => _x( 'Insert into symposium', 'lawreview' ),
+        'uploaded_to_this_item' => _x( 'Uploaded to this symposium', 'lawreview' ),
+        'filter_items_list'     => _x( 'Filter symposiums list', 'lawreview' ),
+        'items_list_navigation' => _x( 'Symposiums list navigation', 'lawreview' ),
+        'items_list'            => _x( 'Symposiums list', 'lawreview' ),
+    );
 
-// Shortcode Demo with Nested Capability
-function lawreview_shortcode_demo($atts, $content = null)
-{
-    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
-}
+    // See `register_post_type()` for args parameters.
+    $args = array(
+        'labels'                => $labels,
+        'public'                => true,
+        'hierarchical'          => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'menu_position'         => 4,
+        'menu_icon'             => 'dashicons-book-alt',
+        'capability_type'       => 'post',
+        'supports'              => array(
+                                        'title',
+                                        'editor',
+                                        'page-attributes',
+                                        'thumbnail',
+                                        'revisions',
+                                    ),
+        'taxonomies'            => array( 'category' ),
+        'has_archive'           => true,
+        'rewrite'               => array( 'slug' => 'symposium' ),
+        'query_var'             => true,
+        'can_export'            => true,
+    );
 
-// Shortcode Demo with simple <h2> tag
-function lawreview_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-{
-    return '<h2>' . $content . '</h2>';
+    register_post_type( 'ilr_symposium', $args );
 }
+add_action( 'init', 'lawreview_custom_post_symposium');
 
 ?>

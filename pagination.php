@@ -1,4 +1,4 @@
-<nav class="pagination">
+<nav class="pagination is-centered">
 
   <?php
 
@@ -10,20 +10,20 @@
       if ( $prev_link ) {
         echo $prev_link;
       } else {
-        echo '<a class="button is-disabled">Previous</a>';
+        echo '<a class="pagination-previous" disabled>Previous</a>';
       }
 
       if ( $next_link ) {
         echo $next_link;
       } else {
-        echo '<a class="button is-disabled">Next page</a>';
+        echo '<a class="pagination-next" disabled>Next page</a>';
       }
 
     }
 
   ?>
 
-  <ul>
+  <ul class="pagination-list">
   	<?php lawreviewwp_pagination(); ?>
   </ul>
 </nav>

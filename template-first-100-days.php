@@ -7,37 +7,35 @@
       	<div class="columns">
       		<div clas="column">
 
-						<h1><?php the_title(); ?></h1>
+				<h1><?php the_title(); ?></h1>
 
-					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-						<!-- article -->
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-							<?php the_content(); ?>
-
-							<?php // comments_template( '', true ); ?>
-
-							<br class="clear">
-
-							<?php edit_post_link(); ?>
-
-						</article>
-						<!-- /article -->
-
-					<?php endwhile; ?>
-
-					<?php else: ?>
-
-						<!-- article -->
-						<article>
-
-							<h2><?php _e( 'Sorry, nothing to display.', 'lawreview' ); ?></h2>
-
-						</article>
-						<!-- /article -->
-
-					<?php endif; ?>
+				<?php
+				    $args = array(
+				      'post_type' => 'ilr_symposium',
+				      'tax_query' => array(
+				        array(
+				          'taxonomy' => 'category',
+				          'field' => 'slug',
+				          'terms' => 'first-100-days'
+				        )
+				      )
+				    );
+				    $symposium = new WP_Query( $args );
+				    if( $symposium->have_posts() ) {
+				      while( $symposium->have_posts() ) {
+				        $symposium->the_post();
+				        ?>
+				          <h2 class="title is-3"><?php the_title() ?></h2>
+				          <div class="content">
+				            <?php the_content() ?>
+				          </div>
+				        <?php
+				      }
+				    }
+				    else {
+				      echo 'Nothing found!';
+				    }
+				  ?>
 
 					</div>
 				</div>
