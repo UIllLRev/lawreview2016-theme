@@ -640,69 +640,80 @@ add_filter('posts_orderby', 'lawreview_custom_posts_orderby', 10, 2); // Sort by
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt
 
-// Shortcodes
-add_shortcode('lawreview_shortcode_demo', 'lawreview_shortcode_demo'); // You can place [lawreview_shortcode_demo] in Pages, Posts now.
-add_shortcode('lawreview_shortcode_demo_2', 'lawreview_shortcode_demo_2'); // Place [lawreview_shortcode_demo_2] in Pages, Posts now.
 
-// Shortcodes above would be nested like this -
-// [lawreview_shortcode_demo] [lawreview_shortcode_demo_2] Here's the page title! [/lawreview_shortcode_demo_2] [/lawreview_shortcode_demo]
 
-/*------------------------------------*\
-	Custom Post Types
-\*------------------------------------*/
 
-// Create 1 Custom Post type for a Demo
-function create_post_type_lawreview()
+
+
+
+
+
+/**
+ * Custom Post Type: Symposium
+ * ===========================
+ *
+ * Create a custom post type for law review symposiums.
+ * ------------------------------------------------------------------------- */
+
+function lawreview_custom_post_symposium()
 {
-    register_taxonomy_for_object_type('category', 'lawreview'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'lawreview');
-    register_post_type('lawreview', // Register Custom Post Type
-        array(
-        'labels' => array(
-            'name' => __('Law Review Custom Post', 'lawreview'), // Rename these to suit
-            'singular_name' => __('Law Review Custom Post', 'lawreview'),
-            'add_new' => __('Add New', 'lawreview'),
-            'add_new_item' => __('Add New Law Review Custom Post', 'lawreview'),
-            'edit' => __('Edit', 'lawreview'),
-            'edit_item' => __('Edit Law Review Custom Post', 'lawreview'),
-            'new_item' => __('New Law Review Custom Post', 'lawreview'),
-            'view' => __('View Law Review Custom Post', 'lawreview'),
-            'view_item' => __('View Law Review Custom Post', 'lawreview'),
-            'search_items' => __('Search Law Review Custom Post', 'lawreview'),
-            'not_found' => __('No Law Review Custom Posts found', 'lawreview'),
-            'not_found_in_trash' => __('No Law Review Custom Posts found in Trash', 'lawreview')
-        ),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom Law Review post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
-    ));
-}
 
-/*------------------------------------*\
-	ShortCode Functions
-\*------------------------------------*/
+    // See `get_post_type_labels()` for label keys.
+    $labels = array(
+        'name'                  => _x( 'Symposiums', 'lawreview' ),
+        'singular_name'         => _x( 'Symposium', 'lawreview' ),
+        'menu_name'             => _x( 'Symposiums', 'lawreview' ),
+        'name_admin_bar'        => _x( 'Symposium', 'lawreview' ),
+        'add_new'               => __( 'Add New', 'lawreview' ),
+        'add_new_item'          => __( 'Add New Symposium', 'lawreview' ),
+        'new_item'              => __( 'New Symposium', 'lawreview' ),
+        'edit_item'             => __( 'Edit Symposium', 'lawreview' ),
+        'view_item'             => __( 'View Symposium', 'lawreview' ),
+        'all_items'             => __( 'All Symposiums', 'lawreview' ),
+        'search_items'          => __( 'Search Symposiums', 'lawreview' ),
+        'parent_item_colon'     => __( 'Parent Symposium:', 'lawreview' ),
+        'not_found'             => __( 'No symposiums found', 'lawreview' ),
+        'not_found_in_trash'    => __( 'No symposiums found in Trash', 'lawreview' ),
+        'featured_image'        => _x( 'Symposium Image', 'lawreview' ),
+        'set_featured_image'    => _x( 'Set Symposium image', 'lawreview' ),
+        'remove_featured_image' => _x( 'Remove symposium image', 'lawreview' ),
+        'use_featured_image'    => _x( 'Use as symposium image', 'lawreview' ),
+        'archives'              => _x( 'Symposiums archives', 'lawreview' ),
+        'insert_into_item'      => _x( 'Insert into symposium', 'lawreview' ),
+        'uploaded_to_this_item' => _x( 'Uploaded to this symposium', 'lawreview' ),
+        'filter_items_list'     => _x( 'Filter symposiums list', 'lawreview' ),
+        'items_list_navigation' => _x( 'Symposiums list navigation', 'lawreview' ),
+        'items_list'            => _x( 'Symposiums list', 'lawreview' ),
+    );
 
-// Shortcode Demo with Nested Capability
-function lawreview_shortcode_demo($atts, $content = null)
-{
-    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
-}
+    // See `register_post_type()` for args parameters.
+    $args = array(
+        'label'                 => $labels,
+        'public'                => true,
+        'hierarchical'          => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'menu_position'         => null,
+        'menu_icon'             => 'dashicons-book-alt',
+        'capability_type'       => 'post',
+        'supports'              => array(
+                                        'title',
+                                        'editor',
+                                        'thumbnail',
+                                        'revisions',
+                                    ),
+        'taxonomies'            => array( 'category' ),
+        'has_archive'           => true,
+        'rewrite'               => array( 'slug' => 'symposium' ),
+        'query_var'             => true,
+        'can_export'            => true,
+    );
 
-// Shortcode Demo with simple <h2> tag
-function lawreview_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-{
-    return '<h2>' . $content . '</h2>';
+    register_post_type( 'ilr_symposium', $args );
 }
+add_action( 'init', 'lawreview_custom_post_symposium');
 
 ?>
