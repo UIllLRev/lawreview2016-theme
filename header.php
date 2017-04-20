@@ -33,6 +33,11 @@
                                 <i class="fa fa-twitter"></i>
                             </span>
                         </a>
+                        <a href="https://twitter.com/UIllLRev" target="_blank" class="nav-item is-icon">
+                            <span class="icon">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
                         <a href="https://www.facebook.com/IllinoisLawReview" target="_blank" class="nav-item is-icon">
                             <span class="icon">
                                 <i class="fa fa-facebook"></i>
