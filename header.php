@@ -17,8 +17,9 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+    <?php if ( ! is_page('First 100 Days') ): ?>
 		<!-- header -->
-		<header class="header" role="banner">
+		<header class="header has-transition" role="banner">
             <div class="container">
                 <nav class="nav nav-primary" role="navigation">
                     <div class="nav-left">
@@ -28,11 +29,6 @@
                         <?php lawreview_nav(); ?>
                     </div>
                     <div class="is-flex is-hidden-mobile">
-                        <a href="https://twitter.com/UIllLRev" target="_blank" class="nav-item is-icon">
-                            <span class="icon">
-                                <i class="fa fa-twitter"></i>
-                            </span>
-                        </a>
                         <a href="https://twitter.com/UIllLRev" target="_blank" class="nav-item is-icon">
                             <span class="icon">
                                 <i class="fa fa-twitter"></i>
@@ -58,3 +54,4 @@
             </div>
 		</header>
 		<!-- /header -->
+    <?php endif; ?>
