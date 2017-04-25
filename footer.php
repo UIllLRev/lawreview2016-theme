@@ -23,6 +23,16 @@
   ga('create', 'UA-22837806-1', 'illinoislawreview.org');
   ga('send', 'pageview');
   </script>
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+
+  <!-- Mailchimp -->
+  <script>
+    function showMailingPopUp() {
+        require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"f03cd499dcf95cd5380c4d7cf","lid":"5385570c73"}) })
+    };
+
+    document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+  </script>
 
   <?php wp_footer(); ?>
 
