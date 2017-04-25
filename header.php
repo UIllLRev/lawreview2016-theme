@@ -28,6 +28,20 @@
                         <?php lawreview_nav(); ?>
                     </div>
                     <div class="is-flex is-hidden-mobile">
+                        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+
+                        <script>
+                        function showMailingPopUp() {
+                            require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"f03cd499dcf95cd5380c4d7cf","lid":"5385570c73"}) })
+                        };
+
+                        document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+                        </script>
+                        <a target="_blank" id="open-popup" class="nav-item is-icon">
+                            <span class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        </a>
                         <a href="https://twitter.com/UIllLRev" target="_blank" class="nav-item is-icon">
                             <span class="icon">
                                 <i class="fa fa-twitter"></i>

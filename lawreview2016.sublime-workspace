@@ -1,0 +1,686 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Sympo",
+				"Symposiums"
+			],
+			[
+				"not_found",
+				"not_found_in_trash"
+			],
+			[
+				"law",
+				"lawreview_custom_post_article"
+			],
+			[
+				"register",
+				"register_post_type"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 2500,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 33055,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 51.0,
+		"last_filter": "sql",
+		"selected_items":
+		[
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass"
+	],
+	"file_history":
+	[
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-config.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/.htaccess",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/components/_post.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/elements/_content.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/sass/elements/content.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/shame/_shame.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/components/_nav.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/pagination.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/layout/_sidebar.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/header.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/single.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/elements/_tag.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/sass/components/nav.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/css/main.css",
+		"/Users/chrismlusk/Code/lawreview2016-theme/style.css",
+		"/Users/chrismlusk/Code/lawreview2016-theme/functions.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/style-BACKUP.css",
+		"/Users/chrismlusk/Code/lawreview2016-theme/.gitignore",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/utilities/_variables.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/sass/utilities/mixins.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/main.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/bulma.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/layout/_hero.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/layout/_header.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/grid/_grid.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/grid/_columns.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/sass/grid/columns.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/layout/_footer.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/elements/_title.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/elements/_label.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/components/_table-of-contents.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/components/_pagination.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/sass/utilities/animations.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/sass/utilities/variables.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/sass/utilities/initial-variables.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/sass/utilities/derived-variables.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/utilities/_helpers.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/layout/_main.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/base/_generic.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/base/_typography.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/utilities/README.md",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/vendors/bulma/sass/base/generic.sass",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/base/README.md",
+		"/Users/chrismlusk/Desktop/ILR mu-plugins/lawreview/functions.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/template-home.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/sidebar.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/template-first-100-days.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/search.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/author.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/stylesheets/abstracts/_variables.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/pages/_first-100-days.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/template-demo.php",
+		"/Users/chrismlusk/Code/lawreview2016-theme/stylesheets/pages/_first-100-days.scss",
+		"/Users/chrismlusk/Code/lawreview2016-theme/stylesheets/main.scss",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/SmartMarkdown.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/Can I Use.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/bh_core.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/CodeKit.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/CodeKit Commands/CodeKit.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/ApplySyntax.sublime-settings"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"// null = at the bottom of the menu",
+			"http://localhost/test-site",
+			"www.example.com",
+			"Articles",
+			"'symposium'",
+			"'Symposium'",
+			"'symposium'",
+			"'Symposium'",
+			"'Symposium",
+			"'Symposiums'",
+			"awreview_custom_post_symposium",
+			"create_post_type_lawreview",
+			".nav-menu",
+			"font-size: 1rem;",
+			"$size-6",
+			"white",
+			"#e84a27",
+			"orange",
+			"-moz-",
+			"-webkit-",
+			"s_link_at",
+			"nk_attrib",
+			"link_attribute",
+			"osts_link_attributes",
+			"posts_link_attributes",
+			"next_text",
+			"prev_text",
+			"$link-hover",
+			"$grey-darker",
+			"$gray-3",
+			"conditionizr",
+			"$nav-height",
+			"conditional_script",
+			"<<<<<<< HEAD",
+			"on-event",
+			"color: $primary-color",
+			"breakpoint('tablet')",
+			"0, 0, 0,",
+			"breakpoint('tablet')",
+			"$speed-2x",
+			"$speed-4x",
+			"breakpoint('desktop')",
+			"breakpoint('tablet')",
+			"breakpoint('widescreen')",
+			"@include on-event",
+			"$primary-color",
+			"$size-6",
+			".post.single .post-meta",
+			"gray-3",
+			"primary",
+			"$size-6",
+			"Articles",
+			"article",
+			"Article",
+			"articles",
+			"Article",
+			"Articles",
+			"tom_post_article",
+			"post_tag",
+			"create_post_type_lawreview",
+			"get_template_directory_uri()",
+			"directory_uri()",
+			"get_template_directory_uri()",
+			"_directory_uri() . ",
+			"/img/",
+			" !default",
+			" ",
+			" !default",
+			"mport '",
+			"// "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1188,
+								1188
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"auto_complete": true,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"git_gutter_enabled": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 389.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33055,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23225,
+								23225
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"auto_complete": true,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"git_gutter_enabled": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 13207.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "lawreview2016.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"function",
+				"wp-content/themes/lawreview2016/functions.php"
+			],
+			[
+				"_nav",
+				"assets/sass/components/_nav.scss"
+			],
+			[
+				"content",
+				"assets/sass/vendors/bulma/sass/elements/content.sass"
+			],
+			[
+				"head",
+				"header.php"
+			],
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"_side",
+				"assets/sass/layout/_sidebar.scss"
+			],
+			[
+				"singl",
+				"single.php"
+			],
+			[
+				"header",
+				"header.php"
+			],
+			[
+				"_tag",
+				"assets/sass/elements/_tag.scss"
+			],
+			[
+				"style",
+				"style.css"
+			],
+			[
+				"main.css",
+				"assets/css/main.css"
+			],
+			[
+				"conten",
+				"assets/sass/elements/_content.scss"
+			],
+			[
+				"post",
+				"assets/sass/components/_post.scss"
+			],
+			[
+				"nav",
+				"assets/sass/vendors/bulma/sass/components/nav.sass"
+			],
+			[
+				"styl",
+				"style.css"
+			],
+			[
+				"mixin",
+				"assets/sass/vendors/bulma/sass/utilities/mixins.sass"
+			],
+			[
+				"main.cs",
+				"assets/css/main.css"
+			],
+			[
+				"_post",
+				"assets/sass/components/_post.scss"
+			],
+			[
+				"bulma.sas",
+				"assets/sass/vendors/bulma/bulma.sass"
+			],
+			[
+				"main.scss",
+				"assets/sass/main.scss"
+			],
+			[
+				"main.scs",
+				"assets/sass/main.scss"
+			],
+			[
+				"_pag",
+				"assets/sass/components/_pagination.scss"
+			],
+			[
+				"varia",
+				"assets/sass/vendors/bulma/sass/utilities/variables.sass"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"_var",
+				"assets/sass/utilities/_variables.scss"
+			],
+			[
+				"_varia",
+				"stylesheets/abstracts/_variables.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 285.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
