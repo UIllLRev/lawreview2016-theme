@@ -27,11 +27,9 @@
 
   <!-- Mailchimp -->
   <script>
-    function showMailingPopUp() {
+    document.getElementById("open-popup").addEventListener("click", function (event) {
         require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"f03cd499dcf95cd5380c4d7cf","lid":"5385570c73"}) })
-    };
-
-    document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+    });
   </script>
 
   <?php wp_footer(); ?>
