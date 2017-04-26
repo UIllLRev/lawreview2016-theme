@@ -6,54 +6,56 @@
 
         var BODY = $('body');
         var PAGE = $('#f100d');
+        var HEADER = $('.header');
+        var NAV_ITEM = $('.nav-item');
+
 
 
 
         //
-        // Trigger page-load animation
-        // ===========================
+        // Trigger scroll watcher
+        // ======================
         //
-        // The `<main>` block has an `.intro` class applied that, when removed,
-        // triggers a layout adjustment for a smooth page-load animation.
+        // 1. The `<main>` block has an `.intro-transition` class applied
+        //    that, when removed, triggers a layout adjustment.
+        //
+        // 2. Add `.is-inverse` to header on scroll.
+        //
+        // 3. Remove `.is-inverse` when the window reaches the top of the page.
+        //
+        // 4. Remove `.content-is-hidden` when each element comes into the
+        //    viewport and switch `.is-active` on nav items.
         // --------------------------------------------------------------------
 
-        setTimeout(function() {
-            PAGE.removeClass('intro-transition');
-        }, 400);
+        var watcher = new ScrollWatcher();
+        var watching_elements = [
+            '#f100d_introduction',
+            '#f100d_topics',
+            '#f100d_contributors'
+        ];
 
+        watcher.on('page:load', function(event) {
+            window.setTimeout( () => {
+                PAGE.removeClass('intro-transition'); // 1
+            }, 400);
+        });
 
-
-
-        //
-        // Trigger scroll animations
-        // =========================
-        //
-        // 1. Add `.is-inverse` to header on scroll.
-        //
-        // 2. Remove `.is-inverse` when the window reaches the top of the page.
-        //
-        // 3. Remove `.content-is-hidden` when elements come into the viewport.
-        // --------------------------------------------------------------------
-
-        var scroll = new ScrollWatcher();
-
-        scroll.on('scrolling', function() {
-            if ( ! scroll.windowAtTop() ) {
-                $('.header').addClass('is-inverse'); // 1
+        watcher.on('scrolling', function() {
+            if ( ! watcher.windowAtTop() ) {
+                HEADER.addClass('is-inverse'); // 2
             } else {
-                $('.header').removeClass('is-inverse'); // 2
+                HEADER.removeClass('is-inverse'); // 3
             }
         });
 
-        scroll.watch('#f100d_topics', 400)
-          .on('enter', function() {
-            $('#f100d_topics').removeClass('content-is-hidden'); // 3
-          });
-
-        scroll.watch('#f100d_contributors', 400)
-          .on('enter', function() {
-            $('#f100d_contributors').removeClass('content-is-hidden'); // 3
-          });
+        $.each( watching_elements, function(i, element) { // 4
+            watcher.watch(element, { top: 600, bottom: -400 })
+                .on('enter', function() {
+                    $('.nav-item.is-active').removeClass('is-active');
+                    $(element).removeClass('content-is-hidden');
+                    $('a[href=' + element + ']').addClass('is-active');
+                });
+        });
 
 
 
@@ -69,10 +71,10 @@
         // 3. Add `.is-active` to the clicked item.
         // --------------------------------------------------------------------
 
-        $('.nav-item').on('click', function() {
+        NAV_ITEM.on('click', function() {
 
             if ( ! $(this).hasClass('is-active') ) { // 1
-                $('.nav-item').removeClass('is-active'); // 2
+                NAV_ITEM.removeClass('is-active'); // 2
                 $(this).addClass('is-active'); // 3
             }
         });
