@@ -42,7 +42,7 @@ a.nav-item {
     }
   }
 
-  .single-post .header & {
+  .single .header & {
     color: $link-hover;
 
     @include hover-focus {
@@ -76,7 +76,7 @@ a.nav-item {
     }
 
     .header.is-inverse &,
-    .single-post .header & {
+    .single .header & {
       color: $link;
 
       @include hover-focus {
@@ -119,8 +119,8 @@ a.nav-item {
         }
       }
 
-      // Adjust fill when on page with `.single-post` class in `<body>`
-      .single-post .header & {
+      // Adjust fill when on page with `.single` class in `<body>`
+      .single .header & {
         fill: $black;
       }
     }

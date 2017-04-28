@@ -119,25 +119,26 @@ function lawreview_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-        wp_register_script('lawreviewscripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
-        wp_enqueue_script('lawreviewscripts'); // Enqueue it!
+        wp_register_script('scroll-watcher', '//cdn.jsdelivr.net/scroll-watcher/latest/scroll-watcher.min.js', array('jquery'));
+        wp_enqueue_script('scroll-watcher');
 
-        wp_register_script('fontawesome', '//use.fontawesome.com/1acee197ed.js', array(), '4.6.3');
+        wp_register_script('fontawesome', '//use.fontawesome.com/1acee197ed.js', array(), '4.7.0');
         wp_enqueue_script('fontawesome');
+
+        wp_register_script('lawreviewscripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), '1.0.0', true); // Custom scripts
+        wp_enqueue_script('lawreviewscripts'); // Enqueue it!
     }
 }
 
 // Loading Conditional Scripts
 function lawreview_conditional_scripts()
 {
-    if ( is_page('First 100 Days') ) {
 
-        wp_register_script('scroll-watcher', '//cdn.jsdelivr.net/scroll-watcher/latest/scroll-watcher.min.js', array('jquery'));
-        wp_enqueue_script('scroll-watcher');
+  wp_register_script('first-100-days-js', get_template_directory_uri() . '/first-100-days/js/first-100-days.min.js', array('jquery', 'scroll-watcher'), '1.0.0');
 
-        wp_register_script('first-100-days-js', get_template_directory_uri() . '/assets/js/first-100-days.js', array('jquery', 'scroll-watcher'), '1.0.0'); // Our Script for Conditional loading
-        wp_enqueue_script('first-100-days-js'); // Enqueue it!
-    }
+  if ( is_page( 'First 100 Days' ) || ( is_single() && in_category('First 100 Days') ) ) {
+    wp_enqueue_script('first-100-days-js');
+  }
 }
 
 // Load Law Review styles
@@ -162,10 +163,12 @@ function lawreview_styles()
 // Load Law Review conditional styles
 function lawreview_conditional_styles()
 {
-    if ( is_page('First 100 Days') ) {
-        wp_register_style('first-100-days-css', get_template_directory_uri() . '/assets/css/first-100-days.css', array('lawreview-styles'), '1.0');
-        wp_enqueue_style('first-100-days-css'); // Enqueue it!
-    }
+
+  wp_register_style('first-100-days-css', get_template_directory_uri() . '/first-100-days/css/first-100-days.css', array('lawreview-styles'), '1.0');
+
+  if ( is_page( 'First 100 Days' ) || ( is_single() && in_category('First 100 Days') ) ) {
+    wp_enqueue_style('first-100-days-css');
+  }
 }
 
 // Register Law Review Navigation
@@ -453,6 +456,26 @@ function lawreview_no_featured_permalink($cat, $cats, $post)
     }
 
     return $cat;
+}
+
+function lawreview_get_posts_by_category_id( $category_id, $offset = 0 )
+{
+    $args = array(
+        'posts_per_page'  => 9999, // set a high number so `offset` works
+        'offset'          => $offset,
+        'category'        => $category_id,
+        'orderby'         => 'menu_order',
+        'order'           => 'ASC',
+        'post_type'       => 'ilr_symposium',
+        'post_status'     => 'publish',
+    );
+
+    $posts = new WP_Query( $args );
+
+    while ( $posts->have_posts() ) : $posts->the_post();
+        echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+    endwhile;
+
 }
 
 function lawreview_get_post_types() {
@@ -917,5 +940,27 @@ function lawreview_reorder_menus( $menu_order )
 }
 add_filter( 'custom_menu_order', '__return_true' );
 add_filter( 'menu_order', 'lawreview_reorder_menus' );
+
+
+
+
+/**
+ * First 100 Days post template
+ * ============================
+ *
+ * Assign posts with the "First 100 Days" category to a custom template.
+ * ----------------------------------------------------------------------------
+ */
+
+add_filter( 'single_template', function($single_template) {
+
+  global $post;
+
+  if ( in_category('First 100 Days') ) {
+    $single_template = dirname( __FILE__ ) . '/first-100-days/single.php';
+  }
+  return $single_template;
+
+}, 10, 3);
 
 ?>
