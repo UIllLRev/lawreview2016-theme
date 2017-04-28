@@ -23,6 +23,7 @@
   ga('create', 'UA-22837806-1', 'illinoislawreview.org');
   ga('send', 'pageview');
   </script>
+
   <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 
   <!-- Mailchimp -->

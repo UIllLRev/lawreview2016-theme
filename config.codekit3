@@ -1307,22 +1307,10 @@
 		"oAP": "\/first-100-days\/template-first-100-days.php",
 		"oF": 0
 		},
-	"\/footer.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/footer.php",
-		"oF": 0
-		},
 	"\/functions.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/functions.php",
-		"oF": 0
-		},
-	"\/header.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/header.php",
 		"oF": 0
 		},
 	"\/includes\/ README.md": {
