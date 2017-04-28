@@ -8,21 +8,21 @@
         var didScroll = null;
         var lastScrollTop = 0;
         var delta = 5;
-        var header = $('.header');
+        var header = $('.header.has-transition');
         // var headerHeight = header.outerHeight();
 
-        $(window).scroll(function(event){
+        $(window).scroll(function(){
             didScroll = true;
         });
 
         setInterval(function() {
             if ( didScroll ) {
-                hasScrolled();
+                elemHasScrolled(header, 150);
                 didScroll = false;
             }
         }, 250);
 
-        function hasScrolled() {
+        function elemHasScrolled(elem, scrollVal) {
             if ( $(window).width() >= 768 ) {
                 var st = $(window).scrollTop();
 
@@ -33,14 +33,14 @@
 
                 // If scrolled down enough, hide and inverse the header
                 if ( st > lastScrollTop && st > delta ){
-                    header.addClass('is-hidden');
+                    elem.addClass('is-hidden');
                 } else if ( st + $(window).height() < $(document).height() ) {
-                        header.removeClass('is-hidden').addClass('is-inverse');
+                        elem.removeClass('is-hidden').addClass('is-inverse');
                 }
 
-                // If scrolled up past 150px, remove inverse class from header
-                if ( st < 150 ) {
-                    header.removeClass('is-inverse');
+                // If scrolled past the `scrollVal`, remove inverse class
+                if ( st < scrollVal ) {
+                    elem.removeClass('is-inverse');
                 }
 
                 lastScrollTop = st;
@@ -54,7 +54,7 @@
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                    if (target.length) {
                      $('html,body').animate({
-                         scrollTop: target.offset().top -120
+                         scrollTop: target.offset().top -60
                     }, 1000);
                     return false;
                 }

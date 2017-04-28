@@ -17,8 +17,9 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+    <?php if ( ! is_page('First 100 Days') ): ?>
 		<!-- header -->
-		<header class="header" role="banner">
+		<header class="header has-transition" role="banner">
             <div class="container">
                 <nav class="nav nav-primary" role="navigation">
                     <div class="nav-left">
@@ -58,3 +59,4 @@
             </div>
 		</header>
 		<!-- /header -->
+    <?php endif; ?>

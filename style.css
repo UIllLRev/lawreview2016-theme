@@ -5253,7 +5253,7 @@ a.nav-item {
   .nav-item a .theme-logo,
   a.nav-item .theme-logo {
     width: 100%;
-    max-width: 214px; }
+    max-width: 204px; }
     @media screen and (min-width: 1000px) {
       .nav-item a .theme-logo,
       a.nav-item .theme-logo {
@@ -5783,3 +5783,4 @@ input[type=checkbox]:checked.collapse + label::before {
   .main.nav-menu-is-active::before {
     opacity: 1;
     visibility: visible; } }
+/*# sourceMappingURL=style.css.map */

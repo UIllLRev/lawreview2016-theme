@@ -119,12 +119,6 @@ function lawreview_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	// wp_register_script('conditionizr', get_template_directory_uri() . '/assets/js/vendors/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-     //    wp_enqueue_script('conditionizr'); // Enqueue it!
-
-        // wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendors/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        // wp_enqueue_script('modernizr'); // Enqueue it!
-
         wp_register_script('lawreviewscripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('lawreviewscripts'); // Enqueue it!
 
@@ -133,14 +127,18 @@ function lawreview_header_scripts()
     }
 }
 
-// // Load Law Review conditional scripts
-// function lawreview_conditional_scripts()
-// {
-//     if (is_page('pagenamehere')) {
-//         wp_register_script('scriptname', get_template_directory_uri() . 'assets/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-//         wp_enqueue_script('scriptname'); // Enqueue it!
-//     }
-// }
+// Loading Conditional Scripts
+function lawreview_conditional_scripts()
+{
+    if ( is_page('First 100 Days') ) {
+
+        wp_register_script('scroll-watcher', '//cdn.jsdelivr.net/scroll-watcher/latest/scroll-watcher.min.js', array('jquery'));
+        wp_enqueue_script('scroll-watcher');
+
+        wp_register_script('first-100-days-js', get_template_directory_uri() . '/assets/js/first-100-days.js', array('jquery', 'scroll-watcher'), '1.0.0'); // Our Script for Conditional loading
+        wp_enqueue_script('first-100-days-js'); // Enqueue it!
+    }
+}
 
 // Load Law Review styles
 function lawreview_styles()
@@ -157,9 +155,17 @@ function lawreview_styles()
     wp_enqueue_style('googlefonts',
       add_query_arg($query_args, "$protocol://fonts.googleapis.com/css" ), array(), null);
 
+    wp_register_style('lawreview-styles', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_enqueue_style('lawreview-styles'); // Enqueue it!
+}
 
-    wp_register_style('lawreview', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-    wp_enqueue_style('lawreview'); // Enqueue it!
+// Load Law Review conditional styles
+function lawreview_conditional_styles()
+{
+    if ( is_page('First 100 Days') ) {
+        wp_register_style('first-100-days-css', get_template_directory_uri() . '/assets/css/first-100-days.css', array('lawreview-styles'), '1.0');
+        wp_enqueue_style('first-100-days-css'); // Enqueue it!
+    }
 }
 
 // Register Law Review Navigation
@@ -587,10 +593,11 @@ function lawreview_feed_rss2( $for_comments ) {
 \*------------------------------------*/
 
 // Add Actions
-add_action('init', 'lawreview_header_scripts'); // Add Custom Scripts to wp_head
-// add_action('wp_print_scripts', 'lawreview_conditional_scripts'); // Add Conditional Page Scripts
+add_action('init', 'lawreview_header_scripts'); // Add Custom Scripts
+add_action('wp_print_scripts', 'lawreview_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'lawreview_styles'); // Add Theme Stylesheet
+add_action('wp_enqueue_scripts', 'lawreview_conditional_styles'); // Add Conditional Page Styles
 add_action('init', 'register_lawreview_menu'); // Add Law Review Menu
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'lawreviewwp_pagination'); // Add custom Pagination
@@ -639,6 +646,153 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt
 
 
 
+
+
+
+
+
+
+
+
+
+/**
+ * Custom Post Type: Article
+ * ===========================
+ *
+ * Create a custom post type for law review article.
+ * ------------------------------------------------------------------------- */
+
+function lawreview_custom_post_article()
+{
+
+    // See `get_post_type_labels()` for label keys.
+    $labels = array(
+        'name'                  => _x( 'Articles', 'lawreview' ),
+        'singular_name'         => _x( 'Article', 'lawreview' ),
+        'menu_name'             => _x( 'Articles', 'lawreview' ),
+        'name_admin_bar'        => _x( 'Article', 'lawreview' ),
+        'add_new'               => __( 'Add New', 'lawreview' ),
+        'add_new_item'          => __( 'Add New Article', 'lawreview' ),
+        'new_item'              => __( 'New Article', 'lawreview' ),
+        'edit_item'             => __( 'Edit Article', 'lawreview' ),
+        'view_item'             => __( 'View Article', 'lawreview' ),
+        'all_items'             => __( 'All Articles', 'lawreview' ),
+        'search_items'          => __( 'Search Articles', 'lawreview' ),
+        'parent_item_colon'     => __( 'Parent Article:', 'lawreview' ),
+        'not_found'             => __( 'No articles found', 'lawreview' ),
+        'not_found_in_trash'    => __( 'No articles found in Trash', 'lawreview' ),
+        'featured_image'        => _x( 'Article Image', 'lawreview' ),
+        'set_featured_image'    => _x( 'Set article image', 'lawreview' ),
+        'remove_featured_image' => _x( 'Remove article image', 'lawreview' ),
+        'use_featured_image'    => _x( 'Use as article image', 'lawreview' ),
+        'archives'              => _x( 'Articles archives', 'lawreview' ),
+        'insert_into_item'      => _x( 'Insert into article', 'lawreview' ),
+        'uploaded_to_this_item' => _x( 'Uploaded to this article', 'lawreview' ),
+        'filter_items_list'     => _x( 'Filter articles list', 'lawreview' ),
+        'items_list_navigation' => _x( 'Articles list navigation', 'lawreview' ),
+        'items_list'            => _x( 'Articles list', 'lawreview' ),
+    );
+
+    // See `register_post_type()` for args parameters.
+    $args = array(
+        'labels'                => $labels,
+        'public'                => true,
+        'hierarchical'          => false,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'menu_position'         => 2,
+        'menu_icon'             => 'dashicons-book-alt',
+        'capability_type'       => 'post',
+        'supports'              => array(
+                                        'title',
+                                        'editor',
+                                        'thumbnail',
+                                        'revisions',
+                                    ),
+        'taxonomies'            => array( 'category' ),
+        'has_archive'           => true,
+        'rewrite'               => array( 'slug' => 'article' ),
+        'query_var'             => true,
+        'can_export'            => true,
+    );
+
+    register_post_type( 'ilr_article', $args );
+}
+add_action( 'init', 'lawreview_custom_post_article');
+
+
+
+
+/**
+ * Custom Post Type: Note
+ * ======================
+ *
+ * Create a custom post type for law review note.
+ * ------------------------------------------------------------------------- */
+
+function lawreview_custom_post_note()
+{
+
+    // See `get_post_type_labels()` for label keys.
+    $labels = array(
+        'name'                  => _x( 'Notes', 'lawreview' ),
+        'singular_name'         => _x( 'Note', 'lawreview' ),
+        'menu_name'             => _x( 'Notes', 'lawreview' ),
+        'name_admin_bar'        => _x( 'Note', 'lawreview' ),
+        'add_new'               => __( 'Add New', 'lawreview' ),
+        'add_new_item'          => __( 'Add New Note', 'lawreview' ),
+        'new_item'              => __( 'New Note', 'lawreview' ),
+        'edit_item'             => __( 'Edit Note', 'lawreview' ),
+        'view_item'             => __( 'View Note', 'lawreview' ),
+        'all_items'             => __( 'All Notes', 'lawreview' ),
+        'search_items'          => __( 'Search Notes', 'lawreview' ),
+        'parent_item_colon'     => __( 'Parent Note:', 'lawreview' ),
+        'not_found'             => __( 'No notes found', 'lawreview' ),
+        'not_found_in_trash'    => __( 'No notes found in Trash', 'lawreview' ),
+        'featured_image'        => _x( 'Note Image', 'lawreview' ),
+        'set_featured_image'    => _x( 'Set note image', 'lawreview' ),
+        'remove_featured_image' => _x( 'Remove note image', 'lawreview' ),
+        'use_featured_image'    => _x( 'Use as note image', 'lawreview' ),
+        'archives'              => _x( 'Notes archives', 'lawreview' ),
+        'insert_into_item'      => _x( 'Insert into note', 'lawreview' ),
+        'uploaded_to_this_item' => _x( 'Uploaded to this note', 'lawreview' ),
+        'filter_items_list'     => _x( 'Filter notes list', 'lawreview' ),
+        'items_list_navigation' => _x( 'Notes list navigation', 'lawreview' ),
+        'items_list'            => _x( 'Notes list', 'lawreview' ),
+    );
+
+    // See `register_post_type()` for args parameters.
+    $args = array(
+        'labels'                => $labels,
+        'public'                => true,
+        'hierarchical'          => false,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'menu_position'         => 3,
+        'menu_icon'             => 'dashicons-book-alt',
+        'capability_type'       => 'post',
+        'supports'              => array(
+                                        'title',
+                                        'editor',
+                                        'thumbnail',
+                                        'revisions',
+                                    ),
+        'taxonomies'            => array( 'category' ),
+        'has_archive'           => true,
+        'rewrite'               => array( 'slug' => 'note' ),
+        'query_var'             => true,
+        'can_export'            => true,
+    );
+
+    register_post_type( 'ilr_note', $args );
+}
+add_action( 'init', 'lawreview_custom_post_note');
 
 
 
@@ -711,5 +865,57 @@ function lawreview_custom_post_symposium()
     register_post_type( 'ilr_symposium', $args );
 }
 add_action( 'init', 'lawreview_custom_post_symposium');
+
+
+
+
+/**
+ * Remove items from dashboard
+ * ===========================
+ *
+ * Certain admin menu items are unnecessary, so we remove them.
+ * ------------------------------------------------------------------------- */
+
+function lawreview_remove_menus()
+{
+  $user = wp_get_current_user();
+
+  if ( ! in_array( 'administrator', $user->roles ) ) {
+    remove_menu_page( 'index.php' );
+    remove_menu_page( 'plugins.php' );
+    remove_submenu_page( 'themes.php', 'themes.php' );
+    remove_menu_page( 'tools.php' );
+  }
+
+  remove_menu_page( 'edit-comments.php' );
+  remove_menu_page( 'link-manager.php' );
+}
+add_action( 'admin_menu', 'lawreview_remove_menus' );
+
+
+
+
+/**
+ * Reorder dashboard menu items
+ * ============================
+ *
+ * Move
+ * ------------------------------------------------------------------------- */
+
+function lawreview_reorder_menus( $menu_order )
+{
+  return array(
+    'index.php',
+    'edit.php?post_type=ilr_article',
+    'edit.php?post_type=ilr_note',
+    'edit.php?post_type=ilr_symposium',
+    'separator1',
+    'edit.php',
+    'edit.php?post_type=page',
+    'upload.php',
+  );
+}
+add_filter( 'custom_menu_order', '__return_true' );
+add_filter( 'menu_order', 'lawreview_reorder_menus' );
 
 ?>
