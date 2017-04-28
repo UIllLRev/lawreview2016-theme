@@ -17,39 +17,44 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<!-- header -->
-		<header class="header" role="banner">
-            <div class="container">
-                <nav class="nav nav-primary" role="navigation">
-                    <div class="nav-left">
-                        <a class="nav-item logo" href="<?php echo home_url(); ?>">
-                            <?php get_template_part('includes/logo.svg'); ?>
-                        </a>
-                        <?php lawreview_nav(); ?>
-                    </div>
-                    <div class="is-flex is-hidden-mobile">
-                        <a href="https://twitter.com/UIllLRev" target="_blank" class="nav-item is-icon">
-                            <span class="icon">
-                                <i class="fa fa-twitter"></i>
-                            </span>
-                        </a>
-                        <a href="https://www.facebook.com/IllinoisLawReview" target="_blank" class="nav-item is-icon">
-                            <span class="icon">
-                                <i class="fa fa-facebook"></i>
-                            </span>
-                        </a>
-                        <a href="https://illinoislawreview.org/feed/" target="_blank" class="nav-item is-icon">
-                            <span class="icon">
-                                <i class="fa fa-rss"></i>
-                            </span>
-                        </a>
-                    </div>
-                    <span class="nav-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </nav>
-            </div>
-		</header>
-		<!-- /header -->
+	<!-- header -->
+	<header class="header has-transition" role="banner">
+        <div class="container">
+            <nav class="nav nav-primary" role="navigation">
+                <div class="nav-left">
+                    <a class="nav-item logo" href="<?php echo home_url(); ?>">
+                        <?php get_template_part('includes/logo.svg'); ?>
+                    </a>
+                    <?php lawreview_nav(); ?>
+                </div>
+                <div class="is-flex is-hidden-mobile">
+                    <a target="_blank" id="open-popup" class="nav-item is-icon">
+                        <span class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                    </a>
+                    <a href="https://twitter.com/UIllLRev" target="_blank" class="nav-item is-icon">
+                        <span class="icon">
+                            <i class="fa fa-twitter"></i>
+                        </span>
+                    </a>
+                    <a href="https://www.facebook.com/IllinoisLawReview" target="_blank" class="nav-item is-icon">
+                        <span class="icon">
+                            <i class="fa fa-facebook"></i>
+                        </span>
+                    </a>
+                    <a href="https://illinoislawreview.org/feed/" target="_blank" class="nav-item is-icon">
+                        <span class="icon">
+                            <i class="fa fa-rss"></i>
+                        </span>
+                    </a>
+                </div>
+                <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </nav>
+        </div>
+	</header>
+	<!-- /header -->

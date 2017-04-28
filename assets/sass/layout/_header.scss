@@ -34,8 +34,8 @@
     }
   }
 
-  /* adjust style when on page with class `.single-post` in the `body` */
-  .single-post & {
+  /* adjust style when on page with class `.single` in the `body` */
+  .single & {
     background-color: $white;
     border-bottom: 1px solid $gray-e;
   }

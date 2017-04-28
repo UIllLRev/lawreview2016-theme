@@ -7,7 +7,7 @@
 
 .main {
 
-  .single-post & { // 1
+  .single & { // 1
     margin-top: 51px;
 
     @include tablet {

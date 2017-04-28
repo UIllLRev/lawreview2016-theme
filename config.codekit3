@@ -41,7 +41,7 @@
 		"oA": 0,
 		"oAP": "\/style.css",
 		"oF": 3,
-		"oS": 1
+		"oS": 0
 		},
 	"\/assets\/css\/main.css.map": {
 		"ft": 8192,
@@ -163,7 +163,16 @@
 		"oAP": "\/assets\/js\/scripts.min.js",
 		"oF": 2,
 		"sC": 1,
-		"tS": 0
+		"tS": 1
+		},
+	"\/assets\/js\/scripts.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/scripts.min.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
 		},
 	"\/assets\/js\/vendors\/conditionizr-4.3.0.min.js": {
 		"ft": 64,
@@ -172,7 +181,7 @@
 		"oAP": "\/assets\/js\/vendors\/conditionizr-4.3.0.min-min.js",
 		"oF": 1,
 		"sC": 1,
-		"tS": 0
+		"tS": 1
 		},
 	"\/assets\/js\/vendors\/modernizr-2.7.1.min.js": {
 		"ft": 64,
@@ -181,7 +190,7 @@
 		"oAP": "\/assets\/js\/vendors\/modernizr-2.7.1.min-min.js",
 		"oF": 1,
 		"sC": 1,
-		"tS": 0
+		"tS": 1
 		},
 	"\/assets\/sass\/base\/_generic.scss": {
 		"aP": 0,
@@ -370,6 +379,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/sass\/first-100-days.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/first-100-days\/css\/first-100-days.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/sass\/grid\/_grid.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -467,10 +489,23 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
 		"oAP": "\/style.css",
 		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/sass\/pages\/_first-100-days.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/sass\/pages\/_first-100-days.css",
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
@@ -1140,22 +1175,142 @@
 		"oAP": "\/feed-rss2.php",
 		"oF": 0
 		},
-	"\/footer.php": {
+	"\/first-100-days\/css\/first-100-days.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/first-100-days\/css\/first-100-days-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/first-100-days\/css\/first-100-days.css.map": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/footer.php",
+		"oAP": "\/first-100-days\/css\/first-100-days.css.map",
+		"oF": 0
+		},
+	"\/first-100-days\/header.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/first-100-days\/header.php",
+		"oF": 0
+		},
+	"\/first-100-days\/images\/adam-chilton.jpg": {
+		"ft": 16384,
+		"iS": 32482,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/adam-chilton.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/first-100-days\/images\/akhil-amar.jpg": {
+		"ft": 16384,
+		"iS": 48242,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/akhil-amar.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/first-100-days\/images\/andreas-cangellaris.jpg": {
+		"ft": 16384,
+		"iS": 32327,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/andreas-cangellaris.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/first-100-days\/images\/erin-delaney.jpg": {
+		"ft": 16384,
+		"iS": 35170,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/erin-delaney.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/first-100-days\/images\/jason-mazzone.jpg": {
+		"ft": 16384,
+		"iS": 30932,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/jason-mazzone.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/first-100-days\/images\/jeffrey-brown.jpg": {
+		"ft": 16384,
+		"iS": 30625,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/jeffrey-brown.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/first-100-days\/images\/kathleen-clark.jpg": {
+		"ft": 16384,
+		"iS": 37147,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/kathleen-clark.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/first-100-days\/images\/neil-richards.jpg": {
+		"ft": 16384,
+		"iS": 48699,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/neil-richards.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/first-100-days\/js\/first-100-days.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/first-100-days\/js\/first-100-days.min.js",
+		"oF": 2,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/first-100-days\/js\/first-100-days.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/first-100-days\/js\/first-100-days.min.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 1
+		},
+	"\/first-100-days\/single.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/first-100-days\/single.php",
+		"oF": 0
+		},
+	"\/first-100-days\/template-first-100-days.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/first-100-days\/template-first-100-days.php",
 		"oF": 0
 		},
 	"\/functions.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/functions.php",
-		"oF": 0
-		},
-	"\/header.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/header.php",
 		"oF": 0
 		},
 	"\/includes\/ README.md": {
@@ -1186,6 +1341,18 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/index.php",
+		"oF": 0
+		},
+	"\/lawreview2016.sublime-project": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lawreview2016.sublime-project",
+		"oF": 0
+		},
+	"\/lawreview2016.sublime-workspace": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lawreview2016.sublime-workspace",
 		"oF": 0
 		},
 	"\/loop-blog.php": {
@@ -1254,16 +1421,6 @@
 		"oAP": "\/single.php",
 		"oF": 0
 		},
-	"\/style-BACKUP.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style-BACKUP-min.css",
-		"oF": 0,
-		"oS": 0
-		},
 	"\/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1272,7 +1429,13 @@
 		"oA": 0,
 		"oAP": "\/style.css",
 		"oF": 2,
-		"oS": 1
+		"oS": 0
+		},
+	"\/style.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/style.css.map",
+		"oF": 0
 		},
 	"\/tag.php": {
 		"ft": 8192,
@@ -1284,12 +1447,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-demo.php",
-		"oF": 0
-		},
-	"\/template-first-100-days.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/template-first-100-days.php",
 		"oF": 0
 		},
 	"\/template-home.php": {
@@ -1305,13 +1462,13 @@
 	},
 "projectAttributes": {
 	"creationDate": 514033442,
-	"displayValue": "lawreview2016-theme",
+	"displayValue": "lawreview2016",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_purple"
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -2665,7 +2822,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http:\/\/localhost",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -3075,7 +3232,7 @@
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*-min.js",
+		"autoOutputPathFilenamePattern": "*.min.js",
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
@@ -3083,7 +3240,7 @@
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
-		"transpilerStyle": 0
+		"transpilerStyle": 1
 		},
 	"languageDefaultsJSON": {
 		"autoOutputAction": 1,

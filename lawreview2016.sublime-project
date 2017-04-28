@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/chrismlusk/Code/dev.illinoislawreview.org",
+            "folder_exclude_patterns": [
+                ".svn",
+                ".settings",
+                "wp-includes",
+                "wp-admin",
+                "twentyseventeen"
+            ],
+            "file_exclude_patterns": [
+                "*.pyc",
+                "*.sql",
+                "*.gz"
+            ]
+		}
+	]
+}
