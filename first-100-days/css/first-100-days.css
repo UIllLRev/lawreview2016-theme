@@ -301,7 +301,7 @@ body.is-scrolling {
       .section__title.is-large {
         font-size: 2.625rem;
         margin-bottom: 3rem; } }
-  .section__title strong {
+  .section__title span {
     color: #f2590d;
     font-weight: 700; }
 

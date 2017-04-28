@@ -21,3 +21,5 @@ wp-content/plugins/hello.php
 
 .sass-cache/
 *.css.map
+*.sublime-project
+*.sublime-workspace

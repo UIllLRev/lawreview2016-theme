@@ -49,7 +49,7 @@
         });
 
         $.each( watching_elements, function(i, element) { // 4
-            watcher.watch(element, { top: 600, bottom: -400 })
+            watcher.watch(element, { top: 400, bottom: -400 })
                 .on('enter', function() {
                     $('.nav-item.is-active').removeClass('is-active');
                     $(element).removeClass('content-is-hidden');
