@@ -191,7 +191,7 @@ if ( $posts->have_posts() ): ?>
                     <div class="columns  contributors__authors">
                         <a href="<?php echo get_permalink( 4931 ); ?>" class="column is-half-tablet is-one-third-desktop">
                             <div class="contributors__person">
-                                <div class="contributors__name">Vik Amar</div>
+                                <div class="contributors__name">Vikram David Amar</div>
                                 <div class="contributors__title">Dean, College of Law at the University of Illinois</div>
                             </div>
                         </a>
