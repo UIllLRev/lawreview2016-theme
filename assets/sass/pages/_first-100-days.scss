@@ -52,80 +52,8 @@
 //
 // Theme overrides
 // ===============
-//
-// These styles are nested inside `#f100d` because they are defined in the
-// global stylesheet and are used elsewhere on the site.
-// ----------------------------------------------------------------------------
 
 #f100d {
-
-  .main {
-    margin-bottom: .75rem;
-  }
-
-  .header {
-    padding: 10px 1.5rem;
-
-    @include tablet {
-      padding: 10px 3rem;
-    }
-  }
-
-  .menu {
-    font-size: 1.5rem;
-    margin-bottom: 4rem;
-    padding: .25rem;
-
-    @include tablet {
-      font-size: 2rem;
-      margin-bottom: 8rem;
-    }
-
-    @include desktop {
-      font-size: 2.25rem;
-      margin-top: 1rem;
-    }
-
-    @include widescreen {
-      font-size: 2.5rem;
-      margin-top: 2rem;
-    }
-  }
-
-  .menu-label {
-    color: rgba($white, .675);
-    font-size: 1.175rem;
-  }
-
-  .menu-list {
-
-    @include hover-focus {
-      a {
-        color: rgba($white,.8);
-      }
-    }
-
-    a {
-      color: rgba($white,.95);
-      font-weight: $weight-bold;
-      transition: all $speed $easing;
-
-      @include hover-focus {
-        background-color: rgba($white, .1);
-        color: $white;
-      }
-
-      strong {
-        color: inherit;
-        font-weight: inherit;
-      }
-    }
-  }
-
-  .nav {
-    background-color: transparent;
-    z-index: 10;
-  }
 
   .theme-logo {
 
@@ -134,48 +62,28 @@
     }
   }
 
-  a.nav-item:not(.logo) {
-    color: $gray-9;
-    font-size: .85rem;
-    letter-spacing: .0125rem;
-    padding: 1rem 1.25rem;
-    position: relative;
-    text-transform: uppercase;
+  .nav-center {
+    display: none;
     transition: all .3s cubic-bezier(.645,.045,.355,1);
 
-    &::after {
-      background-color: $primary;
-      content: '';
-      height: 3px;
-      position: absolute;
-        right: 1.25rem;
-        bottom: .75rem;
-        left: 1.25rem;
-      transform-origin: 0 50%;
-      transform: scaleX(0);
-      transition: transform .3s cubic-bezier(.645,.045,.355,1);
-    }
-
-    @include hover-focus {
-      color: $primary;
-
-      &::after {
-        transform: scaleX(1);
-      }
-    }
-
-    &.is-active {
-      color: $link-active;
-
-      &::after {
-        transform: scaleX(1);
-      }
+    @include desktop {
+      display: flex;
     }
   }
 
-  .logo {
-    margin: 0;
-    padding-left: 0;
+  .nav-right {
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    position: relative;
+
+    .nav-item {
+      display: none;
+
+      @include tablet {
+        display: flex;
+      }
+    }
   }
 
   .nav-toggle {
@@ -201,7 +109,139 @@
     }
   }
 
-  .nav-toggle-label {
+  &.menu-is-open {
+
+    .theme-logo {
+
+      .cls-1 {
+        fill: $white;
+      }
+    }
+
+    .nav-center {
+      opacity: 0;
+    }
+  }
+}
+
+.main {
+  margin-bottom: .75rem;
+}
+
+.header {
+  padding: 10px 1.5rem;
+
+  @include tablet {
+    padding: 10px 3rem;
+  }
+}
+
+.menu {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  padding: .25rem;
+
+  @include tablet {
+    font-size: 2rem;
+    margin-bottom: 8rem;
+  }
+
+  @include desktop {
+    font-size: 2.25rem;
+    margin-top: 1rem;
+  }
+
+  @include widescreen {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+}
+
+.menu-label {
+  color: rgba($white, .675);
+  font-size: 1.175rem;
+}
+
+.menu-list {
+
+  @include hover-focus {
+    a {
+      color: rgba($white,.8);
+    }
+  }
+
+  a {
+    color: rgba($white,.95);
+    font-weight: $weight-bold;
+    transition: all $speed $easing;
+
+    @include hover-focus {
+      background-color: rgba($white, .1);
+      color: $white;
+    }
+
+    strong {
+      color: inherit;
+      font-weight: inherit;
+    }
+  }
+}
+
+.nav {
+  background-color: transparent;
+  z-index: 10;
+}
+
+a.nav-item:not(.logo) {
+  color: $gray-9;
+  font-size: .85rem;
+  letter-spacing: .0125rem;
+  padding: 1rem 1.25rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+
+  &::after {
+    background-color: $primary;
+    content: '';
+    height: 3px;
+    position: absolute;
+      right: 1.25rem;
+      bottom: .75rem;
+      left: 1.25rem;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(.645,.045,.355,1);
+  }
+
+  @include hover-focus {
+    color: $primary;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  &.is-active {
+    color: $link-active;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  .menu-is-open & {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.logo {
+  margin: 0;
+  padding-left: 0;
+}
+
+.nav-toggle-label.nav-item {
     color: $gray-a;
     font-size: .75rem;
     letter-spacing: .0125rem;
@@ -211,103 +251,67 @@
     transition: all .3s cubic-bezier(.645,.045,.355,1);
 
     &::before {
-      @include tablet {
-        background-color: rgba($black,.12);
-        content: '';
-        height: 1px;
-        opacity: 1;
-        position: absolute;
-          top: calc(50% - 1px);
-          right: -2.75rem;
-        transform-origin: 0 50%;
-        transition: left .8s .4s cubic-bezier(.645,.045,.355,1),
-                    opacity .8s .4s cubic-bezier(.645,.045,.355,1);
-        width: 2.25rem;
-      }
+      background-color: rgba($black,.12);
+      content: '';
+      height: 1px;
+      opacity: 1;
+      position: absolute;
+        top: calc(50% - 1px);
+        right: -2.75rem;
+      transform-origin: 0 50%;
+      transition: left .8s .4s cubic-bezier(.645,.045,.355,1),
+                  opacity .8s .4s cubic-bezier(.645,.045,.355,1);
+      width: 2.25rem;
     }
 
     &::after {
-      @include tablet {
-        border-top: 4px solid transparent;
-        border-bottom: 4px solid transparent;
-        border-left: 5px solid $gray-a;
-        content: '';
-        position: absolute;
-          top: calc(50% - 5px);
-          right: -2.75rem;
-        transition: transform .4s 1s cubic-bezier(.645,.045,.355,1);
-      }
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 5px solid $gray-a;
+      content: '';
+      position: absolute;
+        top: calc(50% - 5px);
+        right: -2.75rem;
+      transition: transform .4s 1s cubic-bezier(.645,.045,.355,1);
     }
-  }
 
-  .nav-right {
-    background-color: transparent;
-    box-shadow: none;
-    display: flex;
-    position: relative;
-
-    .nav-item {
-      display: none;
-
-      @include tablet {
-        display: flex;
-      }
+    .menu-is-open & {
+      opacity: 0;
+      visibility: hidden;
     }
-  }
+}
+
+.container {
+  padding: 0 1.5rem;
+}
+
+.footer {
+  background-color: transparent;
+  border-top: 0;
+  color: $gray-b;
+  padding: 3rem;
 
   .container {
-    padding: 0 1.5rem;
+    padding: 0;
+    width: auto;
+    max-width: none;
   }
 
-  .footer {
-    background-color: transparent;
-    border-top: 0;
-    color: $gray-b;
-    padding: 3rem;
+  a {
+    color: inherit;
 
-    .container {
-      padding: 0;
-      width: auto;
-      max-width: none;
-    }
-
-    a {
-      color: inherit;
-
-      @include hover-focus {
-        color: $primary;
-      }
-    }
-  }
-
-
-  //
-  // Topics menu is open
-  // ===================
-
-  &.menu-is-open {
-
-    a.nav-item:not(.logo) {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .theme-logo {
-
-      .cls-1 {
-        fill: $white;
-      }
-    }
-
-    .nav-toggle-label {
-      opacity: 0;
-      visibility: hidden;
+    @include hover-focus {
+      color: $primary;
     }
   }
 }
 
 body.is-scrolling {
   pointer-events: none !important;
+}
+
+body.menu-is-open {
+  overflow: hidden !important;
 }
 
 
@@ -478,6 +482,10 @@ body.is-scrolling {
       font-size: $size-1;
       margin-bottom: 3rem;
     }
+
+    @media screen and (min-width: 1540px) {
+      font-size: 3.5rem;
+    }
   }
 
   span {
@@ -644,6 +652,14 @@ body.is-scrolling {
 
     @include tablet {
       margin-top: 2rem;
+    }
+
+    a {
+      color: inherit;
+
+      @include hover-focus {
+        color: $link;
+      }
     }
   }
 }

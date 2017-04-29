@@ -17,7 +17,7 @@
 </head>
 <body id="f100d" <?php body_class( 'intro-transition' ); ?>>
 
-    <header class="header">
+    <header class="header <?php echo (is_page('First 100 Days') ? 'is-page' : 'is-single'); ?>">
         <div class="full-screen-background"></div>
         <div class="full-screen-menu">
             <div class="container is-fluid">
@@ -41,6 +41,14 @@
                     <?php get_template_part('includes/logo.svg'); ?>
                 </a>
             </div>
+
+        <?php if ( ! is_page('First 100 Days') ): ?>
+            <div class="nav-center">
+                <div class="nav-item">
+                    <a href="<?php echo get_permalink( 4965 ); ?>">President Trump’s First 100 Days: A Symposium</a>
+                </div>
+            </div>
+        <?php endif; ?>
 
             <div class="nav-right nav-menu">
 

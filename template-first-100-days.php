@@ -65,7 +65,9 @@ if ( $posts->have_posts() ): ?>
         </article>
         <blockquote class="section__quote">
             <p class="section__quote__text">"On November 8th, Americans will be voting for this 100-day plan to restore prosperity to our economy, security to our communities, and honesty to our government. This is my pledge to you."</p>
-            <footer class="section__quote__footer">Donald Trump - Oct. 22, 2016</footer>
+            <footer class="section__quote__footer">
+                <a href="//www.donaldjtrump.com/press-releases/donald-j.-trump-delivers-groundbreaking-contract-for-the-american-vote1" target="_blank">Donald J. Trump Contract With the American Voter</a>
+            </footer>
         </blockquote>
     </section>
 

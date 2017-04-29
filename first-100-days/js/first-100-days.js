@@ -3,6 +3,7 @@
     $(function () {
 
         'use strict';
+        /* global ScrollWatcher */
 
         var BODY = $('body');
         var PAGE = $('#f100d');
@@ -34,15 +35,14 @@
             '#f100d_contributors'
         ];
 
-        watcher.on('page:load', function(event) {
+        watcher.on('page:load', function() {
             window.setTimeout( function() {
-                if ( watcher.windowAtBottom() ) {
-                    window.scrollBy(0, -10);
-                } else {
-                    window.scrollBy(0, 10);
+                if ( ! watcher.windowAtTop() ) {
+                    window.scrollBy(0, -1);
+                    $('section').removeClass('content-is-hidden');
                 }
                 PAGE.removeClass('intro-transition'); // 1
-            }, 200);
+            }, 300);
         });
 
         watcher.on('scrolling', function() {

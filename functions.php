@@ -134,7 +134,7 @@ function lawreview_header_scripts()
 function lawreview_conditional_scripts()
 {
 
-  wp_register_script('first-100-days-js', get_template_directory_uri() . '/first-100-days/js/first-100-days.min.js', array('jquery', 'scroll-watcher'), '1.0.0');
+  wp_register_script('first-100-days-js', get_template_directory_uri() . '/first-100-days/js/first-100-days.js', array('jquery', 'scroll-watcher'), '1.0.0');
 
   if ( is_page( 'First 100 Days' ) || ( is_single() && in_category('First 100 Days') ) ) {
     wp_enqueue_script('first-100-days-js');
