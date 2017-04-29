@@ -990,7 +990,36 @@ add_filter( 'single_template', function($single_template) {
 
 
 
+/**
+ * Add Open Graph
+ * ==============
+ */
 
+function lawreview_add_opengraph()
+{
+    if ( is_single() ) {
+        global $post;
+
+        if ( get_the_post_thumbnail($post->ID, 'thumbnail') ) {
+            $thumbnail_id = get_post_thumbnail_id($post->ID);
+            $thumbnail_object = get_post($thumbnail_id);
+            $image = $thumbnail_object->guid;
+        } else {
+            // set default image please
+            $image = '';
+        }
+
+        $description = substr(strip_tags($post->post_content),0,200) . '...';
+
+        echo '<meta property="og:title" content="' . the_title() . '" />';
+        echo '<meta property="og:type" content="article" />';
+        echo '<meta property="og:image" content="' . $image . '" />';
+        echo '<meta property="og:url" content="' . the_permalink() . '" />';
+        echo '<meta property="og:description" content="' . $description . '" />';
+        echo '<meta property="og:site_name" content="Illinois Law Review" />';
+    }
+}
+add_action('wp_head', 'lawreview_add_opengraph');
 
 
 ?>
