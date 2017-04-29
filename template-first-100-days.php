@@ -289,7 +289,7 @@ if ( $posts->have_posts() ): ?>
                         </a>
                         <a href="<?php echo get_permalink( 4906 ); ?>" class="column is-half-tablet is-one-third-desktop">
                             <div class="contributors__person">
-                                <div class="contributors__name">Leslie Wexler</div>
+                                <div class="contributors__name">Lesley Wexler</div>
                                 <div class="contributors__title">Professor of law at the University of Illinois</div>
                             </div>
                         </a>

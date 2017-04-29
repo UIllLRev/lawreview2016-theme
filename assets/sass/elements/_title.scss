@@ -103,6 +103,10 @@
   .tag + & {
     margin-top: 8px;
   }
+
+  &:not(.is-spaced) + .subtitle {
+    margin-top: -1rem;
+  }
 }
 
 

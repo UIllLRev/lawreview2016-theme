@@ -834,6 +834,7 @@ body.menu-is-open {
 
 .topics__list__item {
   border-bottom: 1px solid $gray-f6;
+  display: flex;
   padding: .5rem 0;
   transition: background $speed $easing,
               opacity 1.1s cubic-bezier(.645,.045,.355,1),
@@ -856,7 +857,7 @@ body.menu-is-open {
     font-weight: $weight-bold;
     margin-right: 2rem;
     position: relative;
-      top: -3px;
+      top: 1px;
     text-align: center;
     width: .875rem;
   }

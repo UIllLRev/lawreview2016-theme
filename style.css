@@ -5173,6 +5173,8 @@ h6 {
   font-weight: 700; }
   .tag + .title {
     margin-top: 8px; }
+  .title:not(.is-spaced) + .subtitle {
+    margin-top: -1rem; }
 
 .subtitle {
   color: #494e55;
