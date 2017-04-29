@@ -35,9 +35,14 @@
         ];
 
         watcher.on('page:load', function(event) {
-            window.setTimeout( () => {
+            window.setTimeout( function() {
+                if ( watcher.windowAtBottom() ) {
+                    window.scrollBy(0, -10);
+                } else {
+                    window.scrollBy(0, 10);
+                }
                 PAGE.removeClass('intro-transition'); // 1
-            }, 400);
+            }, 200);
         });
 
         watcher.on('scrolling', function() {
@@ -113,7 +118,7 @@
         }
 
         function resizeMenu() {
-            var windowHeight = window.innerHeight - 30;
+            var windowHeight = window.innerHeight - 60;
 
             // Set the menu height to fill the window
             fullScreenMenu.css({'height': windowHeight});
