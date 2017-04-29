@@ -1011,10 +1011,10 @@ function lawreview_add_opengraph()
 
         $description = substr(strip_tags($post->post_content),0,200) . '...';
 
-        echo '<meta property="og:title" content="' . the_title() . '" />';
+        echo '<meta property="og:title" content="' . get_the_title() . '" />';
         echo '<meta property="og:type" content="article" />';
         echo '<meta property="og:image" content="' . $image . '" />';
-        echo '<meta property="og:url" content="' . the_permalink() . '" />';
+        echo '<meta property="og:url" content="' . get_the_permalink() . '" />';
         echo '<meta property="og:description" content="' . $description . '" />';
         echo '<meta property="og:site_name" content="Illinois Law Review" />';
     }
