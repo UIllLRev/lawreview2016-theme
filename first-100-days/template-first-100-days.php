@@ -32,6 +32,8 @@ if ( $posts->have_posts() ): ?>
                 while ( $posts->have_posts() ) :
                 $posts->the_post();
 
+                $intro_title = get_field('f100d_title_intro');
+
                 // only output post 0
                 if ( $posts->current_post < 1 ): ?>
 
@@ -41,7 +43,18 @@ if ( $posts->have_posts() ): ?>
                         </div>
                     </figure>
                     <div class="column is-8  section__content is-large">
-                        <h2 class="section__title is-large"><?php the_title(); ?></h2>
+                        <h2 class="section__title is-large">
+
+                            <?php
+
+                                if ( ! empty($intro_title) ) {
+                                    echo $intro_title;
+                                } else {
+                                    the_title();
+                                }
+                            ?>
+
+                        </h2>
                         <div class="section__text"><?php echo get_the_excerpt(); ?></div>
                     </div>
 
@@ -72,11 +85,25 @@ if ( $posts->have_posts() ): ?>
                     while ( $posts->have_posts() ) :
                         $posts->the_post();
 
+                        $topic_title = get_field('f100d_title_topics');
+
                         // only output post 1 and above
                         if ( $posts->current_post >= 1 ): ?>
 
                             <li class="topics__list__item">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <a href="<?php the_permalink(); ?>">
+
+                                <?php
+
+                                    if ( ! empty($topic_title) ) {
+                                        echo $topic_title;
+                                    } else {
+                                        the_title();
+                                    }
+
+                                ?>
+
+                                </a>
                             </li>
 
                         <?php endif; ?>
