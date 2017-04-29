@@ -1204,7 +1204,7 @@
 		"oAP": "\/first-100-days\/images\/adam-chilton.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/first-100-days\/images\/akhil-amar.jpg": {
@@ -1214,7 +1214,7 @@
 		"oAP": "\/first-100-days\/images\/akhil-amar.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/first-100-days\/images\/andreas-cangellaris.jpg": {
@@ -1224,7 +1224,7 @@
 		"oAP": "\/first-100-days\/images\/andreas-cangellaris.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/first-100-days\/images\/erin-delaney.jpg": {
@@ -1234,7 +1234,7 @@
 		"oAP": "\/first-100-days\/images\/erin-delaney.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/first-100-days\/images\/jason-mazzone.jpg": {
@@ -1244,7 +1244,7 @@
 		"oAP": "\/first-100-days\/images\/jason-mazzone.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/first-100-days\/images\/jeffrey-brown.jpg": {
@@ -1254,7 +1254,7 @@
 		"oAP": "\/first-100-days\/images\/jeffrey-brown.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/first-100-days\/images\/kathleen-clark.jpg": {
@@ -1264,7 +1264,7 @@
 		"oAP": "\/first-100-days\/images\/kathleen-clark.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/first-100-days\/images\/neil-richards.jpg": {
@@ -1274,7 +1274,27 @@
 		"oAP": "\/first-100-days\/images\/neil-richards.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/first-100-days\/images\/trump-01.jpg": {
+		"ft": 16384,
+		"iS": 126540,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/trump-01.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/first-100-days\/images\/trump-02.jpg": {
+		"ft": 16384,
+		"iS": 145162,
+		"oA": 0,
+		"oAP": "\/first-100-days\/images\/trump-02.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/first-100-days\/js\/first-100-days.js": {
@@ -1307,10 +1327,22 @@
 		"oAP": "\/first-100-days\/template-first-100-days.php",
 		"oF": 0
 		},
+	"\/footer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/footer.php",
+		"oF": 0
+		},
 	"\/functions.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/functions.php",
+		"oF": 0
+		},
+	"\/header.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/header.php",
 		"oF": 0
 		},
 	"\/includes\/ README.md": {

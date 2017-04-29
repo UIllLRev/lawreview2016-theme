@@ -6,16 +6,23 @@
  * We need to fold these into the Sass partials and/or rewrite them.
  *
  */
-.pt-SubHead1 {
+
+[class$="SubHead1"] {
   font-variant: small-caps;
   margin-top: 2rem;
   text-align: center;
 }
 
-div[id^="fn-"],
-p.pt-FootNote {
-  margin-bottom: 1rem;
-  font-size: .875rem;
+p,
+div {
+
+  &[id^="fn-"],
+  &[id^="note-"],
+  &.pt-FootNote,
+  &.pt-FootnoteText {
+    margin-bottom: 1rem;
+    font-size: .875rem;
+  }
 }
 
 .masthead-section {
