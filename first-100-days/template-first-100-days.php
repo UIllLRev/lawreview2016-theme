@@ -44,7 +44,7 @@ if ( $posts->have_posts() ): ?>
                     </figure>
                     <div class="column is-8  section__content is-large">
                         <h2 class="section__title is-large"><?php the_title(); ?></h2>
-                        <div class="section__text"><?php the_content() ?></div>
+                        <div class="section__text"><?php echo get_the_excerpt(); ?></div>
                     </div>
 
                 <?php endif; ?>

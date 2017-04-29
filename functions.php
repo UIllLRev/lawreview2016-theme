@@ -827,6 +827,20 @@ add_action( 'init', 'lawreview_custom_post_note');
 
 
 /**
+ * Add Excerpt to Custom Posts
+ * ===========================
+ */
+
+function lawreview_add_excerpt_to_cpt()
+{
+  add_post_type_support( 'ilr_symposium', 'excerpt' );
+}
+add_action( 'init', 'lawreview_add_excerpt_to_cpt' );
+
+
+
+
+/**
  * Custom Post Type: Symposium
  * ===========================
  *
