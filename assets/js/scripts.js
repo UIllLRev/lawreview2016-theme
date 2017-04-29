@@ -4,12 +4,17 @@
 
         'use strict';
 
-        // Hide Header on on scroll down
+
+
+
+        //
+        // Header transitions
+        // ==================
+
         var didScroll = null;
         var lastScrollTop = 0;
         var delta = 5;
         var header = $('.header.has-transition');
-        // var headerHeight = header.outerHeight();
 
         $(window).scroll(function(){
             didScroll = true;
@@ -47,6 +52,13 @@
             }
         }
 
+
+
+
+        //
+        // Smooth scroll to anchor links
+        // =============================
+
         $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
 
@@ -60,6 +72,13 @@
                 }
             }
         });
+
+
+
+
+        //
+        // Toggle collapsed nav menu
+        // =========================
 
         $('.nav-toggle').click(function() {
             var navMenu = $('.nav-menu');

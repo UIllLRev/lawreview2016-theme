@@ -5643,13 +5643,16 @@ a.nav-item {
  * We need to fold these into the Sass partials and/or rewrite them.
  *
  */
-.pt-SubHead1 {
+[class$="SubHead1"] {
   font-variant: small-caps;
   margin-top: 2rem;
   text-align: center; }
 
+p[id^="fn-"], p[id^="note-"], p.pt-FootNote, p.pt-FootnoteText,
 div[id^="fn-"],
-p.pt-FootNote {
+div[id^="note-"],
+div.pt-FootNote,
+div.pt-FootnoteText {
   margin-bottom: 1rem;
   font-size: .875rem; }
 
