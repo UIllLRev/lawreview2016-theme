@@ -14,7 +14,6 @@
 //      - Introduction
 //      - Topics
 //      - Contributors
-//   4. Page-specific components
 //
 // ============================================================================
 
@@ -339,7 +338,8 @@ body.is-scrolling {
 .full-screen-menu {
   color: $white;
   opacity: 0;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   padding-top: 2rem;
   position: absolute;
     top: 72px;
@@ -759,8 +759,10 @@ body.is-scrolling {
   }
   &.content-is-hidden {
     .section__content {
-      opacity: 0;
-      transform: translate3d(18rem, 0, 0);
+      @include tablet {
+        opacity: 0;
+        transform: translate3d(18rem, 0, 0);
+      }
     }
   }
 
@@ -783,7 +785,9 @@ body.is-scrolling {
   }
   &.content-is-hidden {
     .section__figure__inner {
-      transform: translate3d(18rem, 0, 0);
+      @include tablet {
+        transform: translate3d(18rem, 0, 0);
+      }
     }
   }
 
@@ -821,8 +825,10 @@ body.is-scrolling {
   -webkit-column-break-inside: avoid;
 
   .content-is-hidden & {
-    opacity: 0;
-    transform: translate3d(18rem, 0, 0);
+    @include tablet {
+      opacity: 0;
+      transform: translate3d(18rem, 0, 0);
+    }
   }
 
   &::before {
@@ -884,7 +890,6 @@ body.is-scrolling {
     }
 
     .column {
-      //padding-bottom: 1.5rem;
 
       @include tablet {
         padding: 1.5rem;
@@ -903,8 +908,10 @@ body.is-scrolling {
     }
   }
   &.content-is-hidden .section__content {
-    opacity: 0;
-    transform: translate3d(0,3rem, 0);
+    @include tablet {
+      opacity: 0;
+      transform: translate3d(0,3rem, 0);
+    }
   }
 }
 
@@ -1055,12 +1062,3 @@ body.is-scrolling {
 
 
 
-
-//
-// Page-specific components
-// ========================
-
-#f100d {
-
-  //...
-}

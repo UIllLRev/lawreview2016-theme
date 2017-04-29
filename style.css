@@ -5005,7 +5005,8 @@ h6 {
   .content h4,
   .content h5,
   .content h6 {
-    font-weight: 700; }
+    font-weight: 700;
+    text-align: left; }
   .content h2 {
     font-size: 2.625rem; }
   .content h3 {
