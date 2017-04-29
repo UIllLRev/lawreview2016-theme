@@ -5,7 +5,7 @@ $post_types = lawreview_get_post_types();
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 query_posts( array(
-  'post_type' => 'post',
+  'post_type' => 'any',
   'posts_per_page' => 10,
   'paged' => $paged,
   'orderby' => 'date',
@@ -21,7 +21,7 @@ query_posts( array(
 
 if ( have_posts() ) : ?>
 
-  <?php while ( have_posts() ) : the_post(); 
+  <?php while ( have_posts() ) : the_post();
 
     $label = $post_types[get_field('ilr_post_type')];
     $subtitle = get_field('ilr_subtitle');
@@ -54,7 +54,7 @@ if ( have_posts() ) : ?>
           <?php endif; ?>
         </div>
         <?php endif; ?>
-        
+
     </article>
 
   <?php endwhile; ?>

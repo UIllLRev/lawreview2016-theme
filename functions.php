@@ -965,8 +965,8 @@ add_filter( 'menu_order', 'lawreview_reorder_menus' );
 
 
 /**
- * First 100 Days post template
- * ============================
+ * First 100 Days single post template
+ * ===================================
  *
  * Assign posts with the "First 100 Days" category to a custom template.
  * ----------------------------------------------------------------------------
@@ -979,8 +979,18 @@ add_filter( 'single_template', function($single_template) {
   if ( in_category('First 100 Days') ) {
     $single_template = dirname( __FILE__ ) . '/first-100-days/single.php';
   }
+
+  if ( in_category('News') ) {
+    $single_template = dirname( __FILE__ ) . '/single-news.php';
+  }
   return $single_template;
 
 }, 10, 3);
+
+
+
+
+
+
 
 ?>
