@@ -28,7 +28,7 @@
                     <?php lawreview_nav(); ?>
                 </div>
                 <div class="is-flex is-hidden-mobile">
-                    <a target="_blank" id="open-popup" class="nav-item is-icon">
+                    <a href="http://eepurl.com/cIXVsj" target="_blank" class="nav-item is-icon">
                         <span class="icon">
                             <i class="fa fa-envelope"></i>
                         </span>

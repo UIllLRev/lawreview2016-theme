@@ -130,10 +130,6 @@
 
     .cls-1 {
       fill: $black;
-
-      .menu-is-open & {
-        fill: $white;
-      }
     }
   }
 
@@ -145,11 +141,6 @@
     position: relative;
     text-transform: uppercase;
     transition: all .3s cubic-bezier(.645,.045,.355,1);
-
-    .menu-is-open & {
-      opacity: 0;
-      visibility: hidden;
-    }
 
     &::after {
       background-color: $primary;
@@ -204,12 +195,47 @@
       margin-left: 1rem;
     }
 
-    .menu-is-open & {
-      // background-color: darken($link, 6%);
-    }
-
     span {
       background-color: $white;
+    }
+  }
+
+  .nav-toggle-label {
+    color: $gray-a;
+    font-size: .75rem;
+    letter-spacing: .0125rem;
+    margin-right: 3rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+
+    &::before {
+      @include tablet {
+        background-color: rgba($black,.12);
+        content: '';
+        height: 1px;
+        opacity: 1;
+        position: absolute;
+          top: calc(50% - 1px);
+          right: -2.75rem;
+        transform-origin: 0 50%;
+        transition: left .8s .4s cubic-bezier(.645,.045,.355,1),
+                    opacity .8s .4s cubic-bezier(.645,.045,.355,1);
+        width: 2.25rem;
+      }
+    }
+
+    &::after {
+      @include tablet {
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 5px solid $gray-a;
+        content: '';
+        position: absolute;
+          top: calc(50% - 5px);
+          right: -2.75rem;
+        transition: transform .4s 1s cubic-bezier(.645,.045,.355,1);
+      }
     }
   }
 
@@ -250,6 +276,31 @@
       @include hover-focus {
         color: $primary;
       }
+    }
+  }
+
+
+  //
+  // Topics menu is open
+  // ===================
+
+  &.menu-is-open {
+
+    a.nav-item:not(.logo) {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .theme-logo {
+
+      .cls-1 {
+        fill: $white;
+      }
+    }
+
+    .nav-toggle-label {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
@@ -420,6 +471,11 @@ body.is-scrolling {
       font-size: $size-2;
       margin-bottom: 3rem;
     }
+
+    @include fullhd {
+      font-size: $size-1;
+      margin-bottom: 3rem;
+    }
   }
 
   span {
@@ -431,22 +487,35 @@ body.is-scrolling {
 .section__text {
   color: $gray-9;
   margin-bottom: 3rem;
-  max-width: 680px;
+  // max-width: 700px;
+  width: 100%;
   position: relative;
 
   @include tablet {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 0;
-    padding-left: 10.5rem;
+    padding-left: 6.5rem;
+  }
+
+  @include desktop {
+    flex-direction: row;
   }
 
   @include widescreen {
-    max-width: 720px;
+    // max-width: 680px;
+    padding-left: 10.5rem;
+    width: 95%;
+  }
+
+  @include fullhd {
+    // max-width: 815px;
+    width: 90%;
   }
 
   &::before {
-    @include tablet {
+    @include widescreen {
       background-color: rgba($black,.08);
       content: '';
       height: 1px;
@@ -467,7 +536,7 @@ body.is-scrolling {
   }
 
   &::after {
-    @include tablet {
+    @include widescreen {
       border-top: 4px solid transparent;
       border-bottom: 4px solid transparent;
       border-left: 5px solid $gray-9;
@@ -491,13 +560,22 @@ body.is-scrolling {
                 transform 1.2s cubic-bezier(.215,.61,.355,1);
 
     @include tablet {
-      font-size: 1.175rem;
+      font-size: 1.125rem;
+      width: 100%;
+    }
 
-      width: 235px;
+    @include desktop {
+      width: 46%;
     }
 
     @include widescreen {
-      width: 250px;
+      font-size: 1.175rem;
+
+    }
+
+    @include fullhd {
+      font-size: 1.225rem;
+      //width: 300px;
     }
 
     &:nth-child(1) {
@@ -853,25 +931,19 @@ body.is-scrolling {
   @include widescreen {
     font-size: 1.175rem;
   }
+
+  @include fullhd {
+    font-size: 1.25rem;
+  }
 }
 
 .contributors__title {
   color: $gray-9;
-  font-size: .825rem;
-  //letter-spacing: .015rem;
+  font-size: .9rem;
   margin-top: .25rem;
-  //text-transform: uppercase;
 
   @include tablet {
-    // font-size: ;
-  }
-
-  @include desktop {
-    // font-size: ;
-  }
-
-  @include widescreen {
-    // font-size: ;
+    font-size: 1rem;
   }
 }
 
@@ -923,12 +995,8 @@ body.is-scrolling {
   .contributors__name {
     font-size: 1.35rem;
 
-    @include tablet {
-      // font-size: ;
-    }
-
     @include desktop {
-      font-size: 1.25rem;
+      font-size: 1.275rem;
     }
 
     @include widescreen {
@@ -936,7 +1004,7 @@ body.is-scrolling {
     }
 
     @include fullhd {
-      font-size: 1.35rem;
+      font-size: 1.425rem;
     }
 
     &::after {
@@ -948,8 +1016,6 @@ body.is-scrolling {
       width: 1.5rem;
     }
   }
-
-  .contributors__title {}
 
   .contributors__organization {}
 

@@ -8,4 +8,12 @@
   padding: 3px 8px 2px;
   text-transform: uppercase;
   width: auto;
+
+  > a {
+    color: rgba($white,.85);
+
+    @include hover-focus {
+      color: $white;
+    }
+  }
 }

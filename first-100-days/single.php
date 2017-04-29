@@ -27,9 +27,9 @@ get_template_part( 'first-100-days/header' ); ?>
               <header class="post-header">
 
                 <!-- label -->
-                <?php if ( ! empty($label) ) : ?>
-                  <span class="tag is-primary"><?=$label?></span>
-                <?php endif; ?>
+                <span class="tag is-primary">
+                  <a href="/first-100-days">First 100 Days</a>
+                </span>
 
                 <!-- title -->
                 <h1 class="title is-1"><?php the_title(); ?></h1>
