@@ -467,7 +467,7 @@ function lawreview_get_posts_by_category_id( $category_id, $offset = 0 )
         'orderby'         => 'menu_order',
         'order'           => 'ASC',
         'post_type'       => 'ilr_symposium',
-        'post_status'     => array( 'publish', 'draft' ),
+        'post_status'     => 'publish',
     );
 
     $posts = new WP_Query( $args );
