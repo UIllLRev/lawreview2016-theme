@@ -980,9 +980,9 @@ add_filter( 'single_template', function($single_template) {
     $single_template = dirname( __FILE__ ) . '/first-100-days/single.php';
   }
 
-  if ( in_category('News') ) {
-    $single_template = dirname( __FILE__ ) . '/single-news.php';
-  }
+  // if ( in_category('News') ) {
+  //   $single_template = dirname( __FILE__ ) . '/single-news.php';
+  // }
   return $single_template;
 
 }, 10, 3);
