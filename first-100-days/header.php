@@ -43,9 +43,15 @@
             </div>
 
             <div class="nav-right nav-menu">
+
+            <?php if ( is_page('First 100 Days') ): ?>
                 <a href="#f100d_introduction" class="nav-item is-active" id="menu-introduction">Introduction</a>
                 <a href="#f100d_topics" class="nav-item" id="menu-topics">Topics</a>
                 <a href="#f100d_contributors" class="nav-item" id="menu-contributors">Contributors</a>
+            <?php else: ?>
+                <span class="nav-item nav-toggle-label">Explore articles</span>
+            <?php endif; ?>
+
                 <span class="nav-toggle">
                     <span></span>
                     <span></span>

@@ -5052,6 +5052,10 @@ h6 {
   padding: 3px 8px 2px;
   text-transform: uppercase;
   width: auto; }
+  .tag > a {
+    color: rgba(255, 255, 255, 0.85); }
+    .tag > a:focus, .tag > a:hover {
+      color: #fff; }
 
 .title span,
 .subtitle span {

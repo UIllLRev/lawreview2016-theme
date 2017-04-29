@@ -467,15 +467,21 @@ function lawreview_get_posts_by_category_id( $category_id, $offset = 0 )
         'orderby'         => 'menu_order',
         'order'           => 'ASC',
         'post_type'       => 'ilr_symposium',
-        'post_status'     => 'publish',
+        'post_status'     => array( 'publish', 'draft' ),
     );
 
     $posts = new WP_Query( $args );
 
     while ( $posts->have_posts() ) : $posts->the_post();
-        echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
-    endwhile;
+        $title = get_the_title();
+        $subtitle = get_field('ilr_subtitle');
 
+        if ( ! empty($subtitle) ) {
+            echo '<li><a href="' . get_the_permalink() . '">' . $title . ': ' . $subtitle . '</a></li>';
+        } else {
+            echo '<li><a href="' . get_the_permalink() . '">' . $title . '</a></li>';
+        }
+    endwhile;
 }
 
 function lawreview_get_post_types() {

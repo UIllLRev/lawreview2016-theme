@@ -54,8 +54,6 @@
 
 #f100d .theme-logo .cls-1 {
   fill: #141618; }
-  .menu-is-open #f100d .theme-logo .cls-1 {
-    fill: #fff; }
 
 #f100d a.nav-item:not(.logo) {
   color: #93979d;
@@ -66,9 +64,6 @@
   text-transform: uppercase;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .menu-is-open #f100d a.nav-item:not(.logo) {
-    opacity: 0;
-    visibility: hidden; }
   #f100d a.nav-item:not(.logo)::after {
     background-color: #f2590d;
     content: '';
@@ -126,6 +121,43 @@
   #f100d .nav-toggle span {
     background-color: #fff; }
 
+#f100d .nav-toggle-label {
+  color: #aeb1b5;
+  font-size: .75rem;
+  letter-spacing: .0125rem;
+  margin-right: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  @media screen and (min-width: 769px), print {
+    #f100d .nav-toggle-label::before {
+      background-color: rgba(20, 22, 24, 0.12);
+      content: '';
+      height: 1px;
+      opacity: 1;
+      position: absolute;
+      top: calc(50% - 1px);
+      right: -2.75rem;
+      -webkit-transform-origin: 0 50%;
+              transform-origin: 0 50%;
+      -webkit-transition: left 0.8s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.8s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: left 0.8s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.8s 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      width: 2.25rem; } }
+  @media screen and (min-width: 769px), print {
+    #f100d .nav-toggle-label::after {
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 5px solid #aeb1b5;
+      content: '';
+      position: absolute;
+      top: calc(50% - 5px);
+      right: -2.75rem;
+      -webkit-transition: -webkit-transform 0.4s 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: -webkit-transform 0.4s 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0.4s 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0.4s 1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s 1s cubic-bezier(0.645, 0.045, 0.355, 1); } }
+
 #f100d .nav-right {
   background-color: transparent;
   box-shadow: none;
@@ -157,6 +189,17 @@
     color: inherit; }
     #f100d .footer a:focus, #f100d .footer a:hover {
       color: #f2590d; }
+
+#f100d.menu-is-open a.nav-item:not(.logo) {
+  opacity: 0;
+  visibility: hidden; }
+
+#f100d.menu-is-open .theme-logo .cls-1 {
+  fill: #fff; }
+
+#f100d.menu-is-open .nav-toggle-label {
+  opacity: 0;
+  visibility: hidden; }
 
 body.is-scrolling {
   pointer-events: none !important; }
@@ -301,6 +344,10 @@ body.is-scrolling {
       .section__title.is-large {
         font-size: 2.625rem;
         margin-bottom: 3rem; } }
+    @media screen and (min-width: 1384px) {
+      .section__title.is-large {
+        font-size: 3rem;
+        margin-bottom: 3rem; } }
   .section__title span {
     color: #f2590d;
     font-weight: 700; }
@@ -308,22 +355,36 @@ body.is-scrolling {
 .section__text {
   color: #93979d;
   margin-bottom: 3rem;
-  max-width: 680px;
+  width: 100%;
   position: relative; }
   @media screen and (min-width: 769px), print {
     .section__text {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
       margin-bottom: 0;
-      padding-left: 10.5rem; } }
+      padding-left: 6.5rem; } }
+  @media screen and (min-width: 1000px) {
+    .section__text {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
   @media screen and (min-width: 1192px) {
     .section__text {
-      max-width: 720px; } }
-  @media screen and (min-width: 769px), print {
+      padding-left: 10.5rem;
+      width: 95%; } }
+  @media screen and (min-width: 1384px) {
+    .section__text {
+      width: 90%; } }
+  @media screen and (min-width: 1192px) {
     .section__text::before {
       background-color: rgba(20, 22, 24, 0.08);
       content: '';
@@ -340,7 +401,7 @@ body.is-scrolling {
       .intro-transition .section__text::before {
         left: -6rem;
         opacity: 0; } }
-  @media screen and (min-width: 769px), print {
+  @media screen and (min-width: 1192px) {
     .section__text::after {
       border-top: 4px solid transparent;
       border-bottom: 4px solid transparent;
@@ -367,11 +428,17 @@ body.is-scrolling {
     transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
     @media screen and (min-width: 769px), print {
       .section__text p {
-        font-size: 1.175rem;
-        width: 235px; } }
+        font-size: 1.125rem;
+        width: 100%; } }
+    @media screen and (min-width: 1000px) {
+      .section__text p {
+        width: 46%; } }
     @media screen and (min-width: 1192px) {
       .section__text p {
-        width: 250px; } }
+        font-size: 1.175rem; } }
+    @media screen and (min-width: 1384px) {
+      .section__text p {
+        font-size: 1.225rem; } }
     .section__text p:nth-child(1) {
       -webkit-transition-delay: .5s;
               transition-delay: .5s; }
@@ -771,11 +838,17 @@ body.is-scrolling {
   @media screen and (min-width: 1192px) {
     .contributors__name {
       font-size: 1.175rem; } }
+  @media screen and (min-width: 1384px) {
+    .contributors__name {
+      font-size: 1.25rem; } }
 
 .contributors__title {
   color: #93979d;
-  font-size: .825rem;
+  font-size: .9rem;
   margin-top: .25rem; }
+  @media screen and (min-width: 769px), print {
+    .contributors__title {
+      font-size: 1rem; } }
 
 .contributors__speakers {
   -ms-flex-wrap: wrap;
@@ -821,13 +894,13 @@ body.is-scrolling {
     font-size: 1.35rem; }
     @media screen and (min-width: 1000px) {
       .contributors__speakers .contributors__name {
-        font-size: 1.25rem; } }
+        font-size: 1.275rem; } }
     @media screen and (min-width: 1192px) {
       .contributors__speakers .contributors__name {
         font-size: 1.125rem; } }
     @media screen and (min-width: 1384px) {
       .contributors__speakers .contributors__name {
-        font-size: 1.35rem; } }
+        font-size: 1.425rem; } }
     .contributors__speakers .contributors__name::after {
       background-color: #f2590d;
       content: '';
