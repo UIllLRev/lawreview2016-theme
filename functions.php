@@ -134,7 +134,7 @@ function lawreview_header_scripts()
 function lawreview_conditional_scripts()
 {
 
-  wp_register_script('first-100-days-js', get_template_directory_uri() . '/first-100-days/js/first-100-days.min.js', array('jquery', 'scroll-watcher'), '1.0.0');
+  wp_register_script('first-100-days-js', get_template_directory_uri() . '/first-100-days/js/first-100-days.js', array('jquery', 'scroll-watcher'), '1.0.0');
 
   if ( is_page( 'First 100 Days' ) || ( is_single() && in_category('First 100 Days') ) ) {
     wp_enqueue_script('first-100-days-js');
@@ -467,7 +467,7 @@ function lawreview_get_posts_by_category_id( $category_id, $offset = 0 )
         'orderby'         => 'menu_order',
         'order'           => 'ASC',
         'post_type'       => 'ilr_symposium',
-        'post_status'     => array( 'publish', 'draft' ),
+        'post_status'     => 'publish',
     );
 
     $posts = new WP_Query( $args );
@@ -965,8 +965,8 @@ add_filter( 'menu_order', 'lawreview_reorder_menus' );
 
 
 /**
- * First 100 Days post template
- * ============================
+ * First 100 Days single post template
+ * ===================================
  *
  * Assign posts with the "First 100 Days" category to a custom template.
  * ----------------------------------------------------------------------------
@@ -979,8 +979,47 @@ add_filter( 'single_template', function($single_template) {
   if ( in_category('First 100 Days') ) {
     $single_template = dirname( __FILE__ ) . '/first-100-days/single.php';
   }
+
+  // if ( in_category('News') ) {
+  //   $single_template = dirname( __FILE__ ) . '/single-news.php';
+  // }
   return $single_template;
 
 }, 10, 3);
+
+
+
+
+/**
+ * Add Open Graph
+ * ==============
+ */
+
+function lawreview_add_opengraph()
+{
+    if ( is_single() ) {
+        global $post;
+
+        if ( get_the_post_thumbnail($post->ID, 'thumbnail') ) {
+            $thumbnail_id = get_post_thumbnail_id($post->ID);
+            $thumbnail_object = get_post($thumbnail_id);
+            $image = $thumbnail_object->guid;
+        } else {
+            // set default image please
+            $image = '';
+        }
+
+        $description = substr(strip_tags($post->post_content),0,200) . '...';
+
+        echo '<meta property="og:title" content="' . get_the_title() . '" />';
+        echo '<meta property="og:type" content="article" />';
+        echo '<meta property="og:image" content="' . $image . '" />';
+        echo '<meta property="og:url" content="' . get_the_permalink() . '" />';
+        echo '<meta property="og:description" content="' . $description . '" />';
+        echo '<meta property="og:site_name" content="Illinois Law Review" />';
+    }
+}
+add_action('wp_head', 'lawreview_add_opengraph');
+
 
 ?>

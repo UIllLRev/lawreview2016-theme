@@ -9,13 +9,11 @@ get_template_part( 'first-100-days/header' );
 $symposium_id = 4962;
 
 $args = array(
+    'posts_per_page' => -1,
     'post_type' => 'ilr_symposium',
     'post_parent' => $symposium_id,
     'orderby' => 'menu_order',
     'order' => 'ASC',
-
-    // DELETE THIS BEFORE GOING LIVE
-    'post_status' => array( 'publish', 'draft' ),
 );
 
 $posts = new WP_Query( $args );
@@ -34,6 +32,8 @@ if ( $posts->have_posts() ): ?>
                 while ( $posts->have_posts() ) :
                 $posts->the_post();
 
+                $intro_title = get_field('f100d_title_intro');
+
                 // only output post 0
                 if ( $posts->current_post < 1 ): ?>
 
@@ -43,7 +43,18 @@ if ( $posts->have_posts() ): ?>
                         </div>
                     </figure>
                     <div class="column is-8  section__content is-large">
-                        <h2 class="section__title is-large"><?php the_title(); ?></h2>
+                        <h2 class="section__title is-large">
+
+                            <?php
+
+                                if ( ! empty($intro_title) ) {
+                                    echo $intro_title;
+                                } else {
+                                    the_title();
+                                }
+                            ?>
+
+                        </h2>
                         <div class="section__text"><?php echo get_the_excerpt(); ?></div>
                     </div>
 
@@ -54,7 +65,9 @@ if ( $posts->have_posts() ): ?>
         </article>
         <blockquote class="section__quote">
             <p class="section__quote__text">"On November 8th, Americans will be voting for this 100-day plan to restore prosperity to our economy, security to our communities, and honesty to our government. This is my pledge to you."</p>
-            <footer class="section__quote__footer">Donald Trump - Oct. 22, 2016</footer>
+            <footer class="section__quote__footer">
+                <a href="//www.donaldjtrump.com/press-releases/donald-j.-trump-delivers-groundbreaking-contract-for-the-american-vote1" target="_blank">Donald J. Trump Contract With the American Voter</a>
+            </footer>
         </blockquote>
     </section>
 
@@ -74,11 +87,25 @@ if ( $posts->have_posts() ): ?>
                     while ( $posts->have_posts() ) :
                         $posts->the_post();
 
+                        $topic_title = get_field('f100d_title_topics');
+
                         // only output post 1 and above
                         if ( $posts->current_post >= 1 ): ?>
 
                             <li class="topics__list__item">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <a href="<?php the_permalink(); ?>">
+
+                                <?php
+
+                                    if ( ! empty($topic_title) ) {
+                                        echo $topic_title;
+                                    } else {
+                                        the_title();
+                                    }
+
+                                ?>
+
+                                </a>
                             </li>
 
                         <?php endif; ?>
@@ -166,7 +193,7 @@ if ( $posts->have_posts() ): ?>
                     <div class="columns  contributors__authors">
                         <a href="<?php echo get_permalink( 4931 ); ?>" class="column is-half-tablet is-one-third-desktop">
                             <div class="contributors__person">
-                                <div class="contributors__name">Vik Amar</div>
+                                <div class="contributors__name">Vikram David Amar</div>
                                 <div class="contributors__title">Dean, College of Law at the University of Illinois</div>
                             </div>
                         </a>
@@ -262,7 +289,7 @@ if ( $posts->have_posts() ): ?>
                         </a>
                         <a href="<?php echo get_permalink( 4906 ); ?>" class="column is-half-tablet is-one-third-desktop">
                             <div class="contributors__person">
-                                <div class="contributors__name">Leslie Wexler</div>
+                                <div class="contributors__name">Lesley Wexler</div>
                                 <div class="contributors__title">Professor of law at the University of Illinois</div>
                             </div>
                         </a>

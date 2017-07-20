@@ -3,6 +3,7 @@
     $(function () {
 
         'use strict';
+        /* global ScrollWatcher */
 
         var BODY = $('body');
         var PAGE = $('#f100d');
@@ -34,10 +35,14 @@
             '#f100d_contributors'
         ];
 
-        watcher.on('page:load', function(event) {
-            window.setTimeout( () => {
+        watcher.on('page:load', function() {
+            window.setTimeout( function() {
+                if ( ! watcher.windowAtTop() ) {
+                    window.scrollBy(0, -1);
+                    $('section').removeClass('content-is-hidden');
+                }
                 PAGE.removeClass('intro-transition'); // 1
-            }, 400);
+            }, 300);
         });
 
         watcher.on('scrolling', function() {
@@ -113,7 +118,7 @@
         }
 
         function resizeMenu() {
-            var windowHeight = window.innerHeight - 30;
+            var windowHeight = window.innerHeight - 60;
 
             // Set the menu height to fill the window
             fullScreenMenu.css({'height': windowHeight});
