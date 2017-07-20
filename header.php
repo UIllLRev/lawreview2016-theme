@@ -17,8 +17,6 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-    <div style="display: none;">TEST</div>
-
 	<!-- header -->
 	<header class="header has-transition" role="banner">
         <div class="container">
