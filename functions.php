@@ -672,17 +672,33 @@ add_filter('posts_orderby', 'lawreview_custom_posts_orderby', 10, 2); // Sort by
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt
 
+/*------------------------------------*\
+	Current Issue route
+\*------------------------------------*/
 
+function ilr_import_current_issue() {
+    $cats = get_terms(
+        array(
+            'taxonomy' => 'category',
+            'orderby' => 'name',
+            'order' => 'DESC',
+            'hide_empty' => false,
+            'parent' => 36,
+            'number' => 1
+        ));
 
+    add_rewrite_rule('^current-issue/?$', 'index.php?cat=' . $cats[0]->term_id, 'top');
+}
 
+function ilr_import_rewrite_activation()
+{
+    ilr_import_current_issue();
+    flush_rewrite_rules();
+}
 
-
-
-
-
-
-
-
+add_action('init', 'ilr_import_current_issue');
+add_action('created_term', 'ilr_import_rewrite_activation');
+add_action('delete_term', 'ilr_import_rewrite_activation');
 
 /**
  * Custom Post Type: Article
