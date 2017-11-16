@@ -24,3 +24,5 @@ wp-content/plugins/hello.php
 *.sublime-workspace
 config.codekit3
 *.codekit3
+
+*.sublime-workspace
