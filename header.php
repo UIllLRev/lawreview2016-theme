@@ -28,11 +28,6 @@
                     <?php lawreview_nav(); ?>
                 </div>
                 <div class="is-flex is-hidden-mobile">
-                    <a href="mailto:law-reviewonline@illinois.edu" target="_blank" class="nav-item is-icon">
-                        <span class="icon">
-                            <i class="fa fa-envelope"></i>
-                        </span>
-                    </a>
                     <a href="https://twitter.com/UIllLRev" target="_blank" class="nav-item is-icon">
                         <span class="icon">
                             <i class="fa fa-twitter"></i>
