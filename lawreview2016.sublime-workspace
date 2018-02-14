@@ -4,16 +4,192 @@
 		"selected_items":
 		[
 			[
+				"law",
+				"lawreview_add_opengraph"
+			],
+			[
+				"abs",
+				"absolute"
+			],
+			[
+				"content",
+				"content-is-hidden"
+			],
+			[
+				"posts",
+				"posts_per_page\t(functions.php)"
+			],
+			[
+				"nav-tog",
+				"nav-toggle-label\t(header.php)"
+			],
+			[
+				"get_the",
+				"get_the_permalink"
+			],
+			[
+				"full",
+				"full-screen-menu"
+			],
+			[
+				"f100d_",
+				"f100d_introduction\t(template-first-100-days.php)"
+			],
+			[
+				"lawreview_get",
+				"lawreview_get_posts_by_category_id\t(functions.php)"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"contrib",
+				"contributors__person\t(template-first-100-days.php)"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"endfor",
+				"endforeach\t(template-home.php)"
+			],
+			[
+				"section__fig",
+				"section__figure__image"
+			],
+			[
+				"cat",
+				"category\t(_variables.scss)"
+			],
+			[
+				"tax",
+				"taxonomy"
+			],
+			[
+				"over-",
+				"overflow-x"
+			],
+			[
+				"conten",
+				"content-is-hidden\t(template-first-100-days.php)"
+			],
+			[
+				"change",
+				"changeActiveItem"
+			],
+			[
+				"just",
+				"justify-content"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"contribu",
+				"contributors__name\t(template-first-100-days.php)"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"navItem",
+				"navItemActive"
+			],
+			[
+				"window",
+				"windowAtBottom"
+			],
+			[
+				"f100",
+				"f100d_topics"
+			],
+			[
+				"f1",
+				"f100d_contributors"
+			],
+			[
+				"backgoru",
+				"background-color"
+			],
+			[
+				"topics__list",
+				"topics__list__item\t(template-first-100-days.php)"
+			],
+			[
+				"section__fi",
+				"section__figure__image\t(template-first-100-days.php)"
+			],
+			[
+				"section__figure",
+				"section__figure__inner\t(template-first-100-days.php)"
+			],
+			[
+				"scroll",
+				"scroll-watcher"
+			],
+			[
+				"first-",
+				"first-100-days-js"
+			],
+			[
+				"vi",
+				"viewportSize"
+			],
+			[
+				"trnsiti",
+				"transition-delay"
+			],
+			[
+				"lawreview_con",
+				"lawreview_conditional_scripts"
+			],
+			[
+				"contributor",
+				"contributors__person\t(template-first-100-days.php)"
+			],
+			[
+				"contr",
+				"contributors__authors\t(template-first-100-days.php)"
+			],
+			[
+				"gr",
+				"gray-f9"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"dis",
+				"display\t(template-first-100-days.php)"
+			],
+			[
+				"firs",
+				"first-100-days"
+			],
+			[
 				"Sympo",
 				"Symposiums"
 			],
 			[
 				"not_found",
 				"not_found_in_trash"
-			],
-			[
-				"law",
-				"lawreview_custom_post_article"
 			],
 			[
 				"register",
@@ -23,24 +199,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "header.php",
-			"settings":
-			{
-				"buffer_size": 2500,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "functions.php",
-			"settings":
-			{
-				"buffer_size": 33055,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -49,10 +207,34 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 51.0,
-		"last_filter": "sql",
+		"height": 95.0,
+		"last_filter": "pack control up",
 		"selected_items":
 		[
+			[
+				"pack control up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"package con li",
+				"Package Control: List Packages"
+			],
+			[
+				"package control inst",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: List Packages"
+			],
+			[
+				"css",
+				"Set Syntax: CSS3"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
 			[
 				"sql",
 				"Set Syntax: SQL"
@@ -97,13 +279,62 @@
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass"
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016"
 	],
 	"file_history":
 	[
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/utilities/_variables.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop-print.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/category.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop-index.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/functions.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/archive.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/header.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-config.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/template-home.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/components/_post.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/style.css",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/elements/_button.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/single.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/header.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop-online.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/template-first-100-days.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/js/first-100-days.js",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/pages/_first-100-days.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/category-news.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/single-news.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/category-announcements.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/single-announcements.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/js/scripts.js",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/single.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/elements/_title.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/elements/_content.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/template-first-100-days.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/footer.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/elements/_tag.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/vendors/bulma/sass/elements/tag.sass",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/shame/_shame.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/.gitignore",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/layout/_header.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/js/full-screen-menu.js",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/js/scroll-watcher.js",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/projects/first-100-days/js/first-100-days.js",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/projects/first-100-days/header.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/projects/first-100-days/template-first-100-days.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/first-100-days.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/js/first-100-days.js",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/single-f100d.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/vendors/bulma/sass/elements/title.sass",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/components/_nav.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/layout/_main.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/pages/_home.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/vendors/bulma/sass/components/nav.sass",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/main.scss",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/Users/chrismlusk/Library/Application Support/Sublime Text 3/Packages/DocBlockr/Base File.sublime-settings",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/template-demo.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/lawreview2016.sublime-project",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/.htaccess",
 		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/components/_post.scss",
 		"/Users/chrismlusk/Code/lawreview2016-theme/assets/sass/elements/_content.scss",
@@ -176,7 +407,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -190,76 +421,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"test-site",
+			"www.example.com",
+			"posts_per_page",
+			"$gray-9",
+			"topic",
+			"menu",
+			"add_slug_to_body_class",
+			"menu",
+			"<a href=\"#\" class=\"column is-half-tablet is-one-third-desktop ",
+			"<a href=\"#\" class=\"column is-half-tablet is-one-third-desktop\">",
+			"column is-half-tablet is-one-third-desktop",
+			"at University of Illinois",
+			"amar",
+			".nav-item",
+			"http://www.example.com",
+			"/test-site",
+			"\"></sect",
+			"scroll-watcher",
+			"$post->ID",
+			"the_query",
+			"$posts",
+			"posts",
+			"$symposium_id",
+			"lawreview_get_post_types",
+			"!empt",
+			"/assets/images/first-100-days",
+			"/assets/images/first-100-days/",
+			"first-100",
+			"lawreviewcomments",
+			"Name Name Name",
+			"src=\"<?php ?>/asset",
+			"top is-one-quarter-widescreen\">\n                                <img src=\"/wp",
+			"http://placehold.it/220x165",
+			"max-width: 320px;",
+			"</div>\n                                        <div class=\"contributors__organization\">",
+			"</div>\n                                    <div class=\"contributors__organization\">",
+			"font-size: ;",
+			"column is-half-tablet is-one-quarter-desktop",
+			"th-item-del",
+			"s=\"contributors__title\">Title Title Title Title</div>",
+			";",
+			"add_theme_support",
+			"thumbnail",
+			"thumbnails",
+			"post-thumbnails",
+			"val",
+			"$('.header')",
+			"/ 3",
+			"scroll.",
+			"document.getElementById",
+			"removeClass",
+			"document.getElementById",
+			"classList.add",
+			"classList.remove",
+			"navItem",
+			"exit",
+			"navItem.removeClass('is-active",
+			"$('.nav-item')",
+			"this",
+			"PAGE",
+			"const",
+			"FULL_SCREEN_BACKGROUND",
+			"FULL_SCREEN_MENU",
+			"NAV_TOGGLE",
+			"<div class=\"column is-half-tablet is-one-third-desktop\">",
+			"<div class=\"column is-half-tablet is-one-quarter-desktop\">",
+			"<div class=\"contributors__person\">",
+			"column is-one-quarter",
+			"8px",
+			"y,.4",
+			"background-color: $white;",
+			";",
+			"transform: scale",
+			"5p",
+			"6px",
+			".375rem",
+			"event",
+			"evt",
+			"hasScrolledPast(",
+			"header",
+			"hasScrolled(",
+			"<a class=\"na",
+			".intro &",
+			"is-hidden",
+			"var ",
+			"_scripts",
+			"'scriptname'",
+			"_scripts",
+			".about__figure",
+			".figure__transition",
+			",.",
+			"-webkit-transform:",
+			"transition: -webkit-transform",
+			"-webkit-transition",
+			"-webkit-transform-origin:",
+			"-o-object-fit",
+			"contributor__",
+			"column is-half",
+			"umn is-one-half",
+			" Title</div>",
+			"<div class=\"contributors__name\">Name Name Name</div>\n                            <div class=\"contributors__title\">Title Title Title Title Title</div>",
+			"<div class=\"contributors__name\">Name Name Name</div>",
+			"__speakers",
+			"class=\"\">Name Name Name</div>",
+			"-",
+			"topics-list-item",
+			"ne-fourth",
+			"width: 4rem;",
+			"cs-list-item\">",
+			"1",
+			"    ",
+			"   ",
+			"1.1",
+			"div",
+			"_introduction",
+			"-styles",
+			"awreview_styles",
+			"_conditional_",
+			"_script",
+			"conditional_scripts",
+			"first-100-days",
 			"// null = at the bottom of the menu",
 			"http://localhost/test-site",
 			"www.example.com",
 			"Articles",
 			"'symposium'",
 			"'Symposium'",
-			"'symposium'",
-			"'Symposium'",
-			"'Symposium",
-			"'Symposiums'",
-			"awreview_custom_post_symposium",
-			"create_post_type_lawreview",
-			".nav-menu",
-			"font-size: 1rem;",
-			"$size-6",
-			"white",
-			"#e84a27",
-			"orange",
-			"-moz-",
-			"-webkit-",
-			"s_link_at",
-			"nk_attrib",
-			"link_attribute",
-			"osts_link_attributes",
-			"posts_link_attributes",
-			"next_text",
-			"prev_text",
-			"$link-hover",
-			"$grey-darker",
-			"$gray-3",
-			"conditionizr",
-			"$nav-height",
-			"conditional_script",
-			"<<<<<<< HEAD",
-			"on-event",
-			"color: $primary-color",
-			"breakpoint('tablet')",
-			"0, 0, 0,",
-			"breakpoint('tablet')",
-			"$speed-2x",
-			"$speed-4x",
-			"breakpoint('desktop')",
-			"breakpoint('tablet')",
-			"breakpoint('widescreen')",
-			"@include on-event",
-			"$primary-color",
-			"$size-6",
-			".post.single .post-meta",
-			"gray-3",
-			"primary",
-			"$size-6",
-			"Articles",
-			"article",
-			"Article",
-			"articles",
-			"Article",
-			"Articles",
-			"tom_post_article",
-			"post_tag",
-			"create_post_type_lawreview",
-			"get_template_directory_uri()",
-			"directory_uri()",
-			"get_template_directory_uri()",
-			"_directory_uri() . ",
-			"/img/",
-			" !default",
-			" ",
-			" !default",
-			"mport '",
-			"// "
+			"'symposium'"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -277,229 +566,14 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "header.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2500,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1188,
-								1188
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"auto_complete": true,
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"git_gutter_enabled": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 389.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "functions.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 33055,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								23225,
-								23225
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"auto_complete": true,
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"git_gutter_enabled": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 13207.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -536,7 +610,7 @@
 	"project": "lawreview2016.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -545,6 +619,118 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"head",
+				"wp-content/themes/lawreview2016/header.php"
+			],
+			[
+				"config",
+				"wp-config.php"
+			],
+			[
+				"wp",
+				"wp-config.php"
+			],
+			[
+				"style",
+				"wp-content/themes/lawreview2016/style.css"
+			],
+			[
+				"_po",
+				"wp-content/themes/lawreview2016/assets/sass/components/_post.scss"
+			],
+			[
+				"_button",
+				"wp-content/themes/lawreview2016/assets/sass/elements/_button.scss"
+			],
+			[
+				"",
+				"wp-content/themes/lawreview2016/template-first-100-days.php"
+			],
+			[
+				"_ti",
+				"wp-content/themes/lawreview2016/assets/sass/elements/_title.scss"
+			],
+			[
+				"cont",
+				"wp-content/themes/lawreview2016/assets/sass/elements/_content.scss"
+			],
+			[
+				"hea",
+				"wp-content/themes/lawreview2016/header.php"
+			],
+			[
+				"foot",
+				"wp-content/themes/lawreview2016/footer.php"
+			],
+			[
+				"tag",
+				"wp-content/themes/lawreview2016/assets/sass/elements/_tag.scss"
+			],
+			[
+				"_sham",
+				"wp-content/themes/lawreview2016/assets/sass/shame/_shame.scss"
+			],
+			[
+				"he",
+				"wp-content/themes/lawreview2016/header.php"
+			],
+			[
+				"header",
+				"wp-content/themes/lawreview2016/assets/sass/layout/_header.scss"
+			],
+			[
+				"scri",
+				"wp-content/themes/lawreview2016/assets/js/scripts.js"
+			],
+			[
+				"first",
+				"wp-content/themes/lawreview2016/first-100-days/js/first-100-days.js"
+			],
+			[
+				"title",
+				"wp-content/themes/lawreview2016/assets/sass/vendors/bulma/sass/elements/title.sass"
+			],
+			[
+				"_title",
+				"wp-content/themes/lawreview2016/assets/sass/elements/_title.scss"
+			],
+			[
+				"titl",
+				"wp-content/themes/lawreview2016/assets/sass/vendors/bulma/sass/elements/title.sass"
+			],
+			[
+				"_main",
+				"wp-content/themes/lawreview2016/assets/sass/layout/_main.scss"
+			],
+			[
+				"nav",
+				"wp-content/themes/lawreview2016/assets/sass/components/_nav.scss"
+			],
+			[
+				"scr",
+				"wp-content/themes/lawreview2016/assets/js/scripts.js"
+			],
+			[
+				"nav.s",
+				"wp-content/themes/lawreview2016/assets/sass/vendors/bulma/sass/components/nav.sass"
+			],
+			[
+				"main.",
+				"wp-content/themes/lawreview2016/assets/sass/main.scss"
+			],
+			[
+				"main",
+				"wp-content/themes/lawreview2016/assets/sass/main.scss"
+			],
+			[
+				"varia",
+				"wp-content/themes/lawreview2016/assets/sass/utilities/_variables.scss"
+			],
+			[
+				"func",
+				"wp-content/themes/lawreview2016/functions.php"
+			],
 			[
 				"function",
 				"wp-content/themes/lawreview2016/functions.php"
@@ -556,10 +742,6 @@
 			[
 				"content",
 				"assets/sass/vendors/bulma/sass/elements/content.sass"
-			],
-			[
-				"head",
-				"header.php"
 			],
 			[
 				"fun",
@@ -574,16 +756,8 @@
 				"single.php"
 			],
 			[
-				"header",
-				"header.php"
-			],
-			[
 				"_tag",
 				"assets/sass/elements/_tag.scss"
-			],
-			[
-				"style",
-				"style.css"
 			],
 			[
 				"main.css",
@@ -596,10 +770,6 @@
 			[
 				"post",
 				"assets/sass/components/_post.scss"
-			],
-			[
-				"nav",
-				"assets/sass/vendors/bulma/sass/components/nav.sass"
 			],
 			[
 				"styl",
@@ -632,14 +802,6 @@
 			[
 				"_pag",
 				"assets/sass/components/_pagination.scss"
-			],
-			[
-				"varia",
-				"assets/sass/vendors/bulma/sass/utilities/variables.sass"
-			],
-			[
-				"func",
-				"functions.php"
 			],
 			[
 				"_var",
@@ -678,7 +840,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 285.0,
+	"side_bar_width": 306.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
