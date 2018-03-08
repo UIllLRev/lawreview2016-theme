@@ -4,7 +4,7 @@ $post_types = lawreview_get_post_types();
 
 if ( have_posts() ) : ?>
 
-  <?php while ( have_posts() ) : the_post(); 
+  <?php while ( have_posts() ) : the_post();
 
     $label = $post_types[get_field('ilr_post_type')];
     $subtitle = get_field('ilr_subtitle');
@@ -37,7 +37,7 @@ if ( have_posts() ) : ?>
           <?php endif; ?>
         </div>
         <?php endif; ?>
-        
+
     </article>
 
   <?php endwhile; ?>

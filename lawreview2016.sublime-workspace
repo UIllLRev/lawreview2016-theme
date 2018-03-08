@@ -207,10 +207,26 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 95.0,
-		"last_filter": "pack control up",
+		"height": 230.0,
+		"last_filter": "pack up",
 		"selected_items":
 		[
+			[
+				"pack up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pack inst",
+				"Package Control: Install Package"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"sy scs",
+				"Set Syntax: SCSS"
+			],
 			[
 				"pack control up",
 				"Package Control: Upgrade Package"
@@ -256,7 +272,7 @@
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 579.0
+		"width": 485.0
 	},
 	"console":
 	{
@@ -279,12 +295,23 @@
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016"
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days"
 	],
 	"file_history":
 	[
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/utilities/_variables.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/single.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/header.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/template-first-100-days.php",
+		"/Users/chrismlusk/Downloads/single.php",
+		"/Volumes/Friendship Madness/wp-content/themes/FMAA/single-longform.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop-online.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop-print.php",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/components/_post.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/first-100-days.scss",
+		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/utilities/_variables.scss",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/category.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop-index.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/functions.php",
@@ -292,13 +319,8 @@
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/header.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-config.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/template-home.php",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/components/_post.scss",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/style.css",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/elements/_button.scss",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/single.php",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/header.php",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop-online.php",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/template-first-100-days.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/js/first-100-days.js",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/pages/_first-100-days.scss",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/category-news.php",
@@ -319,10 +341,8 @@
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/js/full-screen-menu.js",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/first-100-days/js/scroll-watcher.js",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/projects/first-100-days/js/first-100-days.js",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/loop.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/projects/first-100-days/header.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/projects/first-100-days/template-first-100-days.php",
-		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/first-100-days.scss",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/js/first-100-days.js",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/single-f100d.php",
 		"/Users/chrismlusk/Code/dev.illinoislawreview.org/wp-content/themes/lawreview2016/assets/sass/vendors/bulma/sass/elements/title.sass",
@@ -407,7 +427,7 @@
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 31.0
 	},
 	"find_in_files":
 	{
@@ -421,6 +441,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"::first-letter",
 			"test-site",
 			"www.example.com",
 			"posts_per_page",
@@ -547,8 +568,7 @@
 			"www.example.com",
 			"Articles",
 			"'symposium'",
-			"'Symposium'",
-			"'symposium'"
+			"'Symposium'"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -569,11 +589,16 @@
 			"sheets":
 			[
 			]
+		},
+		{
+			"sheets":
+			[
+			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -588,11 +613,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -606,11 +638,15 @@
 	{
 		"height": 0.0
 	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
 	"pinned_build_system": "",
 	"project": "lawreview2016.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":
