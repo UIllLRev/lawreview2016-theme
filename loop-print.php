@@ -1,4 +1,4 @@
-<?php 
+<?php
   $post_types = lawreview_get_post_types();
   foreach ($post_types as $post_type => $label):
     lawreview_query_posts($post_type);
