@@ -11,6 +11,8 @@
 
             <?php while ( have_posts() ) : the_post();
 
+              // $post_type = get_post_type_object( get_post_type() );
+              // $label = esc_html($post_type->labels->singular_name);
               $label = $post_types[get_field('ilr_post_type')];
               $subtitle = get_field('ilr_subtitle');
               $author = get_field('ilr_author');

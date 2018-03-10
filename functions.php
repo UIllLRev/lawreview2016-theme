@@ -139,6 +139,10 @@ function lawreview_conditional_scripts()
   if ( is_page( 'First 100 Days' ) || ( is_single() && in_category('First 100 Days') ) ) {
     wp_enqueue_script('first-100-days-js');
   }
+
+  if ( is_single() && in_category('Collection') ) {
+    wp_enqueue_script('first-100-days-js');
+  }
 }
 
 // Load Law Review styles
@@ -167,6 +171,10 @@ function lawreview_conditional_styles()
   wp_register_style('first-100-days-css', get_template_directory_uri() . '/first-100-days/css/first-100-days.css', array('lawreview-styles'), '1.0');
 
   if ( is_page( 'First 100 Days' ) || ( is_single() && in_category('First 100 Days') ) ) {
+    wp_enqueue_style('first-100-days-css');
+  }
+
+  if ( is_single() && in_category('Collection') ) {
     wp_enqueue_style('first-100-days-css');
   }
 }
@@ -531,12 +539,6 @@ function lawreview_custom_posts_orderby($orderby_statement, $query) {
     return $orderby_statement;
 }
 
-// Remove Admin bar
-function remove_admin_bar()
-{
-    return false;
-}
-
 // Remove 'text/css' from our enqueued stylesheet
 function lawreview_style_remove($tag)
 {
@@ -661,7 +663,6 @@ add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove 
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
 add_filter('excerpt_more', 'lawreview_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-//add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'lawreview_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
@@ -742,7 +743,7 @@ function lawreview_custom_post_article()
     $args = array(
         'labels'                => $labels,
         'public'                => true,
-        'hierarchical'          => false,
+        'hierarchical'          => true,
         'publicly_queryable'    => true,
         'show_ui'               => true,
         'show_in_menu'          => true,
@@ -754,6 +755,7 @@ function lawreview_custom_post_article()
         'supports'              => array(
                                         'title',
                                         'editor',
+                                        'page-attributes',
                                         'thumbnail',
                                         'revisions',
                                     ),
@@ -813,7 +815,7 @@ function lawreview_custom_post_note()
     $args = array(
         'labels'                => $labels,
         'public'                => true,
-        'hierarchical'          => false,
+        'hierarchical'          => true,
         'publicly_queryable'    => true,
         'show_ui'               => true,
         'show_in_menu'          => true,
@@ -826,6 +828,7 @@ function lawreview_custom_post_note()
                                         'title',
                                         'editor',
                                         'thumbnail',
+                                        'page-attributes',
                                         'revisions',
                                     ),
         'taxonomies'            => array( 'category' ),
@@ -981,10 +984,10 @@ add_filter( 'menu_order', 'lawreview_reorder_menus' );
 
 
 /**
- * First 100 Days single post template
- * ===================================
+ * Single post templates
+ * =====================
  *
- * Assign posts with the "First 100 Days" category to a custom template.
+ * Assign posts with specific categories to a custom template.
  * ----------------------------------------------------------------------------
  */
 
@@ -992,13 +995,15 @@ add_filter( 'single_template', function($single_template) {
 
   global $post;
 
-  if ( in_category('First 100 Days') ) {
-    $single_template = dirname( __FILE__ ) . '/first-100-days/single.php';
+  if ( in_category('Collection') ) {
+    $single_template = dirname( __FILE__ ) . '/collections/single.php';
   }
 
-  // if ( in_category('News') ) {
-  //   $single_template = dirname( __FILE__ ) . '/single-news.php';
-  // }
+  if ( in_category('First 100 Days') ) {
+    $single_template = dirname( __FILE__ ) . '/collections/single.php';
+    // $single_template = dirname( __FILE__ ) . '/first-100-days/single.php';
+  }
+
   return $single_template;
 
 }, 10, 3);
