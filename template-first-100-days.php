@@ -31,12 +31,10 @@ if ( $posts->have_posts() ): ?>
 
                 while ( $posts->have_posts() ) :
                 $posts->the_post();
-
                 $intro_title = get_field('f100d_title_intro');
 
                 // only output post 0
                 if ( $posts->current_post < 1 ): ?>
-
                     <figure class="column is-5  section__figure">
                         <div class="section__figure__inner  has-transition">
                             <?php the_post_thumbnail('post-thumbnail', ['class' => 'section__figure__image']); ?>
@@ -44,20 +42,16 @@ if ( $posts->have_posts() ): ?>
                     </figure>
                     <div class="column is-8  section__content is-large">
                         <h2 class="section__title is-large">
-
                             <?php
-
                                 if ( ! empty($intro_title) ) {
                                     echo $intro_title;
                                 } else {
                                     the_title();
                                 }
                             ?>
-
                         </h2>
                         <div class="section__text"><?php echo get_the_excerpt(); ?></div>
                     </div>
-
                 <?php endif; ?>
             <?php endwhile; ?>
 
@@ -66,7 +60,7 @@ if ( $posts->have_posts() ): ?>
         <blockquote class="section__quote">
             <p class="section__quote__text">"On November 8th, Americans will be voting for this 100-day plan to restore prosperity to our economy, security to our communities, and honesty to our government. This is my pledge to you."</p>
             <footer class="section__quote__footer">
-                <a href="//www.donaldjtrump.com/press-releases/donald-j.-trump-delivers-groundbreaking-contract-for-the-american-vote1" target="_blank">Donald J. Trump Contract With the American Voter</a>
+                <a href="https://www.donaldjtrump.com/press-releases/donald-j.-trump-delivers-groundbreaking-contract-for-the-american-vote1" target="_blank">Donald J. Trump Contract With the American Voter</a>
             </footer>
         </blockquote>
     </section>
@@ -81,42 +75,32 @@ if ( $posts->have_posts() ): ?>
                     <ol class="topics__list">
 
                     <?php
-
                     // rewind loop to beginning
                     $posts->rewind_posts();
                     while ( $posts->have_posts() ) :
                         $posts->the_post();
-
                         $topic_title = get_field('f100d_title_topics');
 
                         // only output post 1 and above
                         if ( $posts->current_post >= 1 ): ?>
-
                             <li class="topics__list__item">
                                 <a href="<?php the_permalink(); ?>">
-
-                                <?php
-
-                                    if ( ! empty($topic_title) ) {
-                                        echo $topic_title;
-                                    } else {
-                                        the_title();
-                                    }
-
-                                ?>
-
+                                    <?php
+                                        if ( ! empty($topic_title) ) {
+                                            echo $topic_title;
+                                        } else {
+                                            the_title();
+                                        }
+                                    ?>
                                 </a>
                             </li>
-
                         <?php endif; ?>
-
                     <?php endwhile; ?>
-
                     </ol>
                 </div>
                 <figure class="column is-4  section__figure">
                     <div class="section__figure__inner  has-transition">
-                        <img class="section__figure__image" src="/wp-content/uploads/2017/04/trump-02.jpg" alt="">
+                        <img class="section__figure__image" src="<?php echo site_url( '/wp-content/uploads/2017/04/trump-02.jpg/' ); ?>" alt="">
                     </div>
                 </figure>
             </div>

@@ -26,9 +26,7 @@
                         <div class="menu">
                             <p class="menu-label">First 100 Days</p>
                             <ul class="menu-list">
-
-                            <?php lawreview_get_posts_by_category_id( 159, 2 ); ?>
-
+                                <?php lawreview_get_posts_by_category_id( 159, 2 ); ?>
                             </ul>
                         </div>
                     </div>
