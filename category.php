@@ -5,12 +5,12 @@
       <div class="hero-body">
         <div class="container">
 
-          <?php 
+          <?php
 
             $category_id = get_query_var('cat');
             $category = get_category($category_id);
             $category_parent_id = $category->category_parent;
-            $title = single_cat_title("", false); 
+            $title = single_cat_title("", false);
 
             if ( $category_parent_id === 36 ) {
               // 36 is the category id of `Print Archives`
@@ -34,7 +34,7 @@
         <div class="container">
           <div class="nav-center">
 
-            <a href="/online/" class="nav-item is-tab">Articles</a><a href="/online-rankings/" class="nav-item is-tab">Rankings</a><a href="/blog/" class="nav-item is-tab">Blog</a>
+            <a href="<?php echo site_url( '/online/' ) ?>" class="nav-item is-tab">Articles</a><a href="<?php echo site_url( '/online-rankings/' ) ?>" class="nav-item is-tab">Rankings</a><a href="<?php echo site_url( '/blog/' ) ?>" class="nav-item is-tab">Blog</a>
           </div>
         </div>
     </nav>

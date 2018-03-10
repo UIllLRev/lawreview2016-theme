@@ -3,12 +3,12 @@
       <div class="level">
         <div class="level-left">
           <p class="level-item">
-            &copy; <?php echo date('Y'); ?> University of Illinois Law Review.
+            &copy; <?php echo date('Y'); ?> University of Illinois Law Review
           </p>
         </div>
         <div class="level-right">
-          <a href="/members/bookpull" class="level-item">Member Login</a>
-          <a href="/wp-admin" class="level-item">Admin Login</a>
+          <a href="<?php echo site_url( '/members/bookpull/' ) ?>" class="level-item">Member Login</a>
+          <a href="<?php echo admin_url() ?>" class="level-item">Admin Login</a>
         </div>
       </div>
     </div>

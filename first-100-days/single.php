@@ -28,7 +28,7 @@ get_template_part( 'first-100-days/header' ); ?>
 
                 <!-- label -->
                 <span class="tag is-primary">
-                  <a href="/first-100-days">First 100 Days</a>
+                  <a href="<?php site_url( '/first-100-days/' ) ?>">First 100 Days</a>
                 </span>
 
                 <!-- title -->
