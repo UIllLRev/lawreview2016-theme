@@ -1037,5 +1037,8 @@ function lawreview_add_opengraph()
 }
 add_action('wp_head', 'lawreview_add_opengraph');
 
-
+function has_children() {
+  global $post;
+  return count( get_posts( array('post_parent' => $post->ID, 'post_type' => $post->post_type) ) );
+}
 ?>
