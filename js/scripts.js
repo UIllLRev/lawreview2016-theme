@@ -4,60 +4,47 @@
 
         'use strict';
 
-
-
-
-        //
-        // Header transitions
-        // ==================
-
+        // Hide Header on on scroll down
         var didScroll = null;
         var lastScrollTop = 0;
         var delta = 5;
-        var header = $('.header.has-transition');
+        var header = $('.header');
 
-        $(window).scroll(function(){
+        $(window).scroll(function(event){
             didScroll = true;
         });
 
         setInterval(function() {
             if ( didScroll ) {
-                elemHasScrolled(header, 150);
+                hasScrolled();
                 didScroll = false;
             }
         }, 250);
 
-        function elemHasScrolled(elem, scrollVal) {
+        function hasScrolled() {
             if ( $(window).width() >= 768 ) {
                 var st = $(window).scrollTop();
 
                 // Make sure they scroll more than delta
-                if( Math.abs(lastScrollTop - st) <= delta ){
+                if( Math.abs(lastScrollTop - st) <= delta ) {
                     return;
                 }
 
                 // If scrolled down enough, hide and inverse the header
                 if ( st > lastScrollTop && st > delta ){
-                    elem.addClass('is-hidden');
+                    header.addClass('is-hidden');
                 } else if ( st + $(window).height() < $(document).height() ) {
-                        elem.removeClass('is-hidden').addClass('is-inverse');
+                    header.removeClass('is-hidden').addClass('is-inverse');
                 }
 
-                // If scrolled past the `scrollVal`, remove inverse class
-                if ( st < scrollVal ) {
-                    elem.removeClass('is-inverse');
+                // If scrolled up past 150px, remove inverse class from header
+                if ( st <= 150 ) {
+                    header.removeClass('is-inverse');
                 }
 
                 lastScrollTop = st;
             }
         }
-
-
-
-
-        //
-        // Smooth scroll to anchor links
-        // =============================
 
         $('a[href*="#"]:not([href="#"])').click(function() {
             if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
@@ -66,19 +53,12 @@
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                    if (target.length) {
                      $('html,body').animate({
-                         scrollTop: target.offset().top -60
+                         scrollTop: target.offset().top -120
                     }, 1000);
                     return false;
                 }
             }
         });
-
-
-
-
-        //
-        // Toggle collapsed nav menu
-        // =========================
 
         $('.nav-toggle').click(function() {
             var navMenu = $('.nav-menu');
