@@ -74,14 +74,16 @@ do_action( 'rss_tag_pre', 'rss2' );
 		echo apply_filters( 'rss_update_frequency', $frequency );
 	?></sy:updateFrequency>
 	<?php
-	/**
-	 * Fires at the end of the RSS2 Feed Header.
-	 *
-	 * @since 2.0.0
-	 */
-	do_action( 'rss2_head');
+		/**
+		 * Fires at the end of the RSS2 Feed Header.
+		 *
+		 * @since 2.0.0
+		 */
+		do_action( 'rss2_head');
 
-	while( have_posts()) : the_post();
+		while( have_posts()) : the_post();
+
+		$author = get_field('ilr_author');
 	?>
 	<item>
 		<title><?php the_title_rss() ?></title>
@@ -90,7 +92,9 @@ do_action( 'rss_tag_pre', 'rss2' );
 		<comments><?php comments_link_feed(); ?></comments>
 <?php endif; ?>
 		<pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
-		<dc:creator><![CDATA[<?php echo get_field('ilr_author') ?>]]></dc:creator>
+<?php if ( !empty($author) ) : ?>
+		<dc:creator><![CDATA[<?=$author?>]]></dc:creator>
+<?php endif; ?>
 		<?php the_category_rss('rss2') ?>
 
 		<guid isPermaLink="false"><?php the_guid(); ?></guid>

@@ -29,21 +29,11 @@
         </div>
       </div>
     </section>
-    <?php if ( $category_id === 10 || $category_id === 153): ?>
+    <?php if ( $category_id === 175 || $category_parent_id === 175): ?>
     <nav class="nav nav-secondary has-shadow">
         <div class="container">
           <div class="nav-center">
-
-            <a href="/online/" class="nav-item is-tab">Articles</a><a href="/online-rankings/" class="nav-item is-tab">Rankings</a><a href="/blog/" class="nav-item is-tab">Blog</a>
-          </div>
-        </div>
-    </nav>
-    <?php endif; ?>
-    <?php if ( $category_id === 175 || $category_parent_id === 175): ?>  
-    <nav class="nav nav-secondary has-shadow">
-        <div class="container">
-          <div class="nav-center">
-            <?php 
+          <?php 
             $my_menu = array (
                 'menu' => 'Response Piece Subnav',
                 'walker' => new Class_Name_Walker,
@@ -51,23 +41,11 @@
                  'items_wrap'      => '%3$s',
                  'depth'           => 0,
                 );
-            wp_nav_menu($my_menu); ?>
+            wp_nav_menu($my_menu); ?>            
           </div>
         </div>
     </nav>
     <?php endif; ?>
-    <?php if ( $category_id >= 176 && $category_id <= 179): ?> 
-    <section class="section" style="padding-bottom: 0";>
-      <div class="container">
-        <div class="columns">
-        <div class="column is-10 is-offset-1">
-        <p><?php echo category_description($category_id); ?></p>
-        </div>
-        </div>
-      </div>
-    </section>
-    <?php endif; ?>
-
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -98,12 +76,6 @@
 
               echo '<div class="column is-10 is-offset-1 table-of-contents">';
                       get_template_part('loop', 'print');
-              echo '</div>';
-
-            } elseif ( $category_id >= 176 && $category_id <= 179) {
-                      echo '<div class="column is-10 is-offset-1 main-content">';
-                      get_template_part('loop');
-                      get_template_part('pagination');
               echo '</div>';
 
             } else {

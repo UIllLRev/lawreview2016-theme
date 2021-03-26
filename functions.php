@@ -90,6 +90,69 @@ class nav_walker extends Walker_Nav_Menu
     }
 }
 
+class Class_Name_Walker extends Walker_Nav_Menu
+     {
+    /**
+     * Start the element output.
+     *
+     * @param  string $output Passed by reference. Used to append additional content.
+     * @param  object $item   Menu item data object.
+     * @param  int $depth     Depth of menu item. May be used for padding.
+     * @param  array $args    Additional strings.
+     * @return void
+     */
+     function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 )      {
+    $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+
+    $class_names = $value = '';
+
+    $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+    $classes[] = 'menu-item-' . $item->ID;
+
+    $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+    $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+    $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+    $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+
+    $atts = array();
+    $atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+    $atts['target'] = ! empty( $item->target )     ? $item->target     : '';
+    $atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
+    $atts['href']   = ! empty( $item->url )        ? $item->url        : '';
+
+    $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
+
+    $attributes = '';
+    foreach ( $atts as $attr => $value ) {
+        if ( ! empty( $value ) ) {
+            $value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+            $attributes .= ' ' . $attr . '="' . $value . '"';
+        }
+    }
+    $item_output = $args->before;
+    $item_output .= '<a'. $attributes .$class_names.'>';
+    $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+    $item_output .= '</a>';
+    $item_output .= $args->after;
+
+    $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+}
+
+/**
+ * @see Walker::end_el()
+ * @since 3.0.0
+ *
+ * @param string $output Passed by reference. Used to append additional content.
+ * @param object $item Page data object. Not used.
+ * @param int $depth Depth of page. Not Used.
+ */
+function end_el( &$output, $item, $depth = 0, $args = array() ) {
+    $output .= "\n";
+}
+}
+
+
 // Popular Posts: Check and set hit count
 function lawreview_popular_posts($post_id) {
     $count_key = 'popular_posts';
@@ -135,9 +198,14 @@ function lawreview_conditional_scripts()
 {
 
   wp_register_script('first-100-days-js', get_template_directory_uri() . '/first-100-days/js/first-100-days.js', array('jquery', 'scroll-watcher'), '1.0.0');
+  wp_register_script('first-100-days-biden-js', get_template_directory_uri() . '/first-100-days-biden/js/first-100-days-biden.js', array('jquery', 'scroll-watcher'), '1.0.0');
 
   if ( is_page( 'First 100 Days' ) || ( is_single() && in_category('First 100 Days') ) ) {
     wp_enqueue_script('first-100-days-js');
+  }
+  
+  if ( is_page( 'First 100 Days - Biden' ) || ( is_single() && in_category('First 100 Days Biden') ) ) {
+    wp_enqueue_script('first-100-days-biden-js');
   }
 }
 
@@ -165,9 +233,14 @@ function lawreview_conditional_styles()
 {
 
   wp_register_style('first-100-days-css', get_template_directory_uri() . '/first-100-days/css/first-100-days.css', array('lawreview-styles'), '1.0');
+  wp_register_style('first-100-days-biden-css', get_template_directory_uri() . '/first-100-days-biden/css/first-100-days-biden.css', array('lawreview-styles'), '1.0');
 
   if ( is_page( 'First 100 Days' ) || ( is_single() && in_category('First 100 Days') ) ) {
     wp_enqueue_style('first-100-days-css');
+  }
+  
+  if ( is_page( 'First 100 Days - Biden' ) || ( is_single() && in_category('First 100 Days Biden') ) ) {
+    wp_enqueue_style('first-100-days-biden-css');
   }
 }
 
@@ -1000,6 +1073,30 @@ add_filter( 'single_template', function($single_template) {
   //   $single_template = dirname( __FILE__ ) . '/single-news.php';
   // }
   return $single_template;
+
+}, 10, 3);
+
+
+/**
+ * First 100 Days Biden single post template
+ * ===================================
+ *
+ * Assign posts with the "First 100 Days - Biden" category to a custom template.
+ * ----------------------------------------------------------------------------
+ */
+
+add_filter( 'single_template_biden', function($single_template_biden) {
+
+  global $post;
+
+  if ( in_category('First 100 Days - Biden') ) {
+    $single_template_biden = dirname( __FILE__ ) . '/first-100-days-biden/single.php';
+  }
+
+  // if ( in_category('News') ) {
+  //   $single_template = dirname( __FILE__ ) . '/single-news.php';
+  // }
+  return $single_template_biden;
 
 }, 10, 3);
 
