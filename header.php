@@ -39,7 +39,7 @@
                             <i class="fa fa-facebook"></i>
                         </span>
                     </a>
-                    <a href="https://illinoislawreview.org/feed/" target="_blank" class="nav-item is-icon">
+                    <a href="/feed/" target="_blank" class="nav-item is-icon">
                         <span class="icon">
                             <i class="fa fa-rss"></i>
                         </span>
